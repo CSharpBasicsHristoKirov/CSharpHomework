@@ -1,0 +1,6 @@
+C:\Users\Chris\Desktop\CSharpHomework\ProgrammingBasicsCSharp\ProgrammingBasicsCSharp\bin\Debug\ProgrammingBasicsCSharp.exe.config
+C:\Users\Chris\Desktop\CSharpHomework\ProgrammingBasicsCSharp\ProgrammingBasicsCSharp\bin\Debug\ProgrammingBasicsCSharp.exe
+C:\Users\Chris\Desktop\CSharpHomework\ProgrammingBasicsCSharp\ProgrammingBasicsCSharp\bin\Debug\ProgrammingBasicsCSharp.pdb
+C:\Users\Chris\Desktop\CSharpHomework\ProgrammingBasicsCSharp\ProgrammingBasicsCSharp\obj\Debug\ProgrammingBasicsCSharp.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Desktop\CSharpHomework\ProgrammingBasicsCSharp\ProgrammingBasicsCSharp\obj\Debug\ProgrammingBasicsCSharp.exe
+C:\Users\Chris\Desktop\CSharpHomework\ProgrammingBasicsCSharp\ProgrammingBasicsCSharp\obj\Debug\ProgrammingBasicsCSharp.pdb
