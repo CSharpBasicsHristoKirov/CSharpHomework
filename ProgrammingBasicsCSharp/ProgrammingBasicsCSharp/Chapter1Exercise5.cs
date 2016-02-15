@@ -1,21 +1,24 @@
 ﻿///<summary> 
-///TITLE              Output     Chapter1Exercise4VS.cs 
+///TITLE              Output Cyrillic    Chapter1Exercise5.cs 
 ///    COMMENT
 ///        Objective: Use WriteLine() class. 
 ///            Input: -
-///           Output: Hello C#!            
+///           Output: Добър Ден!            
 ///</summary>
 ///<author>Chris B. Kirov</author>
 ///<datecreated>15.02.2016</datecreated>
+
 using System;
+using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
-    class Chapter1Exercise4VS
+    class Chapter1Exercise5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello C#!");
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.WriteLine("Добър Ден!");
         }
     }
 }
