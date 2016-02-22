@@ -9,7 +9,7 @@
 ///<datecreated>15.02.2016</datecreated>
 ///<remarks>
 /// file directory C:\Users\Chris\Desktop
-/// compiler directory: c:\Windows\Microsoft.NET\Framework\v4.0.21006\csc.exe HelloCSharp.cs
+/// compiler directory: c:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe HelloCSharp.cs
 /// executable: HelloCSharp.exe
 ///</remarks>
 

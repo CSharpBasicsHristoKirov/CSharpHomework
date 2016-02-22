@@ -1,0 +1,19 @@
+C#  is a multi-paradigm programming language:
+-imperative,
+-declarative,
+-functional,
+-generic,
+-object-oriented (class-based), 
+-component-oriented.
+developed as a part of Microsoft's .NET platform.
+
+
+.NET Framework is a software framework developed by Microsoft
+-includes a large class library known as Framework Class Library (FCL)
+-provides language interoperability across several programming languages.
+Programs written for .NET Framework execute in a software environment,
+known as Common Language Runtime (CLR), an application virtual machine
+that provides services such as security, memory management, 
+and exception handling. FCL and CLR together constitute .NET Framework.
+ 
+

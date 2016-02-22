@@ -1,0 +1,4 @@
+MSDN Library description of 
+System.Console.WriteLine()
+
+https://msdn.microsoft.com/en-us/library/system.console.writeline(v=vs.110).aspx

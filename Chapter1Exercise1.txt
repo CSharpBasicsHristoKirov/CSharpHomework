@@ -1,0 +1,7 @@
+1. Introduction to Visual Studio: https://msdn.microsoft.com/en-us/library/fx6bk1f4(v=vs.90).aspx
+
+2. (MSDN) Library Documentation: https://msdn.microsoft.com/en-us/library/ms123401.aspx?f=255&MSPPError=-2147217396 
+				 https://msdn.microsoft.com/en-us/library/w0x726c2(v=vs.110).aspx
+				 https://msdn.microsoft.com/en-us/library/gg145045(v=vs.100).aspx
+
+3. Install Visual Studio: https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx

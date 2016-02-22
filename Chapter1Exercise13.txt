@@ -1,0 +1,19 @@
+Popular programming languages:
+Fortran (imperative, for numeric and scientific calculations, a practical alternative to assembly, embedded programming) 
+C (imperative, procedural, static typed, used for system and embedded programming, low level memory access, compiled to machine code),
+C++ (imperative, OOP, generic & low level memory access, compiled to machine code)
+
+C# (mutli-paradigm, imperative, OOP, functional, generic, compiled to CIL (common intermediate language), runs on CLR (common language runtime)), 
+Java (high level, general purpose, class based, OOP, class-based, compiled to byte-code, runs on Java virtual machine),
+Python (imperative, OOP, general-purpose, concise, command line interpreted),
+
+HTML, XML (markup languages, )
+Javascript (high-level, dynamic, untyped, interpreted, WWW programming), 
+CSS (style sheet language, describes the presentation of a document), 
+PHP (imperative, functional, OOP, web development, server-side scripting)
+
+C# inherits most of its syntax from C, c++, 
+similar to Java (conceptually similar compilation and run process);
+Part of the .NET framework with wide portability and cross language interoperability. 
+
+ 

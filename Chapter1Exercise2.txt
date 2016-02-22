@@ -1,0 +1,5 @@
+MSDN library description of 
+class Console.System:
+
+https://msdn.microsoft.com/en-us/library/system.console(v=vs.110).aspx
+
