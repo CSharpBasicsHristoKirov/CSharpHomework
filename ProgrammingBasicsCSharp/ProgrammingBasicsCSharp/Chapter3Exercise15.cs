@@ -6,8 +6,9 @@
            Objective: 1. Read an integer.
                       2. Swap bits at positions: 3, 4 and 5 with
                          bits at positions: 24, 25 and 26.
+   117440512 == 0x07000000, i.e. the larger bits are 1's and smaller 0's 
                Input: Type an integer:
-                      117440512  // 0x07000000
+                      117440512 
               Output: 117440512 after swapping: 0 
    </summary>
    <author>Chris B. Kirov</author>
@@ -62,7 +63,7 @@ namespace ProgrammingBasicsCSharp
         */
         static public int modifyBit(int number, int atPosition, int newBitValue)
         {
-            int testVariable = 1;
+            int testVariable = newBitValue == 0 ? 0 : 1;
             int mask = testVariable << atPosition;
             int modifiedNumber = number | mask;
             return modifiedNumber;
