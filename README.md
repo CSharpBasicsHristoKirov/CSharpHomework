@@ -7,7 +7,7 @@ Software University February 2016
 Exercises from:
 
 1. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
-2. Examples from previous courses.
+2. Exam Practice.
 
 
 
