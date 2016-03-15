@@ -15,6 +15,7 @@ Exercises from:
 
 Errata:
 
+Page 260-1, Exercise 14 : Matrix rows next to each other and on next page.
 Page 262, Exercise 26 : Firtst row of right matrix appended at the bottom of the left. 
 
 ---
