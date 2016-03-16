@@ -110,14 +110,14 @@ Chapter 6
 6. Read `n` and `k`. Print \frac{n!}{k!}
 
 ---
-
+<sub>
 Errata:
 
 No enumeration of the chapter contents, e.g 3.1; 3.2<br>
 
 Page 260-1, Exercise 14 : Matrix rows next to each other and on next page.<br>
 Page 262, Exercise 26 : Firtst row of right matrix appended at the bottom of the left. 
-
+</sub>
 ---
 
 [1]: https://softuni.bg/trainings/1297/programming-basics-january-2016
