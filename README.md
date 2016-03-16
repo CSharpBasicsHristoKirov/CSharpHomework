@@ -102,6 +102,12 @@ Chapter 5
 Chapter 6
 ---
 
+1. Read a number `n`. Print the numbers from `1` to `n`.
+2. Read a number `n`. Print all the numbers within [1, n] not divisible to `3` and `7`.
+3. Read a sequence of integers. Print the numbers with _min_ and _max_ values.
+4. Print all the possible _playing cards_. (52 in total, 4 colours and 13 ranks)
+5. Read a number `n`. Print the first `n` terms of the _Fibonacci sequence_.
+6. Read `n` and `k`. Print \frac{n!}{k!}
 
 ---
 
