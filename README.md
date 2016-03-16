@@ -107,7 +107,7 @@ Chapter 6
 3. Read a sequence of integers. Print the numbers with _min_ and _max_ values.
 4. Print all the possible _playing cards_. (52 in total, 4 colours and 13 ranks)
 5. Read a number `n`. Print the first `n` terms of the _Fibonacci sequence_.
-6. Read `n` and `k`. Print \frac{n!}{k!}
+6. Read `n` and `k`. Print \[ \frac{n!}{k!} \]
 
 ---
 <sub>
