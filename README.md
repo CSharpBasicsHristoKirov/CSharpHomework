@@ -35,7 +35,15 @@ Chapter 2
 
 1. Match values with appropriate types.
 2. Witch of the values could be assigned to `float`, `double` and `decimal`.
-3. 
+3. Calculate with precision up to the sixth digit after the decimal point.
+4. Initialize an `int` with the hexadecimal value `256`.
+5. Initialize a `char` with the symbol with _Unicode_ value `72`.
+6. Define a variable of type `bool` named `isMale` and initialize it properly.
+7. Define two `string`s, concatenate them and assign the result to variable of type `object`.
+8. Define two `string`s, concatenate them and assign the result to variable of type `object`; Initialize a `string` with the value held in the variable of type `object`.
+9. Use _escape sequences_ or _@-quotes strings_ to declare a `string` containing `"` or `\`.
+10. Print a the shape of heart using the symbol `o`.
+11. Print a an isosceles triangle using the sybbol '&#9400'
 
 
 
