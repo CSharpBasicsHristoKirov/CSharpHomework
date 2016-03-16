@@ -107,7 +107,24 @@ Chapter 6
 3. Read a sequence of integers. Print the numbers with _min_ and _max_ values.
 4. Print all the possible _playing cards_. (52 in total, 4 colours and 13 ranks)
 5. Read a number `n`. Print the first `n` terms of the _Fibonacci sequence_.
-6. Read `n` and `k`. Print \[ \frac{n!}{k!} \]
+6. Read `n` and `k`. Print `n! / k!`, where `1 < k < n`.
+7. Read `n` and `k`. Print `n! * k! / (n - k)!`, where `1 < k < n`.
+8. Read `n` and calculate the nth _Catalan number_.
+9. Read `n` and `x`. Calculate the first `n` terms of the series n! / x^n.
+10. Read `n`, where `n < 20` and print a _matrix_ where each next row contains the incremented values of the above, starting with `1,2,...n`.
+11. Calculate the number of trailing zeroes of a factorial of a given value `n`.
+12. Convert a number from _decimal_ to _binary_ representation.
+13. Convert a number from _binary_ to _decimal_ representation.
+14. Convert a number from _decimal_ to _hexadecimal_ representation.
+15. Convert a number from _hexadecimal_ to _decimal_ representation.
+16. Read `n`, print the numbers within [1,n] in random order.
+17. Read `a` and `b`. Find the _greatest common divisor_ of `a` and `b`.
+18. Read `n`. Print _n x n matrix_ with values increasing in a clockwise inward pattern, starting from element _00_ and value `1`.
+
+Chapter 7
+---
+
+
 
 ---
 <sub>
