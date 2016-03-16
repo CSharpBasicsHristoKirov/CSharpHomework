@@ -34,12 +34,13 @@ namespace ProgrammingBasicsCSharp
 
         static void Main()
         {
+            Console.WriteLine("Which Catalan number do you want to see:");
             int n = int.Parse(Console.ReadLine());
 
             const int multiplier = 2;
             double catalanNumber = factorial(multiplier * n) / (factorial(n + 1) * factorial(n));
 
-            Console.WriteLine(catalanNumber);
+            Console.WriteLine("The {0}th Catalan number is {1}", n, catalanNumber);
         }
     }
 }

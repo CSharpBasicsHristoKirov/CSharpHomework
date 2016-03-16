@@ -3,8 +3,8 @@
    TITLE              Harmonic series         Chapter4Exercise13.cs 
    S.Nakov, V.Kolev et al.    "Introduction to Programming with C#" 
    COMMENT
-           Objective: Calculate the Harmonic number with
-                      precision 3 digits after the decimal point.
+           Objective: Accumulate the first 1000 terms of the 
+                      Harmonic series.
                Input: -
               Output: -
    </summary>
@@ -20,7 +20,7 @@ namespace ProgrammingBasicsCSharp
     {
         static void Main()
         {
-            // information
+            // info and variables
             Console.WriteLine("Find the Harmonic number.");
             double epsilon = 0.001;         // determines precision
             int term = 1;                   // summand

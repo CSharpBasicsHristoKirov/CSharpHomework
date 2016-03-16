@@ -5,6 +5,9 @@
    COMMENT
            Objective: Write a program that generates N random numbers
                       within the interval [1,N]. 
+                      
+                      ! It could be done by random swapping such that 
+                      there are no duplicates. !
                Input: -
               Output: -
    </summary>

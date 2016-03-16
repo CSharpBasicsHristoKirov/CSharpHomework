@@ -36,29 +36,29 @@ namespace ProgrammingBasicsCSharp
             int col1 = 0, col2 = n - 1;
             int row1 = 0, row2 = n - 1;
 
-            // run loop till all elements populated
+            // fill in clockwise inward pattern
             int length = n * n;
             while (numbers <= length)
             {
-                // fille top horizontal row
+                // fille top row
                 for (int i = col1; i <= col2; i++)
                 {
                     spiralMatrix[row1, i] = numbers++;
                 }
 
-                // fill right vertical columns
+                // fill right column
                 for (int j = row1 + 1; j <= row2; j++)
                 {
                     spiralMatrix[j, col2] = numbers++;
                 }
 
-                // fill bottom horizontal row
+                // fill bottom row
                 for (int k = col2 - 1; k >= col1; k--)
                 {
                     spiralMatrix[row2, k] = numbers++;
                 }
 
-                // fill left vertical column
+                // fill left column
                 for (int l = row2 - 1; l >= row1 + 1; l--)
                 {
                     spiralMatrix[l, col1] = numbers++;
