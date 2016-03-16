@@ -50,6 +50,37 @@ Chapter 2
 Chapter 3
 ---
 
+1. Check whether a number is odd or even.
+2. Check if a number is perfectly divisble by `5` and `7`.
+3. Is the 3rd least significant digit is `7`.
+4. Is the 3rd bit of a number `0` ro `1`.
+5. Area of a trapezium from given `a`, `b` and `h`.
+6. Area and circumference of a rectangle from given length and height.
+7. Calculate the weight of an human on the Moon, given his weight on Earth.
+8. Check if a point is within a given circle.
+9. Check if a point is within a given circel and out of a rectangle.
+10. Number's digits manipulation: sum, reversed digits, swap first/second and last/third. 
+11. Print the bit on position `p` in the number `n`.
+12. Given a number `n`, check if the bit on position `p` has a value `v = 1`.
+13. Given a number `n`, a position `p` and a bit value `v`. Write a program that sets the bit at position `p` to value `v` in number `n`.
+14. Check if a number is prime.
+15. Swap the bits at positions 3, 4 , 5 with those at positions 24, 25, 26.
+16. Swap `k` number of bits starting a position `p` with `k` number of bits starting at position `q`.
+
+Chapter 4
+---
+
+1. Read three `int`s from the console and print their values.
+2. Read a radius of circle , `r`, and print its area and circumference.
+3. Read and print company data: name, address, phone number, FAX, website and manager (first-, last- name and phone number).
+4. Output formatting: print three columns of numbers with: width = 10, left aligned, first column: hexadecimal , second column: positive floating point, negative floating point. The last two columns to be rounded up to the 2nd digit after the decimal point.
+5. Find perfectly divisible to `5` numbers within `[a,b]`, where `a` and `b` read from console.
+6. Read two numbers, print the largest without the use of conditional epxressions.
+7. Read five numbers and print the largest of them.
+8. Read five numbers and print their sum. (Check input validity).
+9. Find the real roots of the quadratic equation, read the coefficients `a`, `b`, `c` from the console.
+10. Sum `n` numbers, read them from console.
+11. 
 
 
 
@@ -59,6 +90,8 @@ Chapter 3
 ---
 
 Errata:
+
+No enumeration of the chapter contents, e.g 3.1; 3.2<br>
 
 Page 260-1, Exercise 14 : Matrix rows next to each other and on next page.<br>
 Page 262, Exercise 26 : Firtst row of right matrix appended at the bottom of the left. 
