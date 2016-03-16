@@ -12,7 +12,9 @@ Exercises from:
 ---
 Exercises
 
-Chapter 1<br>
+Chapter 1
+---
+
 1. Install [Visual Studio][4] and [MSDN Library Documentation][5].<br>
 2. Describe the class `System.Console`.<br>
 3. Describe the method  `System.Console.WriteLine()`.<br>
@@ -28,7 +30,12 @@ Chapter 1<br>
 13. Compile a list of the most famous program languages; their differences from `C#`.<br>
 14. Decompile Exercise 5.
 
+Chapter 2
+---
 
+1. Match values with appropriate types.
+2. Witch of the values could be assigned to `float`, `double` and `decimal`.
+3. 
 
 
 
