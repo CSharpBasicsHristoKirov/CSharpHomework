@@ -96,8 +96,11 @@ Chapter 5
 7. Find the largest among 5 integers.
 8. Define variables of type `int`, `double` and `string`. Depending on their type increment the type is within the first two, append `*` if is the last and print them. (Use `switch` statement)
 9. Given five `int` values, find all subsets (if existent) that sum up to `0`.
-10. Appy the following rules for the number, `n` (within [1,9]) read from the console: if `n` <\in> [1,3] -> `n * 10` 
+10. Appy the following rules for the number, `n` (within [1,9]) read from the console: if `n` in: [1,3] -> `n * 10` ; [4,6] -> `n * 100`; [7,9] -> `n * 1000`.
+11. Read a number n within [0,999] and print its name in Bulgarian.
 
+Chapter 6
+---
 
 
 ---
