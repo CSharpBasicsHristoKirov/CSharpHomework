@@ -13,9 +13,20 @@ Exercises from:
 Exercises
 
 Chapter 1<br>
-1. Install [Visual Studio][4] and [MSDN Library Documentation][5].
-2. Describe the class `System.Console`.
-3. 3.
+1. Install [Visual Studio][4] and [MSDN Library Documentation][5].<br>
+2. Describe the class `System.Console`.<br>
+3. Describe the method  `System.Console.WriteLine()`.<br>
+4. Compile and run a program via the console.<br>
+5. "Добър Ден!".<br>
+6. First and last name.<br>
+7. Print `1, 101, 1001`.<br>
+8. Print date and time.<br>
+9. Square root of `12345`.<br>
+10. Write the first 100 terms of the sequence `2, -3, 4 , -5, 6 , -7, 8...`<br>
+11. Read age and print age after 10 years.<br>
+12. Differences between `C#` and `.NET Framework`.<br>
+13. Compile a list of the most famous program languages; their differences from `C#`.<br>
+14. Decompile Exercise 5.
 
 
 
