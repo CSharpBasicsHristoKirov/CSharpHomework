@@ -2,7 +2,7 @@
 	TITLE          Longest Alphabetical Word   Exam14042014LongestAlphabeticalWord.cs
 	COMMENT
 		Objective : https://judge.softuni.bg/Contests/9/CSharp-Basics-Exam-14-April-2014-Evening
-			Input : -
+	            Input : -
 		   Output : -
 		   Author : Chris B.Kirov
 			 Date : 02.03.2016
@@ -14,7 +14,6 @@ namespace CSharpExamPractice
 {
     class Exam14042014LongestAlphabeticalWord
     {
-        // to reduce the number of function arguments
         static string word = string.Empty;
         static int dimension;
         static string longestAlphabeticalWord = string.Empty;
