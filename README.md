@@ -124,6 +124,20 @@ Chapter 6
 Chapter 7
 ---
 
+1. Define and print an `int` array of size `20` with elements initialize to values equal to their index multiplied by `5`.
+2. Read two arrays and check if they are identical.
+3. Compare two `char` arrays _lexicographically_.
+4. Find the longest subarray of adjacent elements with identical values.
+5. Find the longest subarray of adjacent elements with increasing values.
+6. Find the longest subarray (with smallest indexes) of consecutive elements with increasing values. 
+7. Read `n` and `k`. Read `n` elements to populate an `int` array. Find `k` adjacent elements with _max sum_.
+8. Implement _Selection Sort_ algorithm that sorts an `int` array in increasing order.
+9. Find the `int` subarray with _max sum_.
+10. Find `int` array _mode_.
+11. Read `sum`. Find whether there is a subarray of elements that sum up to `sum`.
+12. Read `n`. Print _n x n matrix_ with values increasing in different patterns (in terms of the indexes of the matrix elements).
+13. Read `n` and `m`. Define a _n x m matrix_ and populate its elements. Find a `3 x 3` _submatrix_ with maximum sum of its elements.
+
 
 
 ---
