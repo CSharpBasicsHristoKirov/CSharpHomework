@@ -10,7 +10,7 @@ Exercises from:
 2. [Exams Practice from previous years.][3]
 
 ---
-Exercises
+Exercise content
 
 Chapter 1
 ---
