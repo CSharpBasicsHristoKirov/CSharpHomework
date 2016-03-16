@@ -78,12 +78,25 @@ Chapter 4
 6. Read two numbers, print the largest without the use of conditional epxressions.
 7. Read five numbers and print the largest of them.
 8. Read five numbers and print their sum. (Check input validity).
-9. Find the real roots of the quadratic equation, read the coefficients `a`, `b`, `c` from the console.
+9. Find the real roots of the _quadratic equation_, read the coefficients `a`, `b`, `c` from the console.
 10. Sum `n` numbers, read them from console.
-11. 
+11. Read a number `n`, print all the numbers within `[1, n]` on a new line.
+12. Print the first 100 terms of _Fibonacci sequence_.
+13. Accumulate the first 1000 terms of the `Harmonic Series`.
 
+Chapter 5
+---
 
-
+1. Write an `if` construction such that it swaps the values of two variables if the first is larger than the second.
+2. Print the sign (`+` , `-`) of the product of thee numbers without actually calculating it. (Use `if` statements)
+3. Find the largest value among the values of three numbers.
+4. Sort three real integers in descending oreder using nested `if` statements.
+5. Read an integer `[0,9]` and print its name in Bulgarian.
+6. Print the roots (0 ,1 or 2 real roots) of the _quadratic equation_.
+7. Find the largest among 5 integers.
+8. Define variables of type `int`, `double` and `string`. Depending on their type increment the type is within the first two, append `*` if is the last and print them. (Use `switch` statement)
+9. Given five `int` values, find all subsets (if existent) that sum up to `0`.
+10. Appy the following rules for the number, `n` (within [1,9]) read from the console: if `n` \in [1,3] -> `n * 10` 
 
 
 
