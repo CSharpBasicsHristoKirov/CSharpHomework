@@ -43,7 +43,7 @@ Chapter 2
 8. Define two `string`s, concatenate them and assign the result to variable of type `object`; Initialize a `string` with the value held in the variable of type `object`.
 9. Use _escape sequences_ or _@-quotes strings_ to declare a `string` containing `"` or `\`.
 10. Print a the shape of heart using the symbol `o`.
-11. Print a an isosceles triangle using the sybbol '&#9400'
+11. Print a an isosceles triangle using the sybbol &#9400.
 
 
 
