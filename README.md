@@ -137,7 +137,10 @@ Chapter 7
 11. Read `sum`. Find whether there is a subarray of elements that sum up to `sum`.
 12. Read `n`. Print _n x n matrix_ with values increasing in different patterns (in terms of the indexes of the matrix elements).
 13. Read `n` and `m`. Define a _n x m matrix_ and populate its elements. Find a `3 x 3` _submatrix_ with maximum sum of its elements.
-14.
+14. Find longest sequence (horizontal, vertical, diagonal) of identical `string`s within a 2D `string` array.
+15. Read a word and print the indexes of its letters, where the letters of the English alphabet are within [0,25].
+16. Implement _binary search_ for sorted array of integers. 
+17. Implement _merge sort_ for array of integers.
 
 
 ---
