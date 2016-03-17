@@ -9,7 +9,7 @@ Repository Content
 
 Exercises from:
 
-1. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
+I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 
 Chapter 1
 ---
@@ -145,7 +145,7 @@ Chapter 7
 
 ---
 
-2. [Exams Practice.][3]
+II. [Exams Practice.][3]
 
 14.04.2014
 
@@ -160,6 +160,10 @@ Chapter 7
 9. Student Cables.
 10. Wine Glass.
 
+ ---
+ 
+ III. Homework
+ 
  
 ---
 <sub>
