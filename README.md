@@ -168,7 +168,6 @@ II. [Exams Practice.][3]
 5. Bit flipper.
 
  ---
- 
  III. Homework
  
  
