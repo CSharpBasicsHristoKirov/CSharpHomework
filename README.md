@@ -142,6 +142,9 @@ Chapter 7
 17. Implement _merge sort_ for `int` array. 
 18. Implement _quick sort_ for `int` array. 
 19. Find _primes_ within [1, 10000000].
+20. Check if an `int` array of `n` elements contains a subarray with elements that sum up to `s`.
+21. Check if an `int` array of `n` elements contains a subarray with `k` elements that sum up to `s`.
+22. Read `n` elements to populate an `int` array; remove minimal number of elements such that the array is sorted in ascending order.   
 
 ---
 
