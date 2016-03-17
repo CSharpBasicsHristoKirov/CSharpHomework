@@ -148,7 +148,7 @@ Chapter 7
 
 ---
 
-II. [Exams Practice.][3]
+II. [Exam Practice.][3]
 
 14.04.2014
 
