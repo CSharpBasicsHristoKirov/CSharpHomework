@@ -149,16 +149,23 @@ II. [Exams Practice.][3]
 
 14.04.2014
 
-1. Biggest triple.
-2. Bit flipper.
-3. Bit Shooter.
-4. Fruit Market.
-5. Inside The Building.
-6. Longest Alphabetical Word.
-7. Magic Car Numbers.
-8. Programmer DNA.
-9. Student Cables.
-10. Wine Glass.
+1. Morning
+---
+
+1. Fruit Market.
+2. Biggest triple.
+3. Wine Glass.
+4. Longest Alphabetical Word.
+5. Bit Shooter.
+ 
+2. Evening
+---
+
+1. Inside The Building.
+2. Student Cables.
+3. Programmer DNA.
+4. Magic Car Numbers.
+5. Bit flipper.
 
  ---
  
