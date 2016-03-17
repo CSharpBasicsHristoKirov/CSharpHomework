@@ -4,10 +4,12 @@ Software University February 2016
 [Course Programming Basics][1]
 ---
 
+Repository Content
+---
+
 Exercises from:
 
 1. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
-
 
 Chapter 1
 ---
@@ -141,13 +143,24 @@ Chapter 7
 18. Implement _quick sort_ for `int` array. 
 19. Find _primes_ within [1, 10000000].
 
-
 ---
 
-2. [Exams Practice from previous years.][3]
+2. [Exams Practice.][3]
+
+14.04.2014
+
+1. Biggest triple.
+2. Bit flipper.
+3. Bit Shooter.
+4. Fruit Market.
+5. Inside The Building.
+6. Longest Alphabetical Word.
+7. Magic Car Numbers.
+8. Programmer DNA.
+9. Student Cables.
+10. Wine Glass.
+
  
-
-
 ---
 <sub>
 Observations:<br>
