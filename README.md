@@ -7,10 +7,7 @@ Software University February 2016
 Exercises from:
 
 1. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
-2. [Exams Practice from previous years.][3]
 
----
-Exercise content
 
 Chapter 1
 ---
@@ -143,6 +140,13 @@ Chapter 7
 17. Implement _merge sort_ for `int` array. 
 18. Implement _quick sort_ for `int` array. 
 19. Find _primes_ within [1, 10000000].
+
+
+---
+
+2. [Exams Practice from previous years.][3]
+ 
+
 
 ---
 <sub>
