@@ -93,7 +93,7 @@ Chapter 5
 5. Read an integer `[0,9]` and print its name in Bulgarian.
 6. Print the roots (0 ,1 or 2 real roots) of the _quadratic equation_.
 7. Find the largest among 5 integers.
-8. Define variables of type `int`, `double` and `string`. Depending on their type increment the type is within the first two, append `*` if is the last and print them. (Use `switch` statement)
+8. Define variables of type `int`, `double` and `string`. Depending on their type, increment the value if the type is within the first two, append `*` if it is the last; print them. (Use `switch` statement)
 9. Given five `int` values, find all subsets (if existent) that sum up to `0`.
 10. Appy the following rules for the number, `n` (within [1,9]) read from the console: if `n` in: [1,3] -> `n * 10` ; [4,6] -> `n * 100`; [7,9] -> `n * 1000`.
 11. Read a number n within [0,999] and print its name in Bulgarian.
