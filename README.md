@@ -86,7 +86,7 @@ Chapter 4
 Chapter 5
 ---
 
-1. Write an `if` construction such that it swaps the values of two variables if the first is larger than the second.
+1. Write an `if` construction such that it _swaps_ the values of two variables if the first is larger than the second.
 2. Print the sign (`+` , `-`) of the product of thee numbers without actually calculating it. (Use `if` statements)
 3. Find the largest value among the values of three numbers.
 4. Sort three real integers in descending oreder using nested `if` statements.
@@ -96,20 +96,20 @@ Chapter 5
 8. Define variables of type `int`, `double` and `string`. Depending on their type, increment the value if the type is within the first two, append `*` if it is the last; print them. (Use `switch` statement)
 9. Given five `int` values, find all subsets (if existent) that sum up to `0`.
 10. Appy the following rules for the number, `n` (within [1,9]) read from the console: if `n` in: [1,3] -> `n * 10` ; [4,6] -> `n * 100`; [7,9] -> `n * 1000`.
-11. Read a number n within [0,999] and print its name in Bulgarian.
+11. Read a number `n` within [0,999] and print its name in _Bulgarian language_.
 
 Chapter 6
 ---
 
 1. Read a number `n`. Print the numbers from `1` to `n`.
-2. Read a number `n`. Print all the numbers within [1, n] not divisible to `3` and `7`.
+2. Read a number `n`. Print all the numbers within [1, n] not divisible by `3` and `7`.
 3. Read a sequence of integers. Print the numbers with _min_ and _max_ values.
 4. Print all the possible _playing cards_. (52 in total, 4 colours and 13 ranks)
 5. Read a number `n`. Print the first `n` terms of the _Fibonacci sequence_.
 6. Read `n` and `k`. Print `n! / k!`, where `1 < k < n`.
 7. Read `n` and `k`. Print `n! * k! / (n - k)!`, where `1 < k < n`.
 8. Read `n` and calculate the nth _Catalan number_.
-9. Read `n` and `x`. Calculate the first `n` terms of the series n! / x^n.
+9. Read `n` and `x`. Calculate the first `n` terms of the series `n! / x^n`.
 10. Read `n`, where `n < 20` and print a _matrix_ where each next row contains the incremented values of the above, starting with `1,2,...n`.
 11. Calculate the number of trailing zeroes of a factorial of a given value `n`.
 12. Convert a number from _decimal_ to _binary_ representation.
@@ -118,17 +118,17 @@ Chapter 6
 15. Convert a number from _hexadecimal_ to _decimal_ representation.
 16. Read `n`, print the numbers within [1,n] in random order.
 17. Read `a` and `b`. Find the _greatest common divisor_ of `a` and `b`.
-18. Read `n`. Print _n x n matrix_ with values increasing in a clockwise inward pattern, starting from element _00_ and value `1`.
+18. Read `n`. Print _n x n matrix_ with values increasing in a clockwise inward pattern, starting from element with _matrix index_ _00_ and value `1`.
 
 Chapter 7
 ---
 
-1. Define and print an `int` array of size `20` with elements initialize to values equal to their index multiplied by `5`.
+1. Define and print an `int` array of size `20` with elements initialized to values equal to their index multiplied by `5`.
 2. Read two arrays and check if they are identical.
 3. Compare two `char` arrays _lexicographically_.
-4. Find the longest subarray of adjacent elements with identical values.
-5. Find the longest subarray of adjacent elements with increasing values.
-6. Find the longest subarray (with smallest indexes) of consecutive elements with increasing values. 
+4. Find the longest subarray of adjacent elements with _identical values_.
+5. Find the longest subarray of adjacent elements with _increasing values_.
+6. Find the longest subarray (with the smallest indexes) of consecutive elements with increasing values. 
 7. Read `n` and `k`. Read `n` elements to populate an `int` array. Find `k` adjacent elements with _max sum_.
 8. Implement _Selection Sort_ algorithm that sorts an `int` array in increasing order.
 9. Find the `int` subarray with _max sum_.
