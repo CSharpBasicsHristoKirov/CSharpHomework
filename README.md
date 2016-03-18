@@ -176,7 +176,7 @@ II. [Exam Practice.][3]
  
 ---
 <sub>
-Observations:<br>
+Remark:<br>
 No enumeration of the (sub)chapter contents, e.g 3.1; 3.2<br>
 Errata:<br>
 Page 260-1, Exercise 14 : Matrix rows next to each other and on next page.<br>
