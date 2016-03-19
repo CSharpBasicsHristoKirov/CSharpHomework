@@ -188,6 +188,12 @@ Page 260-1, Exercise 14 : Matrix rows next to each other and on next page.<br>
 Page 262, Exercise 26 : Firtst row of right matrix appended at the bottom of the left.<br>
 Page 265, Proposed Solution to Exercise 15: instead of `(int) ch - (int) 'A'`, (index will start from `32`), it should be `(int) ch - (int) 'a'`.
 </sub>
+
+---
+
+OS: Windows 10<br>
+IDE: Visual Studio 2015
+
 ---
 
 [1]: https://softuni.bg/trainings/1297/programming-basics-january-2016
