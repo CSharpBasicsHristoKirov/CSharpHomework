@@ -4,7 +4,7 @@
    S.Nakov, V.Kolev et al.    "Introduction to Programming with C#" 
    COMMENT
            Objective: The longest subarray consisted of
-                      concesutive increasing (with +1) elements.
+                      concesutively increasing (with +1) elements.
                Input: -
               Output: -
    </summary>
