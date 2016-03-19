@@ -19,14 +19,14 @@ Chapter 1
 3. Describe the method  [`System.Console.WriteLine()`](https://msdn.microsoft.com/en-us/library/system.console.writeline(v=vs.110).aspx). 
 4. Compile and run a program using the Command Line Interface. 
 5. "Добър Ден!". 
-6. First and last name.<br>
-7. Print `1, 101, 1001`.<br>
-8. Print date and time.<br>
-9. Square root of `12345`.<br>
-10. Write the first 100 terms of the sequence `2, -3, 4 , -5, 6 , -7, 8...`<br>
-11. Read age and print age after 10 years.<br>
-12. Differences between `C#` and `.NET Framework`.<br>
-13. Compile a list of the most famous program languages; their differences from `C#`.<br>
+6. First and last name. 
+7. Print `1, 101, 1001`. 
+8. Print date and time. 
+9. Square root of `12345`. 
+10. Write the first 100 terms of the sequence `2, -3, 4 , -5, 6 , -7, 8...`.
+11. Read age and print age after 10 years. 
+12. Differences between `C#` and `.NET Framework`. 
+13. Compile a list of the most famous program languages; their differences from `C#`. 
 14. Decompile Exercise 5 . <sup> Use [ILSpy-2.3.1 - Decompiler](http://ilspy.net/)</sup>
 
 Chapter 2
