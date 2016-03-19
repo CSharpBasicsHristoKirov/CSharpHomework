@@ -146,7 +146,9 @@ Chapter 7
 21. Check if an `int` array of `n` elements contains a subarray with `k` elements that sum up to `s`.
 22. Read `n` elements to populate an `int` array; remove minimal number of elements such that the array is sorted in ascending order. 
 23. Print all _permutations_ of ` n` elements.
-24. Print all ` k` _combinations_  of `n` elements. 
+24. Print all `k` _variations_  of `n` elements. <sub>(no repetition)</sub>
+25. Print all  `k` _combinations_ of `n` elements. <sub>(no repetition)</sub>
+26. Go through _matrix_ elements in specific pattern: in parallel / perpendicularly to the main diagonal starting from the bottom.
 
 ---
 
