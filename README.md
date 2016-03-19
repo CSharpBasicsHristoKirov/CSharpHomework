@@ -149,6 +149,7 @@ Chapter 7
 24. Print all `k` _variations_  of `n` elements. <sub>(no repetition)</sub>
 25. Print all  `k` _combinations_ of `n` elements. <sub>(no repetition)</sub>
 26. Go through _matrix_ elements in specific pattern: in parallel / perpendicularly to the main diagonal starting from the bottom.
+27. Find longest sequece of adjacent<sub>horizontally or vertically</sub> elements with equal value within a 2D `int` _matrix_.
 
 ---
 
