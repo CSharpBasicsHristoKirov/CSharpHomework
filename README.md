@@ -1,4 +1,4 @@
-Software University February 2016
+Software University 
 ===
   
 [Course Programming Basics][1]
@@ -193,6 +193,10 @@ Page 265, Proposed Solution to Exercise 15: instead of `(int) ch - (int) 'A'`, (
 
 OS: Windows 10<br>
 IDE: Visual Studio 2015
+
+---
+
+February 2016
 
 ---
 
