@@ -15,10 +15,10 @@ Chapter 1
 ---
 
 1. Install [Visual Studio][4] and [MSDN Library Documentation][5].<br>
-2. Describe the class `System.Console`.<br>
-3. Describe the method  `System.Console.WriteLine()`.<br>
-4. Compile and run a program using the Command Line Interface.<br>
-5. "Добър Ден!".<br>
+2. Describe the class [`System.Console`](https://msdn.microsoft.com/en-us/library/system.console%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396). 
+3. Describe the method  [`System.Console.WriteLine()`](https://msdn.microsoft.com/en-us/library/system.console.writeline(v=vs.110).aspx). 
+4. Compile and run a program using the Command Line Interface. 
+5. "Добър Ден!". 
 6. First and last name.<br>
 7. Print `1, 101, 1001`.<br>
 8. Print date and time.<br>
