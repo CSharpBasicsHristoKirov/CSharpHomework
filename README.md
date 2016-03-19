@@ -17,7 +17,7 @@ Chapter 1
 1. Install [Visual Studio][4] and [MSDN Library Documentation][5].<br>
 2. Describe the class `System.Console`.<br>
 3. Describe the method  `System.Console.WriteLine()`.<br>
-4. Compile and run a program via the console.<br>
+4. Compile and run a program using the Command Line Interface.<br>
 5. "Добър Ден!".<br>
 6. First and last name.<br>
 7. Print `1, 101, 1001`.<br>
@@ -27,7 +27,7 @@ Chapter 1
 11. Read age and print age after 10 years.<br>
 12. Differences between `C#` and `.NET Framework`.<br>
 13. Compile a list of the most famous program languages; their differences from `C#`.<br>
-14. Decompile Exercise 5.
+14. Decompile Exercise 5 . <sub>[use ILSpy-2.3.1 - Decompiler][http://ilspy.net/]</sub>
 
 Chapter 2
 ---
