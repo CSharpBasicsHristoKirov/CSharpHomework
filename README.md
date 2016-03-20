@@ -34,45 +34,45 @@ Chapter 2
 
 1. Match values with appropriate types.
 2. Witch of the values could be assigned to `float`, `double` and `decimal`.
-3. Calculate with precision up to the sixth digit after the decimal point.
-4. Initialize an `int` with the hexadecimal value `256`.
+3. Calculate with _precision_ up to the sixth digit after the decimal point.
+4. Initialize an `int` with the _hexadecimal_ value `256`.
 5. Initialize a `char` with the symbol with _Unicode_ value `72`.
 6. Define a variable of type `bool` named `isMale` and initialize it properly.
 7. Define two `string`s, concatenate them and assign the result to variable of type `object`.
 8. Define two `string`s, concatenate them and assign the result to variable of type `object`; Initialize a `string` with the value held in the variable of type `object`.
 9. Use _escape sequences_ or _@-quoted strings_ to declare a `string` containing `"` or `\`.
-10. Print a the shape of heart using the symbol `o`.
-11. Print a an isosceles triangle using the symbol © (copyright).
+10. _Print a shape_ of heart using the symbol `o`.
+11. Print an isosceles triangle using the symbol © (copyright).
 12. Company employees first-, last- name, gender and ID. 
-13. Swap tha values of two `int`variables.
+13. _Swap_ tha values of two `int`variables.
 
 Chapter 3
 ---
 
-1. Check whether a number is odd or even.
-2. Check if a number is perfectly divisble by `5` and `7`.
-3. Is the 3rd least significant digit is `7`.
-4. Is the 3rd bit of a number `0` ro `1`.
-5. Area of a trapezium from given `a`, `b` and `h`.
-6. Area and circumference of a rectangle from given length and height.
+1. Check whether a number is _odd or even_.
+2. Check if a number is _perfectly divisble_ by `5` and `7`.
+3. Is the 3rd least significant digit is `7`. 
+4. Is the 3rd bit of a number `0` ro `1`. <sup>MSB enumeration from right to left [LSB](https://en.wikipedia.org/wiki/Least_significant_bit)</sup>
+5. _Area_ of a trapezium from given `a`, `b` and `h`.
+6. _Area and circumference_ of a rectangle from given length and height.
 7. Calculate the weight of an human on the Moon, given his weight on Earth.
-8. Check if a point is within a given circle.
-9. Check if a point is within a given circel and out of a rectangle.
+8. Check if a _point is within_ a given circle.
+9. Check if a _point is within_ a given circel and out of a rectangle.
 10. Number's digits manipulation: sum, reversed digits, swap first/second and last/third. 
 11. Print the bit on position `p` in the number `n`.
 12. Given a number `n`, check if the bit on position `p` has a value `v = 1`.
 13. Given a number `n`, a position `p` and a bit value `v`. Write a program that sets the bit at position `p` to value `v` in number `n`.
-14. Check if a number is prime.
-15. Swap the bits at positions 3, 4 , 5 with those at positions 24, 25, 26.
-16. Swap `k` number of bits starting a position `p` with `k` number of bits starting at position `q`.
+14. Check if a number is _prime_.
+15. _Swap_ the bits at positions 3, 4 , 5 with those at positions 24, 25, 26.
+16. _Swap_ `k` number of bits starting a position `p` with `k` number of bits starting at position `q`.
 
 Chapter 4
 ---
 
-1. Read three `int`s from the console and print their values.
+1. Read<sup>1</sup> three `int`s from the console and print their values. <sup>1. "Read"/"Write" to/from Standard Input/Output.</sup>
 2. Read a radius of circle , `r`, and print its area and circumference.
 3. Read and print company data: name, address, phone number, FAX, website and manager (first-, last- name and phone number).
-4. Output formatting: print three columns of numbers with: width = 10, left aligned, first column: hexadecimal , second column: positive floating point, negative floating point. The last two columns to be rounded up to the 2nd digit after the decimal point.
+4. _Output formatting_: print three columns of numbers with: width = 10, left aligned, first column: hexadecimal , second column: positive floating point, negative floating point. The last two columns to be rounded up to the 2nd digit after the decimal point.
 5. Find perfectly divisible to `5` numbers within `[a,b]`, where `a` and `b` read from console.
 6. Read two numbers, print the largest without the use of conditional epxressions.
 7. Read five numbers and print the largest of them.
@@ -88,11 +88,11 @@ Chapter 5
 
 1. Write an `if` construction such that it _swaps_ the values of two variables if the first is larger than the second.
 2. Print the sign (`+` , `-`) of the product of thee numbers without actually calculating it. (Use `if` statements)
-3. Find the largest value among the values of three numbers.
-4. Sort three real integers in descending oreder using nested `if` statements.
+3. _Find the largest_ value among the values of three numbers.
+4. _Sort_ three real integers in descending oreder using nested `if` statements.
 5. Read an integer `[0,9]` and print its name in Bulgarian.
 6. Print the roots (0 ,1 or 2 real roots) of the _quadratic equation_.
-7. Find the largest among 5 integers.
+7. _Find the largest_ among 5 integers.
 8. Define variables of type `int`, `double` and `string`. Depending on their type, increment the value if the type is within the first two, append `*` if it is the last; print them. (Use `switch` statement)
 9. Given five `int` values, find all subsets (if existent) that sum up to `0`.
 10. Appy the following rules for the number, `n` (within [1,9]) read from the console: if `n` in: [1,3] -> `n * 10` ; [4,6] -> `n * 100`; [7,9] -> `n * 1000`.
@@ -128,11 +128,11 @@ Chapter 7
 3. Compare two `char` arrays _lexicographically_.
 4. Find the longest subarray of adjacent elements with _identical values_.
 5. Find the longest subarray of adjacent elements with _increasing values_.
-6. Find the longest subarray (with the smallest indexes) of consecutive elements with increasing values. 
+6. Find the longest subarray (with the smallest indexes) of _consecutive elements with increasing values_. 
 7. Read `n` and `k`. Read `n` elements to populate an `int` array. Find `k` adjacent elements with _max sum_.
-8. Implement _Selection Sort_ algorithm that sorts an `int` array in increasing order.
+8. Implement _selection sort_ algorithm that sorts an `int` array in increasing order.
 9. Find the `int` subarray with _max sum_.
-10. Find `int` array _mode_.
+10. Find _mode_ of `int` array .
 11. Read `sum`. Find whether there is a subarray of elements that sum up to `sum`.
 12. Read `n`. Print _n x n matrix_ with values increasing in different patterns (in terms of the indexes of the matrix elements).
 13. Read `n` and `m`. Define a _n x m matrix_ and populate its elements. Find a `3 x 3` _submatrix_ with maximum sum of its elements.
@@ -148,7 +148,7 @@ Chapter 7
 23. Print all _permutations_ of ` n` elements.
 24. Print all `k` _variations_  of `n` elements. <sub>(no repetition)</sub>
 25. Print all  `k` _combinations_ of `n` elements. <sub>(no repetition)</sub>
-26. Go through _matrix_ elements in specific pattern: in parallel / perpendicularly to the main diagonal starting from the bottom.
+26. Go through _matrix_ elements in specific pattern: in parallel/perpendicularly to the main diagonal starting from the bottom.
 27. Find the largest region of horizontally or vertically adjacent elements with equal values within a 2D `int` _matrix_.
 
 ---
