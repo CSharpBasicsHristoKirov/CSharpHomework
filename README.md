@@ -1,7 +1,7 @@
 Software University 
 ===
   
-[Course Programming Basics][1]
+[Course Programming Basics][1]  26. March - 24. April 2016 
 ---
 
 Repository Content
@@ -181,7 +181,7 @@ II. [Exam Practice.][3]
  
 ---
 <sub>
-Remark:<br>
+Remarks:<br>
 No enumeration of the (sub)chapter contents, e.g 3.1; 3.2<br>
 Errata:<br>
 Page 260-1, Exercise 14 : Matrix rows next to each other and on next page.<br>
