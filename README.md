@@ -1,7 +1,7 @@
 Software University 
 ===
   
-[Course Programming Basics][1]  26. March - 24. April 2016 
+##[Course Programming Basics][1]  26. March - 24. April 2016 
 ---
 
 ####Repository Content
@@ -11,7 +11,7 @@ Exercises from:
 
 I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 
-Chapter 1
+####Chapter 1
 ---
 
 1. Install [Visual Studio][4] and [MSDN Library Documentation][5].<br>
@@ -29,7 +29,7 @@ Chapter 1
 13. Compile a list of the most famous program languages; their differences from `C#`. 
 14. Decompile Exercise 5 . <sup> Use [ILSpy-2.3.1 - Decompiler](http://ilspy.net/)</sup>
 
-Chapter 2
+####Chapter 2
 ---
 
 1. Match values with appropriate types.
@@ -46,7 +46,7 @@ Chapter 2
 12. Company employees first-, last- name, gender and ID. 
 13. _Swap_ tha values of two `int`variables.
 
-Chapter 3
+####Chapter 3
 ---
 
 1. Check whether a number is _odd or even_.
@@ -66,7 +66,7 @@ Chapter 3
 15. _Swap_ the bits at positions 3, 4 , 5 with those at positions 24, 25, 26.
 16. _Swap_ `k` number of bits starting a position `p` with `k` number of bits starting at position `q`.
 
-Chapter 4
+####Chapter 4
 ---
 
 1. Read<sup>1</sup> three `int`s from the console and print their values. <sup>1. "Read"/"Write" to/from Standard Input/Output.</sup>
@@ -83,7 +83,7 @@ Chapter 4
 12. Print the first 100 terms of _Fibonacci sequence_.
 13. Accumulate the first 1000 terms of the `Harmonic Series`.
 
-Chapter 5
+####Chapter 5
 ---
 
 1. Write an `if` construction such that it _swaps_ the values of two variables if the first is larger than the second.
@@ -98,7 +98,7 @@ Chapter 5
 10. Appy the following rules for the number, `n` (within [1,9]) read from the console: if `n` in: [1,3] -> `n * 10` ; [4,6] -> `n * 100`; [7,9] -> `n * 1000`.
 11. Read a number `n` within [0,999] and print its name in _Bulgarian language_.
 
-Chapter 6
+####Chapter 6
 ---
 
 1. Read a number `n`. Print the numbers from `1` to `n`.
@@ -120,7 +120,7 @@ Chapter 6
 17. Read `a` and `b`. Find the _greatest common divisor_ of `a` and `b`.
 18. Read `n`. Print _n x n matrix_ with values increasing in a clockwise inward pattern, starting from element with _matrix index_ _00_ and value `1`.
 
-Chapter 7
+####Chapter 7
 ---
 
 1. Define and print an `int` array of size `20` with elements initialized to values equal to their index multiplied by `5`.
@@ -157,7 +157,7 @@ II. [Exam Practice.][3]
 
 14.04.2014
 
-1. Morning
+####1. Morning
 ---
 
 1. Fruit Market.
@@ -166,7 +166,7 @@ II. [Exam Practice.][3]
 4. Longest Alphabetical Word.
 5. Bit Shooter.
  
-2. Evening
+####2. Evening
 ---
 
 1. Inside The Building.
