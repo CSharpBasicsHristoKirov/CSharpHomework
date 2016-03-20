@@ -196,10 +196,6 @@ IDE: Visual Studio 2015
 
 ---
 
-February 2016
-
----
-
 [1]: https://softuni.bg/trainings/1297/programming-basics-january-2016
 [2]: http://www.introprogramming.info/
 [3]: https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics
