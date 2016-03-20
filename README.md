@@ -41,8 +41,8 @@ Chapter 2
 7. Define two `string`s, concatenate them and assign the result to variable of type `object`.
 8. Define two `string`s, concatenate them and assign the result to variable of type `object`; Initialize a `string` with the value held in the variable of type `object`.
 9. Use _escape sequences_ or _@-quoted strings_ to declare a `string` containing `"` or `\`.
-10. _Print a shape_ of heart using the symbol `o`.
-11. Print an isosceles triangle using the symbol © (copyright).
+10. Print _a shape of heart_ using the symbol `o`.
+11. Print _an isosceles triangle_ using the symbol © (copyright).
 12. Company employees first-, last- name, gender and ID. 
 13. _Swap_ tha values of two `int`variables.
 
