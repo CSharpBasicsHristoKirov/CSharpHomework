@@ -56,7 +56,7 @@ namespace ProgrammingBasicsCSharp
                               to the array of combinations 
                               at [k - currentNumberOfElementsInCombination]. 
                             - exclude added element, update currentNumberOfElementsInCombination.
-                            - call yourself with updated arguments.
+                            - calls itself with updated arguments.
         */
         static void combinations(int[] arr, int length, int startPosition, int[] ithCombination)
         {

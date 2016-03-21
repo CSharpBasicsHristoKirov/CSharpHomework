@@ -56,7 +56,7 @@ namespace ProgrammingBasicsCSharp
                               to the array of variations
                               at [k - currentNumberOfElementsInVariations]. 
                             - update currentNumberOfElementsInVariations.
-                            - call yourself with updated arguments.
+                            - calls itself with updated arguments.
         */
         static void variations(int[] arr, int length, int[] ithVariation)
         {
