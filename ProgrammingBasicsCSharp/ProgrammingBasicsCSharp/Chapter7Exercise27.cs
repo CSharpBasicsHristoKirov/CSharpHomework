@@ -5,11 +5,19 @@
    COMMENT
            Objective: It prints the size (and value) of the largest area
                       composed of adjacent elements with identical values. 
+
+                      It checks all the neighbouring elements similarly to
+                      Breadth First Search, however, it start the checks 
+                      from each element of the matrix.
+
+                      Possible optimization: all the elements from already
+                      covered areas to be collected and excluded from the 
+                      search.
                Input: -
               Output: -
    </summary>
    <author>Chris B. Kirov</author>
-   <datecreated>19.03.2016</datecreated>
+   <datecreated>21.03.2016</datecreated>
 */
 using System;
 using System.Collections.Generic;
