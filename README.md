@@ -151,6 +151,11 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 26. Go through _matrix_ elements in specific pattern: in parallel/perpendicularly to the main diagonal starting from the bottom.
 27. Find the largest region of horizontally or vertically adjacent elements with equal values within a 2D `int` _matrix_.
 
+####Chapter 8
+---
+
+1. Convert `int` and `float` numbers into _binary_ strings.  
+
 ---
 
 II. [Exam Practice.][3]
