@@ -161,6 +161,11 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 5. Convert _binary_ to _decimal_. 
 6. Convert _decimal_ to _hexadecimal_.
 7. Convert _hexadecimal_ to _decimal_.
+8. Convert _hexadecimal_ to _binary_.
+9. Convert _binary_ to _hexadecimal_.
+10. Convert _binary_ to _decimal_ using Horner's method.
+11. Convert _Roman numeral_ to _Arabic_.
+12. Convert _Arabic numeral_ to _Roman_.
 
  
 ---
