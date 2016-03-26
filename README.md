@@ -158,6 +158,8 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 2. Convert a _binary_ string to _hexadecimal_ and _decimal_.
 3. Convert _hexadecimal_ to _decimal_ and _binary_.
 4. Convert _decimal_ to _binary_.
+5. Convert _binary_ to _decimal_. 
+6. Convert _decimal_ to _hexadecimal_.
 
  
 ---
