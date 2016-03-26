@@ -166,7 +166,12 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 10. Convert _binary_ to _decimal_ using Horner's method.
 11. Convert _Roman numeral_ to _Arabic_.
 12. Convert _Arabic numeral_ to _Roman_.
+13. Given `N, S` and `D`, where `2 <= S` and `16 >= D`. Convert number `N` from base `S` to base `D`.
+14. Store `0.000001` in `float`, `double` and `decimal` and sum it `50000000` times. Observe _rounding error_ and _execution time_.
+15. Extract _sign_, _exponent_ and _mantissa_ of `float` number.
 
+####Chapter 9
+---
  
 ---
 
