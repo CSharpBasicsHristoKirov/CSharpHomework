@@ -160,6 +160,7 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 4. Convert _decimal_ to _binary_.
 5. Convert _binary_ to _decimal_. 
 6. Convert _decimal_ to _hexadecimal_.
+7. Convert _hexadecimal_ to _decimal_.
 
  
 ---
