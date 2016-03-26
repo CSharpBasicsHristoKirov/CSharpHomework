@@ -1,28 +1,26 @@
 ﻿/*
-   <summary>     
-   TITLE              Decimal to Hexadecimal  Chapter6Exercise14.cs
+   <summary>    
+   TITLE             Decimal to hexadecimal     Chapter8Exercise6.cs
    S.Nakov, V.Kolev et al.    "Introduction to Programming with C#" 
    COMMENT
-           Objective: Write a program that converts a number from
-                      decimal to hexadecimal. 
+           Objective: Convert a decimal to hexadecimal. 
                Input: -
               Output: -
    </summary>
    <author>Chris B. Kirov</author>
-   <datecreated>07.03.2016</datecreated>
+   <datecreated>26.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
-    class Chapter6Exercise14
+    class Chapter8Exercise6
     {
         /*
-            Method: hex = decimalToHexadecimal(n);
+          Method: hex = decimalToHexadecimal(n);
 
-            It returns a string representing
-            the hexadecimal value of the parameter.
+          It returns a string representing
+          the hexadecimal value of the parameter.
         */
         static string decimalToHexadecimal(int n)
         {
@@ -65,12 +63,11 @@ namespace ProgrammingBasicsCSharp
 
         static void Main()
         {
-            Console.WriteLine("Type a number in decimal representation:");
+            Console.WriteLine("Type a positive integer:");
             int n = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("{0} in hexadecimal is {1:x}", n, n);
-            Console.WriteLine("From function: {0}", decimalToHexadecimal(n));
-
+            Console.WriteLine("{0}(10) -> {1:x}(16)", n, n);
+            Console.WriteLine("{0}(10) -> {1}(16)", n, decimalToHexadecimal(n));
         }
     }
 }

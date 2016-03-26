@@ -1,22 +1,20 @@
 ﻿/*
-   <summary>     
-   TITLE              Binary to decimal       Chapter6Exercise13.cs
+   <summary>    
+   TITLE              Binary to decimal        Chapter8Exercise5.cs
    S.Nakov, V.Kolev et al.    "Introduction to Programming with C#" 
    COMMENT
-           Objective: Write a program that converts a number from
-                      binary to decinal representation. 
+           Objective: Convert binary to decimal.
                Input: -
               Output: -
    </summary>
    <author>Chris B. Kirov</author>
-   <datecreated>07.03.2016</datecreated>
+   <datecreated>26.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
-    class Chapter6Exercise13
+    class Chapter8Exercise5
     {
         /*
             Method: int dec = binaryToDecimal(binary);
@@ -31,7 +29,7 @@ namespace ProgrammingBasicsCSharp
 
             // sum from right to left
             int length = binary.Length;
-            for (int i = length - 1, exp = 0; i >= 0; i--, ++exp)
+            for (int i = length - 1, exp = 0; i >= 0; --i, ++exp)
             {
                 // accumulate the sum of the set bits
                 if (binary[i] == '1')
@@ -49,7 +47,7 @@ namespace ProgrammingBasicsCSharp
             Console.WriteLine("Type a number in binary representation:");
             string binary = Console.ReadLine();
 
-            Console.WriteLine("{0} in decimal is {1}", binary, binaryToDecimal(binary));
+            Console.WriteLine("{0}(2) -> {1}(10)", binary, binaryToDecimal(binary));
         }
     }
 }

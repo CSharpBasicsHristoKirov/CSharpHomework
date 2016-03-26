@@ -19,15 +19,22 @@ namespace ProgrammingBasicsCSharp
     {
         static void Main()
         {
-            Console.WriteLine("Type a word:");
+            Console.WriteLine("Type a word in lower case:");
+            // assumes english alphabet characters
             string word = Console.ReadLine();
 
             Console.WriteLine("The letter indexes are:");
             for (int i = 0; i < word.Length; i++)
             {
-                // utilize Unicode character ordering and convert each character to its int value
-                // translate it to the start by subtracting the character with the smallest int value
-                Console.WriteLine("letter: {0} index: {1}", word[i], (int)word[i] - (int)'a');
+                // lower case letters
+                if ((int)word[i] - (int)'a' >= 0)
+                {
+                    Console.WriteLine("letter: {0} index: {1}", word[i], (int)word[i] - (int)'a');
+                }
+                else // upper case
+                {
+                    Console.WriteLine("letter: {0} index: {1}", word[i], (int)word[i] - (int)'A');
+                }
             }
         }
         

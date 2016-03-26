@@ -31,19 +31,21 @@ namespace ProgrammingBasicsCSharp
             {
                 int remainder = n % 2;
                 n /= 2;
+
                 // insert remainder in front
                 binary = remainder.ToString() + binary;
             }
             return binary;
         }
+        //=================================================================================
 
         static void Main()
         {
-            Console.WriteLine("Type a number in decimal representation:");
+            Console.WriteLine("Type a positive integer:");
             int n = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("{0} in binary is {1}.", n, Convert.ToString(n, 2));
-            Console.WriteLine("From function: {0}", decimalToBinary(n));
+            // Console.WriteLine("{0}(10) -> {1}(2).", n, Convert.ToString(n, 2));
+            Console.WriteLine("{0}(10) -> {1}(2)", decimalToBinary(n));
         }
     }
 }

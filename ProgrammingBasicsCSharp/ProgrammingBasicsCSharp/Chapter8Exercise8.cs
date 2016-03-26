@@ -1,29 +1,27 @@
 ﻿/*
-   <summary>     
-   TITLE              Hexadecimal to Decimal  Chapter6Exercise15.cs
+   <summary>    
+   TITLE             Hexadecimal to binary     Chapter8Exercise8.cs
    S.Nakov, V.Kolev et al.    "Introduction to Programming with C#" 
    COMMENT
-           Objective: Write a program that converts a number from
-                      hexadecimal to decimal. 
+           Objective: Convert a hex to binary.
                Input: -
               Output: -
    </summary>
    <author>Chris B. Kirov</author>
-   <datecreated>07.03.2016</datecreated>
+   <datecreated>26.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
-    class Chapter6Exercise15
+    class Chapter8Exercise8
     {
         /*
-            Method: int hexadecimalToDecimal(string hex);
+          Method: int hexadecimalToDecimal(string hex);
 
-            It returns the decimal value of the parameter
-            holding the string hexadecimal value of a number.
-        */
+          It returns the decimal value of the parameter
+          holding the string hexadecimal value of a number.
+      */
         static int hexadecimalToDecimal(string hex)
         {
             int dec = 0;
@@ -52,18 +50,55 @@ namespace ProgrammingBasicsCSharp
                     case 'F': case 'f': summand = 15; break;
                 }
                 // accumulate the decimal value as number within [0,15] * 16 ^ index
-                dec += summand * (int) Math.Pow(16, i);
+                dec += summand * (int)Math.Pow(16, i);
             }
             return dec;
         }
+
+        //------------------------------------------------------------------
+        /*
+           Method: string binaryRepresentation = decimalToBinaryLogical(n);
+
+           It returns a string holding the binary representation 
+           of the number passed as parameter.
+        */
+        static string decimalToBinaryLogical(int n)
+        {
+            string binary = string.Empty;
+
+            int length = sizeof(int) * 8;
+            for (int i = 0; i < length; i++)
+            {
+                int mask = 1;
+                int valueOfLSB = (n >> i) & mask;
+
+                binary = valueOfLSB.ToString() + binary;
+            }
+            return binary;
+        }
+
+        //----------------------------------------------------------------------------------------
+        /*
+            Method: string binary = hexadecimalToBinary(hexString);
+
+            It returns a string representing the binary value
+            of the input parameter.
+
+            It successively converts hex -> decimal -> binary
+        */
+        static string hexadecimalToBinary(string hexString)
+        {
+            return decimalToBinaryLogical(hexadecimalToDecimal(hexString));
+        }
+
         //========================================================================================
 
         static void Main()
         {
-            Console.WriteLine("Type a hexadecimal value:");
+            Console.WriteLine("Type a hexadecimal string:");
             string hex = Console.ReadLine();
 
-            Console.WriteLine("{0} as decimal is {1}", hex, hexadecimalToDecimal(hex));
+            Console.WriteLine("{0}(16) -> {1}(2)", hex, hexadecimalToBinary(hex));
         }
     }
 }
