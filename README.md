@@ -155,6 +155,7 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 ---
 
 1. Convert `int` and `float` numbers into _binary_ strings.  
+2. Convert a _binary_ string to _hexadecimal_ and _decimal_.
 
 ---
 
