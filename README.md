@@ -173,6 +173,9 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 ####Chapter 9
 ---
  
+ 
+ 
+ 
 ---
 
 II. [Exam Practice.][3]
@@ -197,19 +200,20 @@ II. [Exam Practice.][3]
 4. Magic Car Numbers.
 5. Bit flipper.
 
- ---
- III. Homework
+---
+
+III. Homework
  
- ####1. First steps in Coding
+####1. First steps in Coding
  
- 1. Print _"Hello C#"_.
- 2. Simple Algebraic Expression.
- 3. _GUI application_: simple summator.
- 4. _Web application_: simple summator.
- 5. Print the numbers from `1` to `20`, each on a new line.
- 6. _Print a right-angle triangle_ using the symbol `*`.
- 7. Read base `a` and height `b`, calculate the _area of rectangle_.
- 8. Read side length `N`, _print a square_ of asterisks with side lenght `N`.
+1. Print _"Hello C#"_.
+2. Simple Algebraic Expression.
+3. _GUI application_: simple summator.
+4. _Web application_: simple summator.
+5. Print the numbers from `1` to `20`, each on a new line.
+6. _Print a right-angle triangle_ using the symbol `*`.
+7. Read base `a` and height `b`, calculate the _area of rectangle_.
+8. Read side length `N`, _print a square_ of asterisks with side lenght `N`.
  
 ####2. Simple calculations
 
