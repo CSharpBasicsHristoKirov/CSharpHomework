@@ -202,7 +202,7 @@ II. [Exam Practice.][3]
 
 ---
 
-III. Homework
+III. [Homework][6]
  
 ####1. First steps in Coding
  
@@ -243,3 +243,4 @@ IDE: Visual Studio 2015
 [3]: https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics
 [4]: https://www.visualstudio.com/
 [5]: https://msdn.microsoft.com/en-us/library/ms123401.aspx
+[6]: https://softuni.bg/trainings/1336/programming-basics-march-2016
