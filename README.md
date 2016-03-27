@@ -201,6 +201,7 @@ II. [Exam Practice.][3]
  III. Homework
  
  ####1. First steps in Coding
+ 
  1. Print _"Hello C#"_.
  2. Simple Algebraic Expression.
  3. _GUI application_: simple summator.
@@ -211,6 +212,7 @@ II. [Exam Practice.][3]
  8. Read side length `N`, _print a square_ of asterisks with side lenght `N`.
  
 ####2. Simple calculations
+
 1.
  
 
