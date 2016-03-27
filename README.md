@@ -217,8 +217,24 @@ III. [Homework][6]
  
 ####2. Simple calculations
 
-1.
- 
+1. Visual Studio _blank solution_. Collect projects related to different exercises under common solution.
+2. Square _area_.
+3. Inch to centimeter _unit converter_.
+4. Greetings by personal name.
+5. Text and character _concatenation_.
+6. Trapezium _area_.
+7. Circle _area_ and _perimeter_.
+8. Rectangle _area_.
+9. _GUI application_ BGN to EUR _currency converter_.
+10. Triangle _area_.
+11. Celsius to Fahrenheit _degrees converter_.
+12. Degrees to radians _angle units converter_.
+13. _GUI application_ USD to BGN _currency converter_.
+14. Multiple currency converter.
+15. _Astronomical date_ manipulation.
+16. _GUI application_ push a button at put on random location.
+17. Number of class room seats.
+  
 
 
 ---
