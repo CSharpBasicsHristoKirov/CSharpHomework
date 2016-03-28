@@ -180,10 +180,22 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 
 II. [Exam Practice.][3]
 
-14.04.2014
+####Exam date: 12.04.2014 
 
-####1. Morning
+######1. Morning
+
+1. Triangle.
+2. Pairs.
+3. House.
+4. Magic Dates.
+5. Bits Killer.
+
+######2. Evening
+
 ---
+####Exam date: 14.04.2014
+
+######1. Morning
 
 1. Fruit Market.
 2. Biggest triple.
@@ -191,14 +203,14 @@ II. [Exam Practice.][3]
 4. Longest Alphabetical Word.
 5. Bit Shooter.
  
-####2. Evening
----
+######2. Evening
 
 1. Inside The Building.
 2. Student Cables.
 3. Programmer DNA.
 4. Magic Car Numbers.
 5. Bit flipper.
+
 
 ---
 
