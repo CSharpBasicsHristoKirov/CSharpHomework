@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiple-Currency-Converter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1000-Days-After-Birth", "1000-Days-After-Birth\1000-Days-After-Birth.csproj", "{042EFB97-CBD5-487B-BB9F-834B868D1414}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catch-the-Button", "Catch-the-Button\Catch-the-Button.csproj", "{30FCDE6C-0E84-45D8-9C8A-9BD0F1C6A135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom-Seats", "Classroom-Seats\Classroom-Seats.csproj", "{4E31D84F-7A77-4297-8BCE-5B56DF129ECC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{042EFB97-CBD5-487B-BB9F-834B868D1414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042EFB97-CBD5-487B-BB9F-834B868D1414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042EFB97-CBD5-487B-BB9F-834B868D1414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FCDE6C-0E84-45D8-9C8A-9BD0F1C6A135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FCDE6C-0E84-45D8-9C8A-9BD0F1C6A135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FCDE6C-0E84-45D8-9C8A-9BD0F1C6A135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FCDE6C-0E84-45D8-9C8A-9BD0F1C6A135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E31D84F-7A77-4297-8BCE-5B56DF129ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E31D84F-7A77-4297-8BCE-5B56DF129ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E31D84F-7A77-4297-8BCE-5B56DF129ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E31D84F-7A77-4297-8BCE-5B56DF129ECC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
