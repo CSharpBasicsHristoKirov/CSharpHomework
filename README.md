@@ -257,6 +257,7 @@ Page 265, Proposed Solution to Exercise 15: upper case / lower case ? `(int) ch 
 Errata:<br>
 Page 260-1, Exercise 14 : Matrix rows next to each other and on next page.<br>
 Page 262, Exercise 26 : Firtst row of right matrix appended at the bottom of the left.<br>
+Page 330, Triangles with different size: all but two lines from the triangle on the rhs of the picture indented. 
 </sub>
 
 ---
