@@ -173,7 +173,8 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 ####Chapter 9
 ---
  
- 
+ 1. Implmenent a method that prints a greeting by name read from standard input. Create a [_Unit Test_](https://msdn.microsoft.com/en-us/library/ms182532.aspx) for the implemented method.
+ 2. Implement `GetMax(int a, int b)` returning the largest of the two input parameters.
  
  
 ---
