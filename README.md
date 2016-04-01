@@ -172,9 +172,9 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 
 ####Chapter 9
 ---
- 
+ <sup>From now on it is implied that all the tasks must be implemented via methods.</sup>
  1. Print a greeting by name read from standard input. Create a [_Unit Test_](https://msdn.microsoft.com/en-us/library/hh694602.aspx) for the implemented method.
- 2. Implement `GetMax(int a, int b)` returning the largest of the two input parameters. <sup>From now on it is implied that all the tasks must be implemented via methods</sup>
+ 2. Implement `GetMax(int a, int b)` returning the largest of the two input parameters. 
  3. Return the English name of the last digit of a number.
  4. Read an number `n`. Check how many times `n` occures in an integer array. Write a test unit for the method.
  5. Read an index `n`. Check if an element with index `n` is smaller- or greater- than its two adjacent. Write a test unit.
