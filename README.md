@@ -183,13 +183,16 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
  8. _Sum large integers_ represented as arrays, using Little-Endian representation.
  9. Write a method that finds _element with max value_ in subarray. Use the method to _sort an array_ in ascending / descending order.
  10. Calculate `n!`, where `1 < n <= 100`. Use [`BigInteger`](https://msdn.microsoft.com/en-us/library/system.numerics.biginteger(v=vs.110).aspx) or array representaion.
- 11. Implement a program that contains a menu prompting the use to: 
-  ⋅⋅*reverses integer dgi    
-  ⋅⋅*calculates _arithmetic mean_,
-  ⋅⋅*finds the _root of the linear eqation_. 
- Checks input validity for the three cases. 
+ 11. Implement a program that contains a menu prompting the use to: reverses integer digits, calculates _arithmetic mean_, finds the _root of the linear eqation_. Checks input validity for the three cases. 
+ 12. _Sum polynomials_.
+ 13. _Multiply polynomials_. 
  
- 
+####Chapter 10
+--- 
+
+1.
+
+
 ---
 
 II. [Exam Practice.][3]
