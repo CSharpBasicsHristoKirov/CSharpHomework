@@ -261,8 +261,8 @@ III. [Homework][6]
 13. _GUI application_ USD to BGN _currency converter_.
 14. Multiple currency converter.
 15. _Astronomical date_ manipulation.
-16. _GUI application_ push a button at put on random location.
-17. Number of class room seats.
+16. _GUI application_ push a button appearing on random location.
+17. Number of classroom seats.
   
 
 
