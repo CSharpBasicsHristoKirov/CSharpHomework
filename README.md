@@ -179,7 +179,15 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
  4. Read an number `n`. Check how many times `n` occures in an integer array. Write a test unit for the method.
  5. Read an index `n`. Check if an element with index `n` is smaller- or greater- than its two adjacent. Write a test unit.
  6. Find the first array element larger than its two adjacent.
- 7. Print the digits of a number in the reverse order.
+ 7. Reverse integer digits. 
+ 8. _Sum large integers_ represented as arrays, using Little-Endian representation.
+ 9. Write a method that finds _element with max value_ in subarray. Use the method to _sort an array_ in ascending / descending order.
+ 10. Calculate `n!`, where `1 < n <= 100`. Use [`BigInteger`](https://msdn.microsoft.com/en-us/library/system.numerics.biginteger(v=vs.110).aspx) or array representaion.
+ 11. Implement a program that contains a menu prompting the use to: 
+  ⋅⋅*reverses integer dgi    
+  ⋅⋅*calculates _arithmetic mean_,
+  ⋅⋅*finds the _root of the linear eqation_. 
+ Checks input validity for the three cases. 
  
  
 ---
