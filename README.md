@@ -172,7 +172,7 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 
 ####Chapter 9
 ---
- <sup>From now on it is implied that all the tasks must be implemented via methods.</sup>
+ <sup>From now on, it is implied that all the tasks must be implemented via methods.</sup>
  1. Print a greeting by name read from standard input. Create a [_Unit Test_](https://msdn.microsoft.com/en-us/library/hh694602.aspx) for the implemented method.
  2. Implement `GetMax(int a, int b)` returning the largest of the two input parameters. 
  3. Return the English name of the last digit of a number.
