@@ -45,7 +45,7 @@ Software University
  1. Area of figures.
  2. Bonus score.
  3. Cheap transport.
- 4. GUI Currency converter.
+ 4. _GUI_ Currency converter.
  5. Equal words.
  6. Even or odd.
  7. Excellent or not.
@@ -71,7 +71,7 @@ Software University
  4. Invalid Number.
  5. On time for the Exam.
  6. Personal Title.
- 7. Point and Rectangle.
+ 7. _GUI_ Point and Rectangle.
  8. Point in Rectangle.
  9. Point in the figure.
  10. Point on Rectangle border.
