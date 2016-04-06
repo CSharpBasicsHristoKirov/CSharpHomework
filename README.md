@@ -7,9 +7,102 @@ Software University
 ####Repository Content
 ---
 
-Exercises from:
+#I. [Homework][6]
+ 
+####1. First steps in Coding
+ 
+1. Print _"Hello C#"_.
+2. Simple Algebraic Expression.
+3. _GUI application_: simple summator.
+4. _Web application_: simple summator.
+5. Print the numbers from `1` to `20`, each on a new line.
+6. _Print a right-angle triangle_ using the symbol `*`.
+7. Read base `a` and height `b`, calculate the _area of rectangle_.
+8. Read side length `N`, _print a square_ of asterisks with side lenght `N`.
+ 
+####2. Simple calculations
 
-I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
+1. Visual Studio _blank solution_. Collect projects related to different exercises under common solution.
+2. Square _area_.
+3. Inch to centimeter _unit converter_.
+4. Greetings by personal name.
+5. Text and character _concatenation_.
+6. Trapezium _area_.
+7. Circle _area_ and _perimeter_.
+8. Rectangle _area_.
+9. _GUI application_ BGN to EUR _currency converter_.
+10. Triangle _area_.
+11. Celsius to Fahrenheit _degrees converter_.
+12. Degrees to radians _angle units converter_.
+13. _GUI application_ USD to BGN _currency converter_.
+14. Multiple currency converter.
+15. _Astronomical date_ manipulation.
+16. _GUI application_ push a button appearing on random location.
+17. Number of classroom seats.
+  
+####3. Simple conditions
+
+ 1. Area of figures.
+ 2. Bonus score.
+ 3. Cheap transport.
+ 4. GUI Currency converter.
+ 5. Equal words.
+ 6. Even or odd.
+ 7. Excellent or not.
+ 8. Excellent result.
+ 9. Greater number.
+ 10. Metric converter.
+ 11. Number from 1 to 100 to text.
+ 12. Numbers from 100 to 200.
+ 13. Numer to text.
+ 14. Password guess.
+ 15. Simple conditions.
+ 16. Speed info.
+ 17. Sum seconds.
+ 18. Swimming pool pipes.
+ 19. Three equal numbers.
+ 20. Time in 15 minutes.
+
+####4. Complex conditions
+
+---
+
+#II. [Exam Practice.][3]
+
+####Exam date: 12.04.2014 
+
+######1. Morning
+
+1. Triangle.
+2. Pairs.
+3. House.
+4. Magic Dates.
+5. Bits Killer.
+
+######2. Evening
+
+---
+####Exam date: 14.04.2014
+
+######1. Morning
+
+1. Fruit Market.
+2. Biggest triple.
+3. Wine Glass.
+4. Longest Alphabetical Word.
+5. Bit Shooter.
+ 
+######2. Evening
+
+1. Inside The Building.
+2. Student Cables.
+3. Programmer DNA.
+4. Magic Car Numbers.
+5. Bit flipper.
+
+---
+
+#III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 
 ####Chapter 1
 ---
@@ -193,101 +286,9 @@ I. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 1.
 
 
----
-
-II. [Exam Practice.][3]
-
-####Exam date: 12.04.2014 
-
-######1. Morning
-
-1. Triangle.
-2. Pairs.
-3. House.
-4. Magic Dates.
-5. Bits Killer.
-
-######2. Evening
-
----
-####Exam date: 14.04.2014
-
-######1. Morning
-
-1. Fruit Market.
-2. Biggest triple.
-3. Wine Glass.
-4. Longest Alphabetical Word.
-5. Bit Shooter.
- 
-######2. Evening
-
-1. Inside The Building.
-2. Student Cables.
-3. Programmer DNA.
-4. Magic Car Numbers.
-5. Bit flipper.
 
 
 ---
-
-III. [Homework][6]
- 
-####1. First steps in Coding
- 
-1. Print _"Hello C#"_.
-2. Simple Algebraic Expression.
-3. _GUI application_: simple summator.
-4. _Web application_: simple summator.
-5. Print the numbers from `1` to `20`, each on a new line.
-6. _Print a right-angle triangle_ using the symbol `*`.
-7. Read base `a` and height `b`, calculate the _area of rectangle_.
-8. Read side length `N`, _print a square_ of asterisks with side lenght `N`.
- 
-####2. Simple calculations
-
-1. Visual Studio _blank solution_. Collect projects related to different exercises under common solution.
-2. Square _area_.
-3. Inch to centimeter _unit converter_.
-4. Greetings by personal name.
-5. Text and character _concatenation_.
-6. Trapezium _area_.
-7. Circle _area_ and _perimeter_.
-8. Rectangle _area_.
-9. _GUI application_ BGN to EUR _currency converter_.
-10. Triangle _area_.
-11. Celsius to Fahrenheit _degrees converter_.
-12. Degrees to radians _angle units converter_.
-13. _GUI application_ USD to BGN _currency converter_.
-14. Multiple currency converter.
-15. _Astronomical date_ manipulation.
-16. _GUI application_ push a button appearing on random location.
-17. Number of classroom seats.
-  
-####3. Simple conditions
-
- 1. Area of figures.
- 2. Bonus score.
- 3. Cheap transport.
- 4. GUI Currency converter.
- 5. Equal words.
- 6. Even or odd.
- 7. Excellent or not.
- 8. Excellent result.
- 9. Greater number.
- 10. Metric converter.
- 11. Number from 1 to 100 to text.
- 12. Numbers from 100 to 200.
- 13. Numer to text.
- 14. Password guess.
- 15. Simple conditions.
- 16. Speed info.
- 17. Sum seconds.
- 18. Swimming pool pipes.
- 19. Three equal numbers.
- 20. Time in 15 minutes.
-
-####4. Complex conditions
 
 
 ---
