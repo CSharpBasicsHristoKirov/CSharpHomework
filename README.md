@@ -65,7 +65,20 @@ Software University
 
 ####4. Complex conditions
 
- 1. 
+ 1. Cinema.
+ 2. Fruit or Vegetable.
+ 3. Fruit shop.
+ 4. Invalid Number.
+ 5. On time for the Exam.
+ 6. Personal Title.
+ 7. Point and Rectangle.
+ 8. Point in Rectangle.
+ 9. Point in the figure.
+ 10. Point on Rectangle border.
+ 11. Small shop.
+ 12. Trade comission.
+ 13. Volleyball.
+ 14. Voyage.
 
 ---
 
