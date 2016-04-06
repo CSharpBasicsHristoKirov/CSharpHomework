@@ -264,6 +264,30 @@ III. [Homework][6]
 16. _GUI application_ push a button appearing on random location.
 17. Number of classroom seats.
   
+####3. Simple conditions
+
+ 1. Area of figures.
+ 2. Bonus score.
+ 3. Cheap transport.
+ 4. GUI Currency converter.
+ 5. Equal words.
+ 6. Even or odd.
+ 7. Excellent or not.
+ 8. Excellent result.
+ 9. Greater number.
+ 10. Metric converter.
+ 11. Number from 1 to 100 to text.
+ 12. Numbers from 100 to 200.
+ 13. Numer to text.
+ 14. Password guess.
+ 15. Simple conditions.
+ 16. Speed info.
+ 17. Sum seconds.
+ 18. Swimming pool pipes.
+ 19. Three equal numbers.
+ 20. Time in 15 minutes.
+
+####4. Complex conditions
 
 
 ---
