@@ -7,7 +7,7 @@ Software University
 ####Repository Content
 ---
 
-#I. [Homework][6]
+##I. [Homework][6]
  
 ####1. First steps in Coding
  
@@ -69,7 +69,7 @@ Software University
 
 ---
 
-#II. [Exam Practice.][3]
+##II. [Exam Practice.][3]
 
 ####Exam date: 12.04.2014 
 
@@ -104,7 +104,7 @@ Software University
 
 ---
 
-#III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
+##III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 
 ####Chapter 1
 ---
