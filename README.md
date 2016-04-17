@@ -80,6 +80,43 @@ Software University
  13. Volleyball.
  14. Voyage.
 
+####5. Loops
+
+ 1. Equal Pairs.
+ 2. Half Sum Element.
+ 3. Histogram.
+ 4. Latin Letters.
+ 5. Left and Right Sum.
+ 6. Max Number.
+ 7. Min Number.
+ 8. Numbers 1 to 100.
+ 9. Numbers ending in 7.
+ 10. Odd - Even Position.
+ 11. Odd - Even sum.
+ 12. Perfect division.
+ 13. Sum numbers.
+ 14. GUI Turtle Graphics.
+ 15. Vowels Sum.
+ 
+####6. Drawing with Loops
+
+ 1. Butterfly.
+ 2. Christmas Tree.
+ 3. Diamond.
+ 4. Draw fort.
+ 5. House.
+ 6. Triangle with dollars.
+ 7. Rectangle of 10 by 10 Stars.
+ 8. Rectangle of N by N stars.
+ 9. Rhombus stars.
+ 10. Square of stars.
+ 11. Sunglasses.
+ 12. _Web Application_ Rattings.
+ 
+####7. Advanced Loops
+
+ 1. 
+
 ---
 
 ##II. [Exam Practice.][3]
