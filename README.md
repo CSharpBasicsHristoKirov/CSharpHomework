@@ -115,7 +115,23 @@ Software University
  
 ####7. Advanced Loops
 
- 1. 
+ 1. Check prime.
+ 2. Enter even number.
+ 3. Even powers of `2`.
+ 4. Factorial.
+ 5. Fibonacci.
+ 6. _Web app_ Fruits web game.
+ 7. Greatest common divisor.
+ 8. Number pyramid.
+ 9. Numbers from 1 to N with step 3.
+ 10. Numbers in range.
+ 11. Numbers from N to 1.
+ 12. Number table.
+ 13. Powers of `2`.
+ 14. Sequence of `2k + 1`.
+ 15. Sum digits.
+ 16. Magic numbers.
+ 17. Stupid password generator.
 
 ---
 
