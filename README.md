@@ -168,6 +168,14 @@ Software University
 4. Magic Car Numbers.
 5. Bit flipper.
 
+####Exam date: 29.03.2015
+
+ 1. Torrent Pirate.
+ 2. Basket Battle.
+ 3. Dumbbell.
+ 4. Encrypted Matrix.
+ 5. Game of Bits.
+
 ---
 
 ##III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
