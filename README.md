@@ -178,6 +178,14 @@ Software University
  4. Encrypted Matrix.
  5. Game of Bits.
 
+######1. Evening
+
+ 1. Array Matcher.
+ 2. Currency Check.
+ 3. Dream Item.
+ 4. Knight Path.
+ 5. Magic Wand.
+
 ---
 
 ##III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
