@@ -47,7 +47,7 @@ namespace ProgrammingBasicsCSharp
             Method: printPermutations(arr);
 
             It prints all permutations of the elements 
-            in arr by recursivelly swapping each of the 
+            in arr by recursively swapping each of the 
             elements with the rest.
         */
         static void permute(int[] arr, int currentActivationRecord, int lastActivationRecord)

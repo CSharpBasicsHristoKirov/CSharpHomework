@@ -10,12 +10,12 @@
                       -   -------- ---------------------
                       sign exponent mantissa
                Input: -
-              Output: !!! Deviations in mantissa bits
+              Output: !!! Deviations in mantissa bits, not sure if correct !!!
    </summary>
    <author>Chris B. Kirov</author>
    <datecreated>27.03.2016</datecreated>
 */
-using System;
+using System; 
 using System.Text;
 
 namespace ProgrammingBasicsCSharp

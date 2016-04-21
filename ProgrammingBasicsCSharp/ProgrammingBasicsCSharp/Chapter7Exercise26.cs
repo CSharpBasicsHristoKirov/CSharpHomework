@@ -130,7 +130,7 @@ namespace ProgrammingBasicsCSharp
 
                 // Console.ReadKey();
 
-                // adjust lenght of diagonal 
+                // adjust length of diagonal 
                 if (endingRow >= 0)
                 {
                     --endingRow;

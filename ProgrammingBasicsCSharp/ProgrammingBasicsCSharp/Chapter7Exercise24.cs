@@ -7,7 +7,7 @@
                       (without repetition) of k elements within [1, n].  
 
                       number of variations = n! / (n - k)!
-                      or all permutatations of n with group of k elements.
+                      or all permutations of n with group of k elements.
                Input: -
               Output: -
    </summary>
@@ -30,13 +30,14 @@ namespace ProgrammingBasicsCSharp
        */
         static void printVariations(int n, int k)
         {
-            // define and initialize an array of elements
+            // define and initialize an array of elements to choose from
             int[] elements = new int[n];
             for (int i = 0; i < n; i++)
             {
                 elements[i] = i + 1;
             }
 
+			// number of selected elements
             int length = k;
 
             variations(elements, length, new int[k]);
