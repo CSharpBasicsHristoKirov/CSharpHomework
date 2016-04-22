@@ -186,6 +186,14 @@ Software University
  4. Knight Path.
  5. Magic Wand.
 
+####Exam date: 17.03.2016
+
+ 1. Beer Stock.
+ 2. Cake Tycoon.
+ 3. Emergency Repairs.
+ 4. Illuminati Lock.
+ 5. Master Herbalist.
+
 ---
 
 ##III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
