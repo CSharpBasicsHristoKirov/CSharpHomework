@@ -1,7 +1,7 @@
 Software University 
 ===
   
-##[Course Programming Basics][1]  26. March - 24. April 2016 
+
 
 
 ####Repository Content
