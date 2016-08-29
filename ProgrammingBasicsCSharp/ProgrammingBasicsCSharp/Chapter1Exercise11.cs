@@ -18,11 +18,11 @@ namespace ProgrammingBasicsCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Type your age:");
+            Console.WriteLine("Type your age: ");
 
-            int age = Convert.ToInt32(Console.ReadLine());
+            int age = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("After 10 years you will be: {0}", age + 10);
+            Console.WriteLine("After 10 years you will be: {0}.", age + 10);
         }
     }
 }

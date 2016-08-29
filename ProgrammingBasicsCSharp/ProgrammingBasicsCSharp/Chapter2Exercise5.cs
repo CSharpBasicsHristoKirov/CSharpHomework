@@ -19,10 +19,11 @@ namespace ProgrammingBasicsCSharp
         static void Main()
         {
             int var1 = 72;
-            // explicitly convert to character value
-            char var2 = (char) 72;
 
-            Console.WriteLine("The character corresponding to 72 is: {0}", var2);
+            // explicitly convert (type cast) to character value
+            char var2 = (char) var1;
+
+            Console.WriteLine("The character corresponding to 72 (i.e. ASCII 72) is: {0}", var2);
         }
     }
 }

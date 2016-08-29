@@ -32,11 +32,11 @@ namespace ProgrammingBasicsCSharp
             int benchmark = 7;
             if (remainder == benchmark)
             {
-                Console.WriteLine("The third digit from the right in: " + testValue + " is: " + remainder);
+                Console.WriteLine("The third digit from the right in: {0} is {1}.", testValue, remainder);
             }
             else
             {
-                Console.WriteLine("The third digit from the right in: " + testValue + " is not 7.");
+                Console.WriteLine("The third digit from the right in: {0} is not 7.", testValue);
             }
         }
     }

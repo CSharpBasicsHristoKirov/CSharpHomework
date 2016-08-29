@@ -17,23 +17,26 @@ namespace ProgrammingBasicsCSharp
 {
     public class Chapter9Exercise1
     {
-        /*
-            Method: GreetinsByName(string name)
-        */
-        public void GreetinsByName(string name)
-        {
-            Console.WriteLine("Hello, {0}!", name);
-        }
-
-        //===================================================================
         static void Main()
         {
-            string name = Console.ReadLine();
-
             // member function is not static, thus it can be accessed only via object instantiation
             Chapter9Exercise1 objectInstantiation = new Chapter9Exercise1();
 
-            objectInstantiation.GreetinsByName(name);
+            objectInstantiation.GreetinsByName();
         }
+        //------------------------------------------------------------------------------------------------
+
+        /*
+            Method: GreetinsByName(string name)
+
+        */
+        public void GreetinsByName()
+        {
+            Console.WriteLine("Type your name: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Hello, {0}!", name);
+        }
+
     }
 }

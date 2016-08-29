@@ -18,33 +18,55 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise13
     {
+        static void Main()
+        {
+            // read input
+            Console.WriteLine("Type number of rows: " );
+            int n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Type number of columns: ");
+            int m = int.Parse(Console.ReadLine());
+
+            // define the matrix 
+            int[,] matrix2D = new int[n, m];
+
+            Populate2Darray(matrix2D);
+
+            PrintMatrix(matrix2D);
+
+            // find submatrix with max sum of elements
+            int submatrixsize = 3;
+            FindSubMatrixMaxSum(matrix2D, submatrixsize);
+        }
+        //----------------------------------------------------------------------------
+
         /*
-            Method: populate2Darray(arr2D);
+            Method: Populate2Darray(arr2D);
 
             It prompts the user to fill in the 
             elements of predefined 2D array.
         */
-        static void populate2Darray(int[, ] arr2D)
+        static void Populate2Darray(int[,] arr2D)
         {
             for (int row = 0; row < arr2D.GetLength(0); row++)
             {
                 for (int column = 0; column < arr2D.GetLength(1); column++)
                 {
                     Console.Write("arr[{0},{1}] = ", row, column);
-                    arr2D[row,column] = int.Parse(Console.ReadLine());
+                    arr2D[row, column] = int.Parse(Console.ReadLine());
                 }
             }
             Console.WriteLine("All array values assigned.");
         }
-
         //----------------------------------------------------------------------------
+
         /*
-            Method: findSubMatrixMaxSum(arr2D, submatrixDimension);
+            Method: FindSubMatrixMaxSum(arr2D, submatrixDimension);
 
             It returns the submatrix with the max sum of the values of
             its elements.
         */
-        static void findSubMatrixMaxSum(int[,] arr2D, int submatrixDimension)
+        static void FindSubMatrixMaxSum(int[,] arr2D, int submatrixDimension)
         {
             int maxSum = int.MinValue;
             int startRow = 0;
@@ -55,7 +77,6 @@ namespace ProgrammingBasicsCSharp
             {
                 for (int j = 0; j <= arr2D.GetLength(1) - submatrixDimension; j++)
                 {
-                    // Console.WriteLine("\n[i, j] = {0}, {1}", i, j);
                     // sum all the elements of the subarray
                     int currentSum = 0;
                     for (int row = i; row < submatrixDimension + i; row++)
@@ -63,7 +84,6 @@ namespace ProgrammingBasicsCSharp
                         for (int column = j; column < submatrixDimension + j; column++)
                         {
                             currentSum += arr2D[row, column];
-                            // Console.Write("sum: {0}. ", currentSum);
                         }
                     }
 
@@ -87,16 +107,16 @@ namespace ProgrammingBasicsCSharp
                     Console.Write("{0,3}", arr2D[i, j]);
                 }
                 Console.WriteLine();
-            }    
+            }
         }
-
         //-----------------------------------------------------------------------------
+
         /*
-            Method: printMatrix(arr);
+            Method: PrintMatrix(arr);
 
             It prints all the elements of the 2D array
         */
-        static void printMatrix(int[,] arr)
+        static void PrintMatrix(int[,] arr)
         {
             for (int row = 0; row < arr.GetLength(0); row++)
             {
@@ -107,28 +127,6 @@ namespace ProgrammingBasicsCSharp
                 Console.WriteLine();
             }
             Console.WriteLine();
-        }
-
-        //=============================================================================
-        static void Main()
-        {
-            // read input
-            Console.WriteLine("Type number of rows: " );
-            int n = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Type number of columns: ");
-            int m = int.Parse(Console.ReadLine());
-
-            // define the matrix 
-            int[,] matrix2D = new int[n, m];
-
-            populate2Darray(matrix2D);
-
-            printMatrix(matrix2D);
-
-            // find submatrix with max sum of elements
-            int submatrixsize = 3;
-            findSubMatrixMaxSum(matrix2D, submatrixsize);
         }
     }
 }

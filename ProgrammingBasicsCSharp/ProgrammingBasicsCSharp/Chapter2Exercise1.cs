@@ -26,9 +26,9 @@ namespace ProgrammingBasicsCSharp
             int var8 = 970700000;            // [-2147483648, 2147483647]
             byte var9 = 112;                 // [0, 255]
             sbyte var10 = -44;               // [-128, 127]
-            int var11 = -1000000;            // [-2e+9, 2e+9 - 1]
+            int var11 = -1000000;            // [-2e+32, 2e+32 - 1]
             short var12 = 1990;              // [-32768, 32767]
-            long var13 = 123456789123456789; // [-9e+18, -9e+18 - 1]
+            long var13 = 123456789123456789; // [-2e+64, 9e+64 - 1]
 
             Console.WriteLine("Check stored values: ");
             Console.WriteLine("var1: {0}", var1);
@@ -38,12 +38,12 @@ namespace ProgrammingBasicsCSharp
             Console.WriteLine("var5: {0}", var5);
             Console.WriteLine("var6: {0}", var6);
             Console.WriteLine("var7: {0}", var7);
-            Console.WriteLine("var8: {0}", var8);
+            Console.WriteLine("var8: {0:N}", var8);
             Console.WriteLine("var9: {0}", var9);
             Console.WriteLine("var10: {0}", var10);
             Console.WriteLine("var11: {0}", var11);
             Console.WriteLine("var12: {0}", var12);
-            Console.WriteLine("var13: {0}", var13);
+            Console.WriteLine("var13: {0:N}", var13);
         }
     }
 }

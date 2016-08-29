@@ -14,7 +14,6 @@
 */
 using System;
 
-
 namespace Chapter10Exercise1
 {
     class SimulateNestedLoops

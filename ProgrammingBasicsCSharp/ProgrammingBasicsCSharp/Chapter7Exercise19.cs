@@ -18,25 +18,37 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise19
     {
+        static void Main()
+        {
+            uint max = 1000000;
+            bool[] sieve= new bool[max];
+
+            FindPrimes(sieve);
+
+            int numbersPerLine = 50;
+            PrintPrimes(sieve, numbersPerLine);
+        }
+        //----------------------------------------------------------------
+
         /*
-	        Function: find_primes(boolArray);
+	        Function: FindPrimes(boolArray);
 
             It returns all the prime numbers till the
-            number: size_of_array, in the form of the
+            number: sizeOfArray, in the form of the
             indexes of the array with value: true.
 
             It implements the Sieve of Eratosthenes,
             consisted of:
 
-	        a loop through the first "sqrt(size_of_array)"
+	        a loop through the first "sqrt(sizeOfArray)"
 	        numbers starting from the first prime(2).
 
-	        a loop through all the indexes < size_of_array,
+	        a loop through all the indexes < sizeOfArray,
             marking the ones satisfying the relation i^2 + n*i
 	        as false, i.e.composite numbers, where i - known prime
             number starting from 2.
         */
-        static void findPrimes(bool[] sieve)
+        static void FindPrimes(bool[] sieve)
         {
             // by definition 0 and 1 are not prime numbers
             sieve[0] = false;
@@ -49,8 +61,8 @@ namespace ProgrammingBasicsCSharp
             }
 
             // loop through the first prime numbers < sqrt(max)  
-            uint first_prime = 2;
-            for (uint i = first_prime; i <= Math.Sqrt(sieve.Length); ++i)
+            uint firstPrime = 2;
+            for (uint i = firstPrime; i <= Math.Sqrt(sieve.Length); ++i)
             {
                 // find multiples of primes till < max
                 if (sieve[i] == true)
@@ -66,12 +78,12 @@ namespace ProgrammingBasicsCSharp
 
         //----------------------------------------------------------------
         /*
-            Function: print_primes(boolArray)
+            Function: PrintPrimes(boolArray)
 
             It prints all the prime numbers, 
             i.e. the indexes with value: true.
         */
-        static void printPrimes(bool[] sieve, int perLine)
+        static void PrintPrimes(bool[] sieve, int perLine)
         {
             // all the indexes of the array marked as true are primes
             for (uint i = 0; i < sieve.Length; ++i)
@@ -81,24 +93,12 @@ namespace ProgrammingBasicsCSharp
                     Console.Write("{0}, ", i);
                 }
 
-                if (i % perLine == 0 && i !=0)
+                if (i % perLine == 0 && i != 0)
                 {
                     Console.WriteLine();
                 }
             }
             Console.WriteLine();
-        }
-        //==================================================================
-
-        static void Main()
-        {
-            uint max = 1000000;
-            bool[] sieve= new bool[max];
-
-            findPrimes(sieve);
-
-            int numbersPerLine = 50;
-            printPrimes(sieve, numbersPerLine);
         }
     }
 }

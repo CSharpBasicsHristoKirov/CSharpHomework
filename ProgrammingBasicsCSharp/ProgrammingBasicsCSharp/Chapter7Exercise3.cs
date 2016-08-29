@@ -20,17 +20,28 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise3
     {
+        static void Main()
+        {
+            // define arrays
+            char[] first = {'a', 'b', 'c' };
+            char[] second = { 'a', 'b' , 'd'};
+
+            // compare and print result
+            CompareLexicographically(first, second);
+        }
+        //------------------------------------------------------------------
+
         /*
-            Method: compareLexicographically(a, b);
+           Method: CompareLexicographically(a, b);
 
-            Compare lexicographically the two arrays
-            passed as parameters and print result.
+           Compare lexicographically the two arrays
+           passed as parameters and print result.
 
-            Comparison criteria:
-            1. Arrays lengths. 
-            2. Accumulated ASCII values of the array characters. 
-        */
-        static void compareLexicographically(char[] a, char[] b)
+           Comparison criteria:
+           1. Arrays lengths. 
+           2. Accumulated ASCII values of the array characters. 
+       */
+        static void CompareLexicographically(char[] a, char[] b)
         {
             if (a.Length == b.Length) // same lengths
             {
@@ -69,17 +80,6 @@ namespace ProgrammingBasicsCSharp
                     Console.WriteLine("First array lexicographically greater than second.\n");
                 }
             }
-        }
-
-        //========================================================================================
-        static void Main()
-        {
-            // define arrays
-            char[] first = {'a', 'b', 'c' };
-            char[] second = { 'a', 'b' , 'd'};
-
-            // compare and print result
-            compareLexicographically(first, second);
         }
     }
 }

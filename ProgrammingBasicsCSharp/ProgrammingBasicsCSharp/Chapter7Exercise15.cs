@@ -19,24 +19,71 @@ namespace ProgrammingBasicsCSharp
     {
         static void Main()
         {
+            InitializeArray(alphabet);
+
             Console.WriteLine("Type a word in lower case:");
-            // assumes english alphabet characters
+            
             string word = Console.ReadLine();
 
-            Console.WriteLine("The letter indexes are:");
-            for (int i = 0; i < word.Length; i++)
+            PrintLetterIndexes(word);
+        }
+        //--------------------------------------------------------------------------------------------
+
+        // data members
+        const int length = 26;
+        static char[] alphabet = new char[length];
+
+        //--------------------------------------------------------------------------------------------
+
+        // member methods
+        /*
+            Method: InitializeArray(char[] arr)
+
+        */
+        static void InitializeArray(char[] arr)
+        {
+           
+            for (int i = 0; i < arr.Length; i++)
             {
-                // lower case letters
-                if ((int)word[i] - (int)'a' >= 0)
-                {
-                    Console.WriteLine("letter: {0} index: {1}", word[i], (int)word[i] - (int)'a');
-                }
-                else // upper case
-                {
-                    Console.WriteLine("letter: {0} index: {1}", word[i], (int)word[i] - (int)'A');
-                }
+                char letter = (char)('a' + i);
+                arr[i] = letter;
             }
         }
-        
+        //--------------------------------------------------------------------------------------------
+
+        /*
+            Method: FindIndex(char letter)
+
+            It returns the index of the letter in the 
+            array.
+            Assumes array stores English alphabet.
+        */
+        static int FindIndex(char letter)
+        {
+            int length = alphabet.Length;
+            for (int i = 0; i < length; i++)
+            {
+                if (alphabet[i] == letter)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        //--------------------------------------------------------------------------------------------
+
+        /*
+            Method: PrintLetterIndexes(string word)
+
+        */
+        static void PrintLetterIndexes(string word)
+        {
+            Console.WriteLine("The indexes of the letters in the word: {0} are:", word);
+            for (int i = 0; i < word.Length; i++)
+            {
+                Console.Write(" " + FindIndex(word[i]));
+            }
+            Console.WriteLine();
+        }
     }
 }

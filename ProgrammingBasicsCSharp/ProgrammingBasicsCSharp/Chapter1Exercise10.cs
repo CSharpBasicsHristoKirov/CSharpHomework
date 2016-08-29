@@ -19,21 +19,32 @@ namespace ProgrammingBasicsCSharp
     {
         static void Main(string[] args)
         {
-            int elem = 1;
+            // value of current element
+            int element = 1;
 
-            int length = 100;
-            for (int i = 0; i < length; i++)
+            // number of elements to be displayed
+            int n = 100;
+            for (int i = 0; i < n; i++)
             {
-                ++elem;
+                ++element;
                 if (i % 2 == 0)
                 {
-                    Console.WriteLine(elem);
+                    Console.Write(element);
                 }
                 else
                 {
-                    Console.WriteLine("-" + elem);
+                    // insert a '-' character in front of every odd element
+                    Console.Write("-" + element);
+                }
+
+                // separate elements with comma and empty space
+                if (i < n - 1)
+                {
+                    Console.Write(", ");
                 }
             }
+
+            Console.WriteLine();
         }
     }
 }

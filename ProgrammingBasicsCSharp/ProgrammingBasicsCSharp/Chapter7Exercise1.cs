@@ -22,7 +22,7 @@ namespace ProgrammingBasicsCSharp
         static void Main()
         {
             // define array of size 20
-            int size = 20;
+            const int size = 20;
             int[] numbers = new int[size];
 
             // initialize elements

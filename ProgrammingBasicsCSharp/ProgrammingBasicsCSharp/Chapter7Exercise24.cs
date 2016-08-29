@@ -15,36 +15,43 @@
    <datecreated>18.03.2016</datecreated>
 */
 using System;
-using System.Collections.Generic;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise24
     {
+        static void Main()
+        {
+            Console.Write("N = ");
+            int n = int.Parse(Console.ReadLine());
+
+            Console.Write("K = ");
+            int k = int.Parse(Console.ReadLine());
+
+            PrintVariations(n, k);
+        }
+        //-----------------------------------------------------------------------
+
         /*
-           Method: printVariations(n, k);
+           Method: PrintVariations(n, k);
 
            Wrapper for the recursive function.
            It prints all the k variations
            out of n elements.
        */
-        static void printVariations(int n, int k)
+        static void PrintVariations(int n, int k)
         {
             // define and initialize an array of elements to choose from
             int[] elements = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                elements[i] = i + 1;
-            }
+            InitializeArray(elements, n);
 
-			// number of selected elements
-            int length = k;
-
-            variations(elements, length, new int[k]);
+            // number of selected elements
+            Variations(elements, k, new int[k]);
         }
+        //-----------------------------------------------------------------------
 
         /*
-            Method:  variations(arr, length, ithVariation);
+            Method:  Variations(arr, length, ithVariation);
 
             Recursive function that accumulates all the (k == length) variations
             in array ithVariation and when filled up it prints it.
@@ -59,12 +66,12 @@ namespace ProgrammingBasicsCSharp
                             - update currentNumberOfElementsInVariations.
                             - calls itself with updated arguments.
         */
-        static void variations(int[] arr, int length, int[] ithVariation)
+        static void Variations(int[] arr, int length, int[] ithVariation)
         {
             // if k elements added to the variation: print it
             if (length == 0)
             {
-                print(", ", ithVariation);
+                PrintArray(", ", ithVariation);
                 return;
             }
 
@@ -73,17 +80,16 @@ namespace ProgrammingBasicsCSharp
             {
                 ithVariation[ithVariation.Length - length] = arr[i];
 
-                variations(arr, length - 1, ithVariation);
+                Variations(arr, length - 1, ithVariation);
             }
         }
-
         //-----------------------------------------------------------------------
-        /*
-            Method: printArray(label, arr);
 
-            Print label and the array elements.
+        /*
+            Method: PrintArray(label, arr);
+
         */
-        static void print(string label, int[] arr)
+        static void PrintArray(string label, int[] arr)
         {
             Console.Write("{");
             for (int i = 0; i < arr.Length; i++)
@@ -98,18 +104,18 @@ namespace ProgrammingBasicsCSharp
             Console.Write("}");
             Console.Write(label);
         }
-        //=======================================================================
+        //-----------------------------------------------------------------------
 
-        static void Main()
+        /*
+            Method: InitializeArray();
+
+        */
+        static void InitializeArray(int[] arr, int n)
         {
-            // read input
-            Console.Write("N = ");
-            int n = int.Parse(Console.ReadLine());
-
-            Console.Write("K = ");
-            int k = int.Parse(Console.ReadLine());
-
-            printVariations(n, k);
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = i + 1;
+            }
         }
     }
 }

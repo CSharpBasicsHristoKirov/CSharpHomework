@@ -16,14 +16,25 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise2
     {
+        static void Main()
+        {
+            // Console.WriteLine("Type a binary string:");
+            // string binary = Console.ReadLine();
+            string binary = "1111010110011110";
+
+            Console.WriteLine("{0}(2) -> {1}(10), {2}(16)",
+                               binary, BinaryToDecimal(binary), BinaryToHexadecimal(binary));
+        }
+        //--------------------------------------------------------------------------------
+
         /*
-            Method: int dec = binaryToHex(binaryString);
+            Method: BinaryToHex(binaryString);
 
             It converts the string parameter consisted
-            of binary represented number to decimal
+            of binary represented number to its decimal
             representation.
         */
-        static int binaryToDecimal(string binary)
+        static int BinaryToDecimal(string binary)
         {
             int dec = 0;
             int length = binary.Length;
@@ -31,7 +42,7 @@ namespace ProgrammingBasicsCSharp
             {
                 if (binary[i] == '1')
                 {
-                    dec += (int)Math.Pow(2, i);
+                    dec += (int)Math.Pow(2, length - 1 - i);
                 }
             }
             return dec;
@@ -39,12 +50,12 @@ namespace ProgrammingBasicsCSharp
         //--------------------------------------------------------------------------------
 
         /*
-           Method: hex = decimalToHexadecimal(n);
+           Method: DecimalToHexadecimal(n);
 
            It returns a string representing
-           the hexadecimal value of the parameter.
+           the hexadecimal value of the int parameter.
        */
-        static string decimalToHexadecimal(int n)
+        static string DecimalToHexadecimal(int n)
         {
             string hex = string.Empty;
 
@@ -79,25 +90,14 @@ namespace ProgrammingBasicsCSharp
         //--------------------------------------------------------------------------------
 
         /*
-            Method: string hex = binaryToHexadecimal(binaryString);
+            Method: BinaryToHexadecimal(binaryString);
 
             It returns a string representing the hex value of the
-            input parameter.
+            input string parameter.
         */
-        static string binaryToHexadecimal(string binaryString)
+        static string BinaryToHexadecimal(string binaryString)
         {
-            return decimalToHexadecimal(binaryToDecimal(binaryString));
-        }
-
-        //================================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a binary string:");
-            string binary = Console.ReadLine();
-
-            Console.WriteLine("{0}(2) -> {1}(10), {2}(16)",
-                               binary, binaryToDecimal(binary), binaryToHexadecimal(binary));
+            return DecimalToHexadecimal(BinaryToDecimal(binaryString));
         }
     }
 }

@@ -44,8 +44,7 @@ namespace ProgrammingBasicsCSharp
             }  
 
             // print result
-            Console.WriteLine("Current precision exceeded after {0} iterations, H = {1:F3}",
-                              iterations, currentSum);
+            Console.WriteLine("Current precision exceeded after {0} iterations, H converges to: {1:F3}", iterations, currentSum);
         }
     }
 }

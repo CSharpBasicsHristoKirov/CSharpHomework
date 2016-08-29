@@ -22,13 +22,25 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise14
     {
-        /*
-            Method: checkLeft(arr2D, row, column, currentElement);
+        static void Main()
+        {
+            string[,] strMatrix2D = { { "ha",   "ha1",   "ho", "hi"}, 
+                                      { "fo",   "ha1",   "ha", "xx"}, 
+                                      {"xxx",   "ha1",  "ha2", "xx"}, 
+                                      { "ha",   "ha1", "ha22", "ha3"}
+                                    };
+           
+            Console.WriteLine("Length of longest sequence: {0}", FindLongestSequenceOfIdenticalElements(strMatrix2D));
+        }
+        //-------------------------------------------------------------------------------------------
 
-            It returns how many identical to "currentElement" are there
-            to the left of the current element.
-        */
-        static int checkLeft(string[,] arr2D, int row, int column ,string currentElement)
+        /*
+           Method: CheckLeft(arr2D, row, column, currentElement);
+
+           It returns how many identical to "currentElement" are there
+           to the left of the current element.
+       */
+        static int CheckLeft(string[,] arr2D, int row, int column, string currentElement)
         {
             int length = 0;
             do
@@ -36,13 +48,18 @@ namespace ProgrammingBasicsCSharp
                 if (currentElement == arr2D[row, column])
                 {
                     ++length;
-                }   
+                }
                 --row;
             } while (row >= 0);
             return length;
         }
         //-------------------------------------------------------------------------------------------
-        static int checkTopLeftDiagonal(string[,] arr2D, int row, int column, string currentElement)
+
+        /*
+            Method: CheckTopLeftDiagonal()
+
+        */
+        static int CheckTopLeftDiagonal(string[,] arr2D, int row, int column, string currentElement)
         {
             int length = 0;
             do
@@ -58,7 +75,12 @@ namespace ProgrammingBasicsCSharp
             return length;
         }
         //-------------------------------------------------------------------------------------------
-        static int checkTop(string[,] arr2D, int row, int column, string currentElement)
+
+        /*
+            Method: CheckTop()
+
+        */
+        static int CheckTop(string[,] arr2D, int row, int column, string currentElement)
         {
             int length = 0;
             do
@@ -73,7 +95,12 @@ namespace ProgrammingBasicsCSharp
             return length;
         }
         //-------------------------------------------------------------------------------------------
-        static int checkTopRightDiagonal(string[,] arr2D, int row, int column, string currentElement)
+
+        /*
+            Method: CheckTopRightDiagonal()
+
+        */
+        static int CheckTopRightDiagonal(string[,] arr2D, int row, int column, string currentElement)
         {
             int length = 0;
             do
@@ -89,7 +116,12 @@ namespace ProgrammingBasicsCSharp
             return length;
         }
         //-------------------------------------------------------------------------------------------
-        static int checkRight(string[,] arr2D, int row, int column, string currentElement)
+
+        /*
+            Method: CheckRight()
+
+        */
+        static int CheckRight(string[,] arr2D, int row, int column, string currentElement)
         {
             int length = 0;
             do
@@ -104,7 +136,12 @@ namespace ProgrammingBasicsCSharp
             return length;
         }
         //-------------------------------------------------------------------------------------------
-        static int checkBottomRightDiagonal(string[,] arr2D, int row, int column, string currentElement)
+
+        /*
+            Method: CheckBottomRightDiagonal()
+
+        */
+        static int CheckBottomRightDiagonal(string[,] arr2D, int row, int column, string currentElement)
         {
             int length = 0;
             do
@@ -120,7 +157,12 @@ namespace ProgrammingBasicsCSharp
             return length;
         }
         //-------------------------------------------------------------------------------------------
-        static int checkBottom(string[,] arr2D, int row, int column, string currentElement)
+
+        /*
+            Method: CheckBottom()
+
+        */
+        static int CheckBottom(string[,] arr2D, int row, int column, string currentElement)
         {
             int length = 0;
             do
@@ -135,7 +177,12 @@ namespace ProgrammingBasicsCSharp
             return length;
         }
         //-------------------------------------------------------------------------------------------
-        static int checkBottomLeftDiagonal(string[,] arr2D, int row, int column, string currentElement)
+
+        /*
+            Method: CheckBottomLeftDiagonal()
+
+        */
+        static int CheckBottomLeftDiagonal(string[,] arr2D, int row, int column, string currentElement)
         {
             int length = 0;
             do
@@ -151,13 +198,16 @@ namespace ProgrammingBasicsCSharp
             return length;
         }
         //---------------------------------------------------------------------------
+
         /*
             Method: findLongestSequenceOfIdenticalElements(arr2D);
 
             It returns the length of the longest sequence of identical
             elements.
+
+            Complexity: O(n^2)
         */
-        static int findLongestSequenceOfIdenticalElements(string[,] strMatrix2D)
+        static int FindLongestSequenceOfIdenticalElements(string[,] strMatrix2D)
         {
             int maxLength = 1;
 
@@ -171,38 +221,24 @@ namespace ProgrammingBasicsCSharp
                     Console.WriteLine("Current Element: {0}", currentElement);
 
                     // check left
-                    maxLength = Math.Max(maxLength, checkLeft(strMatrix2D, row, column, currentElement));
+                    maxLength = Math.Max(maxLength, CheckLeft(strMatrix2D, row, column, currentElement));
                     // check top left diagonal
-                    maxLength = Math.Max(maxLength, checkTopLeftDiagonal(strMatrix2D, row, column, currentElement));
+                    maxLength = Math.Max(maxLength, CheckTopLeftDiagonal(strMatrix2D, row, column, currentElement));
                     // check top
-                    maxLength = Math.Max(maxLength, checkTop(strMatrix2D, row, column, currentElement));
+                    maxLength = Math.Max(maxLength, CheckTop(strMatrix2D, row, column, currentElement));
                     // check top right diagonal
-                    maxLength = Math.Max(maxLength, checkTopRightDiagonal(strMatrix2D, row, column, currentElement));
+                    maxLength = Math.Max(maxLength, CheckTopRightDiagonal(strMatrix2D, row, column, currentElement));
                     // check right 
-                    maxLength = Math.Max(maxLength, checkRight(strMatrix2D, row, column, currentElement));
+                    maxLength = Math.Max(maxLength, CheckRight(strMatrix2D, row, column, currentElement));
                     // check right bottom diagonal
-                    maxLength = Math.Max(maxLength, checkBottomRightDiagonal(strMatrix2D, row, column, currentElement));
+                    maxLength = Math.Max(maxLength, CheckBottomRightDiagonal(strMatrix2D, row, column, currentElement));
                     // check bottom
-                    maxLength = Math.Max(maxLength, checkBottom(strMatrix2D, row, column, currentElement));
+                    maxLength = Math.Max(maxLength, CheckBottom(strMatrix2D, row, column, currentElement));
                     // check left bottom diagonal
-                    maxLength = Math.Max(maxLength, checkBottomLeftDiagonal(strMatrix2D, row, column, currentElement));
+                    maxLength = Math.Max(maxLength, CheckBottomLeftDiagonal(strMatrix2D, row, column, currentElement));
                 }
             }
-
             return maxLength;
-        }
-
-        //===========================================================================
-        static void Main()
-        {
-            string[,] strMatrix2D = { { "ha",   "ha1",   "ho", "hi"}, 
-                                      { "fo",   "ha1",   "ha", "xx"}, 
-                                      {"xxx",   "ha1",  "ha2", "xx"}, 
-                                      { "ha",   "ha1", "ha22", "ha3"}
-                                    };
-           
-            // print result
-            Console.WriteLine("Length of longest sequence: {0}", findLongestSequenceOfIdenticalElements(strMatrix2D));
         }
     }
 }

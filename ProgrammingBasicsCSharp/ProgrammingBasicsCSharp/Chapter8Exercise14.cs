@@ -15,17 +15,36 @@
    <datecreated>26.03.2016</datecreated>
 */
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace ProgrammingBasicsCSharp
 { 
     class Chapter8Exercise14
     {
+        static void Main()
+        {
+            Stopwatch sw1 = Stopwatch.StartNew();
+            SumFloat();
+            sw1.Stop();
+            Console.WriteLine("Time taken: {0}ms\n", sw1.Elapsed.TotalMilliseconds);
+
+            Stopwatch sw2 = Stopwatch.StartNew();
+            SumDouble();
+            sw2.Stop();
+            Console.WriteLine("Time taken: {0}ms\n", sw2.Elapsed.TotalMilliseconds);
+
+            Stopwatch sw3= Stopwatch.StartNew();
+            SumDecimal();
+            sw3.Stop();
+            Console.WriteLine("Time taken: {0}ms\n", sw3.Elapsed.TotalMilliseconds);
+        }
+        //---------------------------------------------------
+
         /*
-            Method: sumFloat();
+            Method: SumFloat();
+
         */
-        static void sumFloat()
+        static void SumFloat()
         {
             float result = 0;
 
@@ -37,12 +56,13 @@ namespace ProgrammingBasicsCSharp
             float absError = Math.Abs(50 - result);
             Console.WriteLine("Float result: {0}\nAbsolute error: {1}", result, absError);
         }
-
         //---------------------------------------------------
+
         /*
-            Method: sumDouble();
+            Method: SumDouble();
+
         */
-        static void sumDouble()
+        static void SumDouble()
         {
             double result = 0;
 
@@ -54,12 +74,13 @@ namespace ProgrammingBasicsCSharp
             double absError = Math.Abs(50 - result);
             Console.WriteLine("Double result: {0}\nAbsolute error: {1}", result, absError);
         }
-
         //---------------------------------------------------
+
         /*
             Method: sumDecimal();
+
         */
-        static void sumDecimal()
+        static void SumDecimal()
         {
             decimal result = 0;
 
@@ -70,29 +91,6 @@ namespace ProgrammingBasicsCSharp
             }
             decimal absError = Math.Abs(50 - result);
             Console.WriteLine("Decimal result: {0}\nAbsolute error: {1}", result, absError);
-        }
-
-        //===================================================
-
-        static void Main()
-        {
-            // FLOAT
-            Stopwatch sw1 = Stopwatch.StartNew();
-            sumFloat();
-            sw1.Stop();
-            Console.WriteLine("Time taken: {0}ms\n", sw1.Elapsed.TotalMilliseconds);
-
-            // DOUBLE
-            Stopwatch sw2 = Stopwatch.StartNew();
-            sumDouble();
-            sw2.Stop();
-            Console.WriteLine("Time taken: {0}ms\n", sw2.Elapsed.TotalMilliseconds);
-
-            // DECIMAL
-            Stopwatch sw3= Stopwatch.StartNew();
-            sumDecimal();
-            sw3.Stop();
-            Console.WriteLine("Time taken: {0}ms\n", sw3.Elapsed.TotalMilliseconds);
         }
     }
 }

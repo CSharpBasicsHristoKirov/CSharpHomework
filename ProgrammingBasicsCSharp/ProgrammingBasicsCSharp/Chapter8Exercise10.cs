@@ -19,14 +19,24 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise10
     {
+        static void Main()
+        {
+            Console.WriteLine("Type a number in binary representation:");
+            string binary = Console.ReadLine();
+
+            Console.WriteLine("{0}(2) -> {1}(10)", binary, BinaryToDecimalHornerIteratively(binary));
+            Console.WriteLine("{0}(2) -> {1}(10)", binary, BinaryToDecimalHornerRecursively(binary));
+        }
+        //------------------------------------------------------------------------
+
         /*
-            Method: int dec = binaryToDecimalHornerIteratively(binaryString);
+            Method: BinaryToDecimalHornerIteratively(binaryString);
 
             It returns an integer representing the decimal value
             of the input parameter. Implements the Horner method
             iteratively.
         */
-        static int binaryToDecimalHornerIteratively(string binaryString)
+        static int BinaryToDecimalHornerIteratively(string binaryString)
         {
             // copy in reverse order; convert to int
             int[] binaryArray = new int[binaryString.Length];
@@ -45,16 +55,16 @@ namespace ProgrammingBasicsCSharp
 
             return sum;
         }
-
         //------------------------------------------------------------------------
+
         /*
-            Method: int dec = binaryToDecimalHornerRecursively(binaryString);
+            Method: BinaryToDecimalHornerRecursively(binaryString);
 
             It returns an integer representing the decimal value
             of the input parameter. Implements the Horner method
             recursively.
         */
-        static int binaryToDecimalHornerRecursively(string binaryString)
+        static int BinaryToDecimalHornerRecursively(string binaryString)
         {
             // copy in reverse order; convert to int
             int[] binaryArray = new int[binaryString.Length];
@@ -63,16 +73,16 @@ namespace ProgrammingBasicsCSharp
                 binaryArray[j] = binaryString[i] - '0';
             }
 
-            return horner(binaryArray, 0);
+            return Horner(binaryArray, 0);
         }
-
         //------------------------------------------------------------------------
-        /*
-           Method: horner(binaryArray, currentIndex);
 
-           It implements the Horner method.
+        /*
+           Method: Horner(binaryArray, currentIndex);
+
+           Wrapper of recursive function implementing the Horner method.
        */
-        static int horner(int[] binaryArray, int currentIndex)
+        static int Horner(int[] binaryArray, int currentIndex)
         {
             if (currentIndex == binaryArray.Length - 1)
             {
@@ -80,19 +90,8 @@ namespace ProgrammingBasicsCSharp
             }
             else
             {
-                return 2 * horner(binaryArray, currentIndex + 1) + binaryArray[currentIndex];
+                return 2 * Horner(binaryArray, currentIndex + 1) + binaryArray[currentIndex];
             }
-        }
-
-
-        //===========================================================
-        static void Main()
-        {
-            Console.WriteLine("Type a number in binary representation:");
-            string binary = Console.ReadLine();
-
-            Console.WriteLine("{0}(2) -> {1}(10)", binary, binaryToDecimalHornerIteratively(binary));
-            Console.WriteLine("{0}(2) -> {1}(10)", binary, binaryToDecimalHornerRecursively(binary));
         }
     }
 }

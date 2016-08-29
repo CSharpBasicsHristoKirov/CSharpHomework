@@ -13,19 +13,28 @@
    <datecreated>26.03.2016</datecreated>
 */
 using System;
-using System.Collections.Generic;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise13
     {
+        static void Main()
+        {
+            string src = "15";
+            int sourceBase = 10;
+            int destionationBase = 2;
+            Console.WriteLine("{0}({1}) -> {2}({3}); {4}({3})",
+                              src, sourceBase, ChangeBase(src, sourceBase, destionationBase), destionationBase, 
+                              ConvertBase(src, sourceBase, destionationBase));
+        }
+        //-------------------------------------------------------------------
         /*
-            Method: string decimalVal = toDecimal(src, srcBase);
+            Method: ToDecimal(src, srcBase);
 
-            Assumes source base <= 16.
+            Assumes source base <= 16. (2, 8, 16)
             It converts src with base: srcBase to decimal.
         */
-        static int toDecimal(string src, int srcBase)
+        static int ToDecimal(string src, int srcBase)
         {
             int dec = 0;
 
@@ -58,15 +67,15 @@ namespace ProgrammingBasicsCSharp
             }
             return dec;
         }
-
         //-------------------------------------------------------------------
+
         /*
-            Method: string destVal = fromDecimal(src, destBase);
+            Method: FromDecimal(src, destBase);
 
             It assumes positive integer as first parameter and
-            destBase >= 16.
+            destBase <= 16. (2, 8, 10, 16)
         */
-        static string fromDecimal(int src, int destBase)
+        static string FromDecimal(int src, int destBase)
         {
             if (src == 0)
             {
@@ -104,34 +113,54 @@ namespace ProgrammingBasicsCSharp
                 else // for any other base
                 {
                     destinationString = remainder.ToString() + destinationString;
-                }               
+                }
 
                 src /= destBase;
             }
 
             return destinationString;
         }
-
         //-------------------------------------------------------------------
+
         /*
-            Method: string dest = changeBase(src, startBase, endBase);
+            Method: ChangeBase(src, startBase, endBase);
 
             It changes the string "src" from "startBase" to "endBase".
         */
-        static string changeBase(string src, int startBase, int endBase)
+        static string ChangeBase(string src, int startBase, int endBase)
         {
-            return fromDecimal(toDecimal(src, startBase), endBase);
+            if ((startBase < 2 || startBase > 16) || (endBase < 2 || endBase > 16))
+            {
+                return "Invalid Base!";
+            }
+
+            if (startBase == endBase)
+            {
+                return src;
+            }
+
+            return FromDecimal(ToDecimal(src, startBase), endBase);
         }
+        //-------------------------------------------------------------------
 
-        //===================================================================
+        /*
+            Method: ConvertBase(string number, int fromBase, int ToBase)
 
-        static void Main()
+            Supported bases: 2, 8, 10, 16.
+        */
+        static string ConvertBase(string number, int fromBase, int toBase)
         {
-            string src = "15";
-            int sourceBase = 10;
-            int destionationBase = 2;
-            Console.WriteLine("{0}({1}) -> {2}({3})",
-                              src, sourceBase, changeBase(src, sourceBase, destionationBase), destionationBase);
+            if ((fromBase < 2 || fromBase > 16) || (toBase < 2 || toBase > 16))
+            {
+                return "Invalid Base!";
+            }
+
+            if (fromBase == toBase)
+            {
+                return number;
+            }
+
+            return Convert.ToString(Convert.ToInt32(number, fromBase), toBase);
         }
     }
 }

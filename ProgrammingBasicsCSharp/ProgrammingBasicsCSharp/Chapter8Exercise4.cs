@@ -16,13 +16,30 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise4
     {
-        /*
-           Method: string binaryRepresentation = decimalToBinary(n);
+        static void Main()
+        {
+            Console.WriteLine("Type a positive integer:");
+            int n = int.Parse(Console.ReadLine());
 
-           It returns a string holding the binary representation 
-           of the number passed as parameter.
-       */
-        static string decimalToBinary(uint n)
+            // test line (using C# libraries)
+            Console.WriteLine("{0}(10) -> {1}(2).", n, Convert.ToString(n, 2));
+
+            // convert by dividing by the destination base
+            Console.WriteLine("{0}(10) -> {1}(2)",n , DecimalToBinary((uint) n));
+
+            // convert by logical operations: AND with mask = 1;
+            Console.WriteLine("{0}(10) -> {1}(2)", n, DecimalToBinaryBitwise(n));
+
+        }
+        //------------------------------------------------------------------
+
+        /*
+            Method: DecimalToBinary(n);
+
+            It returns a string holding the binary representation 
+            of the number passed as parameter.
+        */
+        static string DecimalToBinary(uint n)
         {
             if (n == 0)
             {
@@ -41,15 +58,15 @@ namespace ProgrammingBasicsCSharp
             }
             return binary;
         }
-
         //------------------------------------------------------------------
-        /*
-           Method: string binaryRepresentation = decimalToBinaryLogical(n);
 
-           It returns a string holding the binary representation 
-           of the number passed as parameter.
+        /*
+             Method: DecimalToBinaryBitwise(n);
+
+             It returns a string holding the binary representation 
+             of the number passed as parameter.
         */
-        static string decimalToBinaryLogical(int n)
+        static string DecimalToBinaryBitwise(int n)
         {
             string binary = string.Empty;
 
@@ -62,24 +79,6 @@ namespace ProgrammingBasicsCSharp
                 binary = valueOfLSB.ToString() + binary;
             }
             return binary;
-        }
-
-        //==================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a positive integer:");
-            int n = int.Parse(Console.ReadLine());
-
-            // test line
-            Console.WriteLine("{0}(10) -> {1}(2).", n, Convert.ToString(n, 2));
-
-            // convert by dividing by the destination base
-            Console.WriteLine("{0}(10) -> {1}(2)",n , decimalToBinary((uint) n));
-
-            // convert by logical operations: AND with mask = 1;
-            Console.WriteLine("{0}(10) -> {1}(2)", n, decimalToBinaryLogical(n));
-
         }
     }
 }

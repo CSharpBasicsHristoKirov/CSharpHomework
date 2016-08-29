@@ -18,9 +18,19 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise26
     {
+        static void Main()
+        {
+            Console.Write("N = ");
+            int dimension = int.Parse(Console.ReadLine());
+
+            FillParallelToMainDiagonal(dimension);
+
+            FillPerpendicularToMainDiagonal(dimension);
+        }
         //-----------------------------------------------------------------------------
+
         /*
-            Method: fillParallelToMainDiagonal(dimension);
+            Method: FillParallelToMainDiagonal(dimension);
 
             It fills a 2D array of size n x n, n = "dimension" 
             in the format:
@@ -29,14 +39,14 @@ namespace ProgrammingBasicsCSharp
             b e h
             a c f
         */
-        static void fillParallelToMainDiagonal(int dimension)
+        static void FillParallelToMainDiagonal(int dimension)
         {
             int[,] arr = new int[dimension, dimension];
 
             // array filler
             int element = 0;
 
-            // Starting/ ending diagonal coordinates
+            // starting/ ending diagonal coordinates
             // start from bottom to top
             int startingRow = dimension - 1;
             int endingRow = dimension;
@@ -79,19 +89,21 @@ namespace ProgrammingBasicsCSharp
                     ++startingColumn;
                 }
             }
-            printMatrix(arr);
+            PrintMatrix(arr);
         }
-
         //-----------------------------------------------------------------------------
+
         /*
-            Method: fillPerpendicularToMainDiagonal(dimension);
+            Method: FillPerpendicularToMainDiagonal(dimension);
 
             It fills a 2D array of size n x n, n = "dimension" 
             in the format:
 
-             
+            d g i
+            b e h
+            a c f
         */
-        static void fillPerpendicularToMainDiagonal(int dimension)
+        static void FillPerpendicularToMainDiagonal(int dimension)
         {
             int[,] arr = new int[dimension, dimension];
 
@@ -112,23 +124,15 @@ namespace ProgrammingBasicsCSharp
                 int row = startingRow;
                 int column = startingColumn;
 
-                // Console.WriteLine("[{0}, {1}]", row, column);
-
                 // fill a diagonal
                 while (row > endingRow)
                 {
                     arr[row, column] = ++element;
 
-                    // Console.WriteLine("[{0}, {1}] = {2}", row, column, element);
-                    // printMatrix(arr);
-                    // Console.ReadKey();
-
                     // go from bottom left to top right
                     row--;
                     column++;
                 }
-
-                // Console.ReadKey();
 
                 // adjust length of diagonal 
                 if (endingRow >= 0)
@@ -149,16 +153,15 @@ namespace ProgrammingBasicsCSharp
                     --endingColumn;
                 }
             }
-            printMatrix(arr);
+            PrintMatrix(arr);
         }
-
         //-----------------------------------------------------------------------------
-        /*
-            Method: printMatrix(arr);
 
-            It prints all the elements of the 2D array
+        /*
+            Method: PrintMatrix(arr);
+
         */
-        static void printMatrix(int[,] arr)
+        static void PrintMatrix(int[,] arr)
         {
             for (int row = 0; row < arr.GetLength(0); row++)
             {
@@ -169,18 +172,6 @@ namespace ProgrammingBasicsCSharp
                 Console.WriteLine();
             }
             Console.WriteLine();
-        }
-
-        //=======================================================================
-
-        static void Main()
-        {
-            Console.Write("N = ");
-            int dimension = int.Parse(Console.ReadLine());
-
-            fillParallelToMainDiagonal(dimension);
-
-            fillPerpendicularToMainDiagonal(dimension);
         }
     }
 }

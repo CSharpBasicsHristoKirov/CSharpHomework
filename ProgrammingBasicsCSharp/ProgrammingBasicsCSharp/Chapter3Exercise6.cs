@@ -27,7 +27,7 @@ namespace ProgrammingBasicsCSharp
             double height = Convert.ToDouble(Console.ReadLine());
 
             double rectnagleArea = width * height;
-            double rectnaglePerimeter = 2 * (width + height);
+            double rectnaglePerimeter = 2d * (width + height);
 
             Console.WriteLine("Area = " + rectnagleArea + " arbitrary units");
             Console.WriteLine("Perimeter = " + rectnaglePerimeter + " arbitrary units");

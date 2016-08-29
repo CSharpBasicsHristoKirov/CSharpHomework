@@ -12,19 +12,25 @@
    <datecreated>12.03.2016</datecreated>
 */
 using System;
-using System.Collections.Generic;
-
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise9
     {
+        static void Main()
+        {
+            int[] numbers = { 2, 3, -6, -1, 2, -1, 6, 4, -8, 8 };
+
+            MaxSumSequence(numbers);
+        }
+        //-----------------------------------------------------------
+
         /*
-            Method: maxSumSequence(arr);
+            Method: MaxSumSequence(arr);
 
             It prints the sequence with max sum and its value.
         */
-        static void maxSumSequence(int[] arr)
+        static void MaxSumSequence(int[] arr)
         {
             int currentSum = 0;
             int maxSum = int.MinValue;
@@ -52,20 +58,13 @@ namespace ProgrammingBasicsCSharp
             {
                 maxSum -= arr[index--];
             }
+
             Console.Write("{");
             for (int i = index + 1; i <= lastElementIndex; i++)
             {
                 Console.Write(arr[i] + ", ");
             }
-            Console.Write("}\n");
-        }
-
-        //==============================================================================
-        static void Main()
-        {
-            int[] numbers = { 2, 3, -6, -1, 2, -1, 6, 4, -8, 8 };
-
-            maxSumSequence(numbers);
+            Console.WriteLine("}");
         }
     }
 }

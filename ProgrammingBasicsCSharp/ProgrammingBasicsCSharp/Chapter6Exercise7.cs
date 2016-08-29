@@ -11,18 +11,28 @@
    <datecreated>06.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise7
     {
-        /*
-           Method: double p = factorial(n)
+       
 
-           It returns the factorial of n.
-       */
-        static double factorial(int n)
+        static void Main()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("{0}! * {1}! / {2}! = {3}",n, k, n - k, Combination(n, k)  * Factorial(k));
+        }
+        //--------------------------------------------------------------------
+
+        /*
+          Method: double p = Factorial(n)
+
+          It returns the factorial of n.
+        */
+        static double Factorial(int n)
         {
             double fact = 1;
             for (int i = 1; i <= n; i++)
@@ -31,14 +41,17 @@ namespace ProgrammingBasicsCSharp
             }
             return fact;
         }
+        //--------------------------------------------------------------------
 
-        static void Main()
+        /*
+          Method:  double Combination( int n, int k)
+
+           It returns the k - combination of a set of
+           n elements.
+        */
+        static double Combination(int n, int k)
         {
-            int n = int.Parse(Console.ReadLine());
-            int k = int.Parse(Console.ReadLine());
-
-            double result = (factorial(n) * factorial(k)) / factorial(n - k);
-            Console.WriteLine(result);
+            return Factorial(n) / (Factorial(k) * Factorial(n - k));
         }
     }
 }

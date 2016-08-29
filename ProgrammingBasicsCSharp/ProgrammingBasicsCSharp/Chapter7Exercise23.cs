@@ -19,64 +19,74 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise23
     {
-        /*
-            Method: printPermutations(n);
+        static void Main()
+        {
+            // read input
+            Console.Write("N = ");
+            int n = int.Parse(Console.ReadLine());
 
-            Wrapper of the recursive function
-            printing all the permutations of the
-            elements stored in arr.
-        */
-        static void printPermutations(int n)
+            // find permutations
+            PrintPermutations(n);
+
+            Console.WriteLine();
+        }
+        //-----------------------------------------------------------------------
+
+        /*
+           Method: PrintPermutations(n);
+
+           Wrapper of the recursive function
+           printing all the permutations of the
+           elements stored in arr.
+       */
+        static void PrintPermutations(int n)
         {
             // define and initialize an array
             int[] numbers = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                numbers[i] = i + 1;
-            }
+            InitializeArray(numbers, n);
 
             Console.Write("->");
             int indexOfLast = numbers.Length - 1;
             int indexOfFirst = 0;
 
-            permute(numbers, indexOfFirst, indexOfLast);
+            Permute(numbers, indexOfFirst, indexOfLast);
         }
-
         //-----------------------------------------------------------------------
+
         /*
-            Method: printPermutations(arr);
+            Method: Permute(arr);
 
             It prints all permutations of the elements 
             in arr by recursively swapping each of the 
             elements with the rest.
         */
-        static void permute(int[] arr, int currentActivationRecord, int lastActivationRecord)
+        static void Permute(int[] arr, int currentActivationRecord, int lastActivationRecord)
         {
             // print permutation
             if (currentActivationRecord == lastActivationRecord)
             {
-                print(", ", arr);
+                PrintArray(", ", arr);
             }
             else
             {
                 for (int i = currentActivationRecord; i <= lastActivationRecord; i++)
                 {
-                    swap(ref arr[currentActivationRecord], ref arr[i]);
+                    Swap(ref arr[currentActivationRecord], ref arr[i]);
 
                     // recursive call
-                    permute(arr, currentActivationRecord + 1, lastActivationRecord);
+                    Permute(arr, currentActivationRecord + 1, lastActivationRecord);
 
-                    swap(ref arr[currentActivationRecord], ref arr[i]);
+                    Swap(ref arr[currentActivationRecord], ref arr[i]);
                 }
             }
         }
-
         //-----------------------------------------------------------------------
+
         /*
-            Method: swap(a, b);
+            Method: Swap(a, b);
 
         */
-        static void swap(ref int a, ref int b)
+        static void Swap(ref int a, ref int b)
         {
             if (a != b)
             {
@@ -85,14 +95,14 @@ namespace ProgrammingBasicsCSharp
                 b = temp;
             }
         }
-
         //-----------------------------------------------------------------------
+
         /*
-            Method: printArray(label, arr);
+            Method: PrintArray(label, arr);
 
             Print the array elements.
         */
-        static void print(string label, int[] arr)
+        static void PrintArray(string label, int[] arr)
         {
             Console.Write("{");
             for (int i = 0; i < arr.Length; i++)
@@ -107,19 +117,18 @@ namespace ProgrammingBasicsCSharp
             Console.Write("}");
             Console.Write(label);
         }
+        //-----------------------------------------------------------------------
 
-        //=======================================================================
+        /*
+            Method: InitializeArray();
 
-        static void Main()
+        */
+        static void InitializeArray(int[] arr, int n)
         {
-            // read input
-            Console.Write("N = ");
-            int n = int.Parse(Console.ReadLine());
-
-            // find permutations
-            printPermutations(n);
-
-            Console.WriteLine();
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = i + 1;
+            }
         }
     }
 }

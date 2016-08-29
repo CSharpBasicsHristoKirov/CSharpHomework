@@ -17,8 +17,23 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise12
     {
+        static void Main()
+        {
+            Console.WriteLine("Type 2D matrix dimension:");
+            int dimension = int.Parse(Console.ReadLine());
+
+            FillVertically(dimension);
+
+            FillVerticallyEvenColumnReversed(dimension);
+
+            FillParallelToMainDiagonal(dimension);
+
+            FillCounterClockwiseInwardSpiral(dimension);
+        }
+        //-----------------------------------------------------------------------------
+
         /*
-            Method: fillVertically(dimension);
+            Method: FillVertically(dimension);
 
             It fills a 2D array of n x n, n = "dimension" 
             in the format:
@@ -27,7 +42,7 @@ namespace ProgrammingBasicsCSharp
             b e h 
             c f i
         */
-        static void fillVertically(int dimension)
+        static void FillVertically(int dimension)
         {
             int[,] arr = new int[dimension, dimension];
             // fill array
@@ -39,12 +54,12 @@ namespace ProgrammingBasicsCSharp
                     arr[row, column] = ++element;
                 }
             }
-            printMatrix(arr);
+            PrintMatrix(arr);
         }
         //-----------------------------------------------------------------------------
 
         /*
-                Method: fillVerticallyEvenColumnReversed(dimension);
+                Method: FillVerticallyEvenColumnReversed(dimension);
 
                 It fills a 2D array of n x n, n = "dimension" 
                 in the format:
@@ -53,7 +68,7 @@ namespace ProgrammingBasicsCSharp
                 b e h 
                 c d i
             */
-        static void fillVerticallyEvenColumnReversed(int dimension)
+        static void FillVerticallyEvenColumnReversed(int dimension)
         {
             int[,] arr = new int[dimension, dimension];
             // fill array
@@ -75,12 +90,12 @@ namespace ProgrammingBasicsCSharp
                     }
                 }
             }
-            printMatrix(arr);
+            PrintMatrix(arr);
         }
-
         //-----------------------------------------------------------------------------
+
         /*
-            Method: fillParallelToMainDiagonal(dimension);
+            Method: FillParallelToMainDiagonal(dimension);
 
             It fills a 2D array of size n x n, n = "dimension" 
             in the format:
@@ -89,19 +104,19 @@ namespace ProgrammingBasicsCSharp
             b e h
             a c f
         */
-        static void fillParallelToMainDiagonal(int dimension)
+        static void FillParallelToMainDiagonal(int dimension)
         {
             int[,] arr = new int[dimension, dimension];
             // fill array
             int element = 0;
 
             // start from bottom to top
-            int startingRow = dimension - 1; 
-            int endingRow = dimension;       
+            int startingRow = dimension - 1;
+            int endingRow = dimension;
 
             // start from left to right
-            int startingColumn = 0;          
-            int endingColumn = 1;            
+            int startingColumn = 0;
+            int endingColumn = 1;
 
             while (element < dimension * dimension)
             {
@@ -114,7 +129,7 @@ namespace ProgrammingBasicsCSharp
 
                     row++;
                     column++;
-                } 
+                }
                 // adjust row start / end indexes
                 if (startingRow > 0)
                 {
@@ -134,11 +149,12 @@ namespace ProgrammingBasicsCSharp
                     ++startingColumn;
                 }
             }
-            printMatrix(arr);
+            PrintMatrix(arr);
         }
+        //-----------------------------------------------------------------------------
 
         /*
-           Method: fillCounterClockwiseInwardSpiral(dimension);
+           Method: FillCounterClockwiseInwardSpiral(dimension);
 
             It fills a 2D array of size n x n, n = "dimension" 
             in the format:
@@ -147,7 +163,7 @@ namespace ProgrammingBasicsCSharp
             b i f
             c d e
        */
-        static void fillCounterClockwiseInwardSpiral(int dimension)
+        static void FillCounterClockwiseInwardSpiral(int dimension)
         {
             int[,] spiralMatrix = new int[dimension, dimension];
             // fill array
@@ -189,16 +205,16 @@ namespace ProgrammingBasicsCSharp
                 col1++; col2--;
                 row1++; row2--;
             }
-            printMatrix(spiralMatrix);
+            PrintMatrix(spiralMatrix);
         }
-
         //-----------------------------------------------------------------------------
+
         /*
-            Method: printMatrix(arr);
+            Method: PrintMatrix(arr);
 
             It prints all the elements of the 2D array
         */
-        static void printMatrix(int[,] arr)
+        static void PrintMatrix(int[,] arr)
         {
             for (int row = 0; row < arr.GetLength(0); row++)
             {
@@ -209,25 +225,6 @@ namespace ProgrammingBasicsCSharp
                 Console.WriteLine();
             }
             Console.WriteLine();
-        }
-
-        //=============================================================================
-        static void Main()
-        {
-            Console.WriteLine("Type 2D matrix dimension:");
-            int dimension = int.Parse(Console.ReadLine());
-
-            // a)
-            fillVertically(dimension);
-
-            // b)
-            fillVerticallyEvenColumnReversed(dimension);
-
-            // c)
-            fillParallelToMainDiagonal(dimension);
-
-            // d)
-            fillCounterClockwiseInwardSpiral(dimension);
         }
     }
 }

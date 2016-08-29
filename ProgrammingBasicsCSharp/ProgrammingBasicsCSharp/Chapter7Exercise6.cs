@@ -18,32 +18,6 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise6
     {
-        /*
-            Method: int index = leastLarger(array, startIndex, referent);
-
-            It returns the index to the element larger than the referent, but 
-            with the smallest difference.
-        */
-        static int leastLarger(int[] array, int startIndex, int referent)
-        {
-            int targetIndex = -1; // initial value signigies no larger element than referent exist
-            int difference = int.MaxValue;
-            for (int i = startIndex; i < array.Length; ++i)
-            {
-                if (array[i] > referent)
-                {
-                    int currentDifference = array[i] - referent;
-                    if (currentDifference < difference)
-                    {
-                        targetIndex = i;
-                        difference = currentDifference;
-                    }
-                }
-            }
-            return targetIndex;
-        }
-        //==========================================================================================
-
         static void Main()
         {
             int[] numbers = { 9, 6, 2, 7, 4, 7, 6, 5, 8, 4 };
@@ -57,7 +31,7 @@ namespace ProgrammingBasicsCSharp
                 for (int j = i + 1; j < numbers.Length; j++)
                 {
                     // find the least larger than the last element of the current subarray
-                    int nextElementIndex = leastLarger(numbers, j, currentSubarray[currentSubarray.Count - 1]);
+                    int nextElementIndex = LeastLarger(numbers, j, currentSubarray[currentSubarray.Count - 1]);
                     if (nextElementIndex > 0)
                     {
                         currentSubarray.Add(numbers[nextElementIndex]);
@@ -84,6 +58,32 @@ namespace ProgrammingBasicsCSharp
                 Console.Write(item + ", ");
             }
             Console.WriteLine();
+        }
+        //-------------------------------------------------------------------------------------------
+
+        /*
+           Method: LeastLarger(array, startIndex, referent);
+
+           It returns the index to the element larger than the referent, but 
+           with the smallest difference.
+        */
+        static int LeastLarger(int[] array, int startIndex, int referent)
+        {
+            int targetIndex = -1; // initial value signifies no larger element than referent exist
+            int difference = int.MaxValue;
+            for (int i = startIndex; i < array.Length; ++i)
+            {
+                if (array[i] > referent)
+                {
+                    int currentDifference = array[i] - referent;
+                    if (currentDifference < difference)
+                    {
+                        targetIndex = i;
+                        difference = currentDifference;
+                    }
+                }
+            }
+            return targetIndex;
         }
     }
 }

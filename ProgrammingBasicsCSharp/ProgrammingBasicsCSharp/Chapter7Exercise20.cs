@@ -4,7 +4,8 @@
    S.Nakov, V.Kolev et al.    "Introduction to Programming with C#" 
    COMMENT
            Objective: Define an int array of n values.
-                      Define an int "sum". Check if there is a subarray
+                      Define an int "sum". 
+                      Check if there is a subarray
                       with elements that sum up to "sum".
                Input: -
               Output: -
@@ -18,69 +19,116 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise20
     {
-        /*
-            Method: isSubarrayWithSum(arr, sum);
-
-            It returns a bool value that indicates
-            whether there is a subarray within arr
-            with elements that sum up to the value
-            passed by the second parameter.
-        */
-        static bool isThereSubarrayWithSum(int[] arr, int sum)
+        static void Main()
         {
-            for (int i = 0; i < arr.Length; i++)
-            {
-                int currentSum = arr[i];
-
-                for (int j = i + 1; j < arr.Length; j++)
-                {
-                    currentSum += arr[j];
-
-                    if (currentSum == sum)
-                    {
-                        printArrayWithin(arr, i, j);
-
-                        return true;
-                    }
-                }
-            }
-            return false;
+            PrintArray(arr);
+            SubArraySumProblem();
         }
         //--------------------------------------------------------------------
+
         /*
-            Method: printArrayWithin(arr, iStart, iEnd);
+            Data members.
 
-            It prins the elements of the array with index 
-            from iStart to iEnd. 
         */
-        static void printArrayWithin(int[] arr, int iStart, int iEnd)
-        {
-            Console.Write("\n{");
-            for (int k = iStart; k <= iEnd; k++)
-            {
-                Console.Write(arr[k]);
+        // targer array
+        static int[] arr = { 2, 1, 2, 4, 3, 5, 2, 6 };
+        // target sum
+        static int targetSum = 14;
 
-                if (k < iEnd)
+        //--------------------------------------------------------------------
+
+        /*
+            Method: SubArraySumProblem();
+
+            Dynamic programming: break it to 
+            smaller subproblems by making binary
+            decisions: 0, or 1, about element inclusion
+            on each call, updating the current sum and index.
+        */
+        static void SubArraySumProblem()
+        {
+            int index = 0;
+            int currentSum = 0;
+            bool[] subArray = new bool[arr.Length];
+
+            FindSubArray(index, currentSum, subArray);
+        }
+        //--------------------------------------------------------------------
+
+        /*
+            Method: FindSubArray();
+
+            Base case: - if current sum == targer sum: print current elements.
+                       - if index == arr.Length: terminate search.
+
+            Recursive step: 
+                       - do not/select element with index and do not/update the current sum; recursive call with updated current sum and index.
+        */
+        static void FindSubArray(int index, int currentSum, bool[] subArray)
+        {
+            // base case
+            if (currentSum == targetSum)
+            {
+                PrintSubArray(subArray);
+            }
+            else if (index == arr.Length)
+            {
+                return;
+            }
+            else
+            {
+                // recursive calls
+                subArray[index] = true;
+                currentSum += arr[index];
+                FindSubArray(index + 1, currentSum, subArray);
+
+                currentSum -= arr[index]; // restore previous value of the sum signifying: element not selected
+                subArray[index] = false;
+                FindSubArray(index + 1, currentSum, subArray);
+            }
+        }
+        //--------------------------------------------------------------------
+
+        /*
+            Method: PrintArray();
+
+        */
+        static void PrintArray(int[] array)
+        {
+            Console.Write("{");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i]);
+
+                if (i < array.Length - 1)
                 {
                     Console.Write(", ");
                 }
             }
-            Console.Write("}\n");
+            Console.WriteLine("}");
         }
+        //--------------------------------------------------------------------
 
-        //====================================================================
+        /*
+            Method: PrintSubArray();
 
-        static void Main()
+        */
+        static void PrintSubArray(bool[] subArray)
         {
-            int[] numbers = { 1, 4, 20, 3, 10, 5 };
-            int wantedSum = 33;  
-
-            Console.Write("There is ");
-            if (!isThereSubarrayWithSum(numbers, wantedSum))
+            Console.Write("S = {0} -> yes (", targetSum);
+            for (int i = 0; i < subArray.Length; i++)
             {
-                Console.Write("no ");
+                if (subArray[i] == true)
+                {
+                    Console.Write(arr[i]);
+                }
+
+                if (subArray[i] == true && i < subArray.Length - 1)
+                {
+                    Console.Write(" + ");
+                }
             }
-            Console.Write("subarray with elements with sum {0}.\n", wantedSum);
+            Console.WriteLine(" = {0})", targetSum);
         }
     }
 }

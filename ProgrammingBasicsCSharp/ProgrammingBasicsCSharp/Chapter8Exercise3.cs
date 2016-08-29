@@ -16,13 +16,26 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise3
     {
-        /*
-          Method: int hexadecimalToDecimal(string hex);
+        static void Main()
+        {
+            string[] hex = { "2A3E", "FA", "FFFF", "5A0E9" };
 
-          It returns the decimal value of the parameter
-          holding the string hexadecimal value of a number.
-      */
-        static int hexadecimalToDecimal(string hex)
+            int length = hex.Length;
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine("{0,-10}(16) -> {1,-10}(10), {2,-10}(2)",
+                                   hex[i], HexadecimalToDecimal(hex[i]), HexadecimalToBinary(hex[i]));
+            }
+        }
+        //---------------------------------------------------------------------------------------
+
+        /*
+            Method: HexadecimalToDecimal(string hex);
+
+            It returns the decimal value of the parameter
+            holding the string hexadecimal value of a number.
+        */
+        static int HexadecimalToDecimal(string hex)
         {
             int dec = 0;
             int length = hex.ToString().Length;
@@ -49,20 +62,20 @@ namespace ProgrammingBasicsCSharp
                     case 'E': case 'e': summand = 14; break;
                     case 'F': case 'f': summand = 15; break;
                 }
-                // accumulate the decimal value as number within [0,15] * 16 ^ index
+                // accumulate the decimal value as number within [0, 15] * 16 ^ index
                 dec += summand * (int)Math.Pow(16, i);
             }
             return dec;
         }
-
         //---------------------------------------------------------------------------------------
-        /*
-           Method: string binaryRepresentation = decimalToBinary(n);
 
-           It returns a string holding the binary representation 
-           of the number passed as parameter.
-       */
-        static string decimalToBinary(int n)
+        /*
+            Method: DecimalToBinary(n);
+
+            It returns a string holding the binary representation 
+            of the number passed as parameter.
+        */
+        static string DecimalToBinary(int n)
         {
             string binary = string.Empty;
             while (n > 0)
@@ -75,31 +88,17 @@ namespace ProgrammingBasicsCSharp
             }
             return binary;
         }
-
         //---------------------------------------------------------------------------------------
+
         /*
-           Method: string binary = hexadecimalToBinary(n);
+            Method: HhexadecimalToBinary(n);
 
-           It returns a string holding the binary representation 
-           of the hex passed as parameter.
-       */
-        static string hexadecimalToBinary(string hex)
+            It returns a string holding the binary representation 
+            of the hex passed as parameter.
+        */
+        static string HexadecimalToBinary(string hex)
         {
-            return decimalToBinary(hexadecimalToDecimal(hex));
-        }
-
-        //========================================================================================
-
-        static void Main()
-        {
-            string[] hex = { "2A3E", "FA", "FFFF", "5A0E9" };
-
-            int length = hex.Length;
-            for (int i = 0; i < length; i++)
-            {
-                Console.WriteLine("{0,-10}(16) -> {1,-10}(10), {2,-10}(2)",
-                                   hex[i], hexadecimalToDecimal(hex[i]), hexadecimalToBinary(hex[i]));
-            }
+            return DecimalToBinary(HexadecimalToDecimal(hex));
         }
     }
 }

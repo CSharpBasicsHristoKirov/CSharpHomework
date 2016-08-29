@@ -26,8 +26,8 @@ namespace ProgrammingBasicsCSharp
             double r = double.Parse(Console.ReadLine());
 
             // print area & length
-            Console.WriteLine("Area of circle with radius: {0:F2} is: {1:F2}au.", r, (Math.PI * r * r));
-            Console.WriteLine("Perimeter of circle with radius: {0:F2} is {1:F2}au.", r, (2 * Math.PI * r));
+            Console.WriteLine("Area of circle with radius: {0:F2} is: {1:F2} [au^2].", r, (Math.PI * r * r));
+            Console.WriteLine("Perimeter of circle with radius: {0:F2} is {1:F2} [au].", r, (2 * Math.PI * r));
         }
     }
 }

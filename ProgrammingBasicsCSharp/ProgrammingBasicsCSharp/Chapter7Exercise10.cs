@@ -16,13 +16,21 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise10
     {
+        static void Main()
+        {
+            int[] numbers = { 4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 };
+
+            Mode(numbers);
+        }
+        //-------------------------------------------------------------------------
+
         /*
-            Method: findMode(arr);
+            Method: Mode(arr);
 
             It prints the mode value and its frequency.
-            O (n^2).
+            Complexity: O (n^2).
         */
-        static void findMode(int[] arr)
+        static void Mode(int[] arr)
         {
             int mode = 0;
             int frequency = 1;
@@ -52,14 +60,6 @@ namespace ProgrammingBasicsCSharp
             }
             // print result
             Console.WriteLine("{0} and occurs {1}.", mode, frequency);
-        }
-
-        //==================================================================
-        static void Main()
-        {
-            int[] numbers = { 4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 };
-
-            findMode(numbers);
         }
     }
 }

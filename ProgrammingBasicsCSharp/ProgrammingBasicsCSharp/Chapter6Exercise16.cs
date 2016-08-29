@@ -15,7 +15,6 @@
    <datecreated>07.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
@@ -26,23 +25,63 @@ namespace ProgrammingBasicsCSharp
             // read input
             Console.WriteLine("Print randomly the numbers from 1 to:");
             int n = int.Parse(Console.ReadLine());
-            int[] randomNumbers = new int[n];
 
-            // instantiate a random generator
-            Random rand = new Random();
+            int[] arr = new int[n];
 
-            // populate an array with random numbers within [1, n]
-            for (int i = 0; i < n; i++)
+            InitializeArray(arr);
+            RandomizeArrayElements(arr);
+            PrintArray(arr);
+        }
+        //-----------------------------------------------------------------------------------------------------
+
+        /*
+            Method: InitializeArray(int[] arr)
+
+            It initializes the elements of the 
+            array with the numbers from 1 to n.
+        */
+        static void InitializeArray(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
             {
-                randomNumbers[i] = rand.Next(1, n + 1);
+                arr[i] = i;
             }
+        }
+        //-----------------------------------------------------------------------------------------------------
 
-            // print result
-            Console.WriteLine("Randomly generated number within [1,{0}]", n);
-            foreach (var element in randomNumbers)
+        /*
+            Method: RandomizeArrayElements(int[] arr)
+
+            It swaps random pairs of elements in the array.
+        */
+        static void RandomizeArrayElements(int[] arr)
+        {
+            Random random = new Random();
+            // i = number of swaps
+            for (int i = 0; i < arr.Length / 2; i++)
             {
-                Console.WriteLine(element);
+                // random lower half index swapped with random upper half
+                int smallIndex = random.Next(0, arr.Length / 2);
+                int largeIndex = random.Next((arr.Length / 2) + 1, arr.Length - 1);
+
+                int temp = arr[smallIndex];
+                arr[smallIndex] = arr[largeIndex];
+                arr[largeIndex] = temp;
             }
+        }
+        //-----------------------------------------------------------------------------------------------------
+
+        /*
+            Method: PrintArray(int[] arr);
+
+        */
+        static void PrintArray(int[] arr)
+        {
+            foreach (var item in arr)
+            {
+                Console.Write(" " + item);
+            }
+            Console.WriteLine();
         }
     }
 }

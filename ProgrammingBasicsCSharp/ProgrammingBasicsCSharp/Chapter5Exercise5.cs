@@ -18,37 +18,15 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter5Exercise5
     {
-        /*
-            Method: nameOfDigit(n);
-
-            It prints the name of the
-            digit n.
-        */
-        static string nameOfDigit(int n)
-        {
-            switch (n)
-            {
-                case 0: return "zero";
-                case 1: return "one";
-                case 2: return "two";
-                case 3: return "three";
-                case 4: return "four";
-                case 5: return "five";
-                case 6: return "six";
-                case 7: return "seven";
-                case 8: return "eight";
-                case 9: return "nine";
-                default: return "Value not supported!\n";
-            }
-        }
-
         static void Main()
         {
-            string promt = "Type a single digit integer:";
+            Console.OutputEncoding = Encoding.UTF8;
+
+            string promt = "Избери цифра:";
             string sentinel = "q";
 
             // input loop
-            Console.WriteLine("Find name of digit; exit with 'q'.");
+            Console.WriteLine("Научи името на цифрата; излез с 'ч'.");
             while (true)
             {
                 // read input
@@ -61,16 +39,41 @@ namespace ProgrammingBasicsCSharp
                     break;
                 }
 
-                // learn digit name
+                // learn digit's name
                 int number;
                 if (int.TryParse(input, out number))
                 {
-                    Console.WriteLine("You've typed {0}.", nameOfDigit(number));
+                    Console.WriteLine("Натиснали сте: {0}.", nameOfDigit(number));
                 }
                 else
                 {
-                    Console.WriteLine("Wrong input!");
+                    Console.WriteLine("Данни от грешен тип!");
                 }
+            }
+        }
+        //---------------------------------------------------------------------------------------
+
+        /*
+           Method: nameOfDigit(n);
+
+           It prints the name of the
+           digit n.
+        */
+        static string nameOfDigit(int n)
+        {
+            switch (n)
+            {
+                case 0: return "нула";
+                case 1: return "едно";
+                case 2: return "две";
+                case 3: return "три";
+                case 4: return "четири";
+                case 5: return "пет";
+                case 6: return "шест";
+                case 7: return "седем";
+                case 8: return "осем";
+                case 9: return "девет";
+                default: return "Непозната стойност!\n";
             }
         }
     }

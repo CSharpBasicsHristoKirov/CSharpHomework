@@ -16,18 +16,27 @@
    <datecreated>06.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise10
     {
-        /*
-            Method: void block(int n);
+        static void Main()
+        {
+            // read input
+            int n = int.Parse(Console.ReadLine());
 
-            Prints a n x n block.
+            // print n x n block
+            Block(n);
+        }
+        //------------------------------------------------
+
+        /*
+           Method: void Block(int n);
+
+           Prints a n x n block.
         */
-        static void block(int n)
+        static void Block(int n)
         {
             for (int i = 0; i < n; i++)
             {
@@ -38,15 +47,6 @@ namespace ProgrammingBasicsCSharp
                 Console.WriteLine();
             }
             Console.WriteLine();
-        }
-
-        static void Main()
-        {
-            // read input
-            int n = int.Parse(Console.ReadLine());
-
-            // print n x n block
-            block(n);
         }
     }
 }

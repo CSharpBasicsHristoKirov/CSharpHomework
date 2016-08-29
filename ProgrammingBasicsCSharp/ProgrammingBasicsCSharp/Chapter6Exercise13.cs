@@ -12,20 +12,27 @@
    <datecreated>07.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise13
     {
-        /*
-            Method: int dec = binaryToDecimal(binary);
+        static void Main()
+        {
+            Console.WriteLine("Type a number in binary representation:");
+            string binary = Console.ReadLine();
 
-            It converts the string parameter consisted
-            of binary represented number to decimal
-            representation.
+            Console.WriteLine("{0} in decimal is {1}", binary, BinaryToDecimal(binary));
+        }
+        //-----------------------------------------------------------------------
+
+        /*
+           Method: BinaryToDecimal(binary);
+
+           It converts the string of binary represening 
+           number its to decimal base.
         */
-        static int binaryToDecimal(string binary)
+        static int BinaryToDecimal(string binary)
         {
             int dec = 0;
 
@@ -41,15 +48,6 @@ namespace ProgrammingBasicsCSharp
                 }
             }
             return dec;
-        }
-        //==============================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a number in binary representation:");
-            string binary = Console.ReadLine();
-
-            Console.WriteLine("{0} in decimal is {1}", binary, binaryToDecimal(binary));
         }
     }
 }

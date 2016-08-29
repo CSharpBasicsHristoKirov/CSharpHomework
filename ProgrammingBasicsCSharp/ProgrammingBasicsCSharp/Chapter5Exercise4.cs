@@ -11,7 +11,6 @@
    <datecreated>29.02.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
@@ -25,29 +24,43 @@ namespace ProgrammingBasicsCSharp
             int b = int.Parse(Console.ReadLine());
             int c = int.Parse(Console.ReadLine());
 
-            // sort in descending order; a will be min and c max
-            if (a > b)
+            // 3! possible relations
+            if (a >= b)
             {
-                int temp = a;
-                a = b;
-                b = temp;
+                if (a >= c)
+                {
+                    if (b >= c)
+                    {
+                        Console.WriteLine("{0} >= {1} >= {2}", a, b, c);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} >= {1} >= {2}", a, c, b);
+                    }
+                }
+                else
+                {
+                     Console.WriteLine("{0} >= {1} >= {2}", c, a, b);
+                }
             }
-
-            if (b > c)
+            else
             {
-                int temp = b;
-                b = c;
-                c = temp;
+                if (b >= c)
+                {
+                    if (a >= c)
+                    {
+                        Console.WriteLine("{0} >= {1} >= {2}", b, a, c);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} >= {1} >= {2}", b, c, a);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("{0} >= {1} >= {2}",c ,b, a);
+                } 
             }
-
-            if (a > b)
-            {
-                int temp = a;
-                a = b;
-                b = temp;
-            }
-
-            Console.WriteLine("Sorted in descending order: " + c +" "+ b +" "+ a);
         }
     }
 }

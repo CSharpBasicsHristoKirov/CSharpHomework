@@ -20,11 +20,11 @@ namespace ProgrammingBasicsCSharp
         static void Main()
         {
             // trapezium parameters
-            float baseA = 10;
-            float baseB = 5;
-            float height = 3;
+            float baseA = 10f;
+            float baseB = 5f;
+            float height = 3f;
 
-            float trapeziumArea = ((baseA + baseB) / 2) * height;
+            float trapeziumArea = ((baseA + baseB) / 2f) * height;
 
             Console.WriteLine("Area: " + trapeziumArea + " arbitrary units");
         }

@@ -18,7 +18,7 @@ namespace ProgrammingBasicsCSharp
         static void Main(string[] args)
         {
             DateTime currentTime = DateTime.Now;
-            Console.WriteLine(currentTime);
+            Console.WriteLine("{0:dd/MM/yyyy HH:mm:ss}", currentTime);
         }
     }
 }

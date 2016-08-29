@@ -19,19 +19,20 @@ namespace ProgrammingBasicsCSharp
     {
         static void Main()
         { 
-            double circleRadius = 5.0f;
-            double coordinateX = 4f;
-            double coordinateY = 3f;
+            double circleRadius = 5d;
+            double coordinateX = 4d;
+            double coordinateY = 3d;
 
-            double distanceFromOrigin = Math.Sqrt(coordinateX * coordinateX + coordinateY * coordinateY);
+            double distanceFromCenter = Math.Sqrt(coordinateX * coordinateX + coordinateY * coordinateY);
 
-            if (distanceFromOrigin <= circleRadius)
+            // compare the distance of the point from the center of the circle with its radius
+            if (Math.Abs(distanceFromCenter) <= circleRadius)
             {
-                Console.WriteLine("Point O(" + coordinateX + ", " + coordinateY + ") within the circle.");
+                Console.WriteLine("Point O({0}, {1}) within the circle.", coordinateX, coordinateY); 
             }
             else
             {
-                Console.WriteLine("Point O(" + coordinateX + ", " + coordinateY + ") out the circle.");
+                Console.WriteLine("Point O({0}, {1}) is out the circle.", coordinateX, coordinateY);
             }
         }
     }

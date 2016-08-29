@@ -10,7 +10,7 @@
                       the decimal point
                Input: -
               Output:                   !-------V
-                        0         0.00      0.00  
+                        0         0.00      +0.00  
                         1         0.10      -0.10
                         3         0.30      -0.30
                         4         0.40      -0.40
@@ -36,13 +36,13 @@ namespace ProgrammingBasicsCSharp
             // column width: 10 characters; alignment: left  
 
             // number format: hex,
-            string firstColumnFormat = "{0 ,-10 :X}";
+            string firstColumnFormat = "{0,-10:X}";
 
             // number format: positive floating-point; precision: 2 digits after the decimal point 
-            string secondColumnFormat = "{1 ,-10 :F2}";
+            string secondColumnFormat = "{1,-10:F2}";
 
-            // number format: negative floating-point; precision: 2 digits after the decimal point
-            string thirdColumnFormat = "{2 ,-10 :F2}";
+            // number format: negative floating-point; precision: 2 digits after the decimal point; display zero with sign
+            string thirdColumnFormat = "{2,-10:+0.00;-0.00}";
 
             // number of columns: 3
             const int size = 10;
@@ -52,10 +52,8 @@ namespace ProgrammingBasicsCSharp
 
             for (int i = 0; i < size; i++)
             {
-                Console.WriteLine(firstColumnFormat + secondColumnFormat + thirdColumnFormat,
-                                  firstColumn[i], secondColumn[i], thirdColumn[i]);
+                Console.WriteLine(firstColumnFormat + secondColumnFormat + thirdColumnFormat, firstColumn[i], secondColumn[i], thirdColumn[i]);
             }
-
         }
     }
 }

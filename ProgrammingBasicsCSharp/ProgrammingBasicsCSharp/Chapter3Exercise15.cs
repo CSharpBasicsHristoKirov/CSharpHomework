@@ -6,102 +6,93 @@
            Objective: 1. Read an integer.
                       2. Swap bits at positions: 3, 4 and 5 with
                          bits at positions: 24, 25 and 26.
-   117440512 == 0x07000000, i.e. the larger bits are 1's and smaller 0's 
-               Input: Type an integer:
-                      117440512 
-              Output: 117440512 after swapping: 0 
+               Input: Type a positive integer.
+              Output: 56 -> 469762048.
    </summary>
    <author>Chris B. Kirov</author>
    <datecreated>25.02.2016</datecreated>
 */
 using System;
-using System.Text;
+using System.Collections;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter3Exercise15
     {
-        /*
-            Function: findBitValue();
-
-            Returns the value of the bit in integer passed 
-            as first parameter, at position specified by
-            the second parameter.
-        */
-        static public int findBitValue(int number, int atPosition)
-        {
-            int testVariable = 1; // 00000001
-            int mask = testVariable << atPosition;
-
-            int bitValue = (mask & number) == 1 ? 1 : 0;  
-
-            return bitValue;
-        }
-
-        /*
-            Function: resetBit();
-
-            It returns the value passed by the first 
-            parameter after a bit at position specified
-            by the second parameter has been reset (= 0). 
-        */
-        static public int resetBit(int number, int atPosition)
-        {
-            int testVariable = 1;
-            int mask = testVariable << atPosition;
-            int modifiedNumber = number & ~(mask);
-            return modifiedNumber;
-        }
-
-        /*
-            Function: modifyBit();
-
-            It returns the value passed by the first parameter after
-            a bit at position specified by the second parameter has
-            been modified to a new value specified by the third parameter.
-            Assumes that bits to be modified are reset (= 0).
-        */
-        static public int modifyBit(int number, int atPosition, int newBitValue)
-        {
-            int testVariable = newBitValue == 0 ? 0 : 1;
-            int mask = testVariable << atPosition;
-            int modifiedNumber = number | mask;
-            return modifiedNumber;
-        }
-
         static void Main()
         {
-            Console.WriteLine("Type an int:");
-            int inputVariable = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Type a positive integer: ");
+            int number = Math.Abs(int.Parse(Console.ReadLine()));
 
-            // swap bits
-            int number = inputVariable;
-            // exrtact bits from position: 3, 4, 5 and 24, 25, 26
-            const int arraySize = 6;
-            int[] bitPositions = new int[arraySize] { 3, 4, 5, 24, 25, 26 };
-            int[] bitValues = new int[arraySize];
+            // get bit pattern 
+            BitArray bitPattern = new BitArray(new int[] { number });
+            Reverse(bitPattern);
 
-            int length = arraySize;
-            for (int i = 0; i < length; i++)
+
+            for (int i = 0; i < bitPattern.Length; i++)
             {
-                bitValues[i] = findBitValue(number, bitPositions[i]);
+                if (bitPattern[i] == true) Console.Write(1);
+                else Console.Write(0);
             }
+            Console.WriteLine();
+             
 
-            // reset bits at the position const int arraySize = 6;
-            for (int i = 0; i < length; i++)
+            // swap pairs of bits
+            int[] lowerBitsIndex = { 3, 4, 5 };
+            int[] higherBitsIndex = { 23, 24, 25 };
+            for (int i = 0; i < lowerBitsIndex.Length; i++)
             {
-                number = resetBit(number, bitPositions[i]);
+                bool temp = bitPattern[lowerBitsIndex[i]];
+                bitPattern[lowerBitsIndex[i]] = bitPattern[higherBitsIndex[i]];
+                bitPattern[higherBitsIndex[i]] = temp;
             }
+            // get integer value of the swapped bits
+            int numberWithSwappedBits = GetIntFromBitArray(bitPattern);
 
-            // reasign new values to the reset bits
-            int[] reversedBitPositions = new int[arraySize] { 24, 25, 26, 3, 4, 5 };
-            for (int i = 0; i < length; i++)
+
+            Reverse(bitPattern);
+            for (int i = 0; i < bitPattern.Length; i++)
             {
-                number = modifyBit(number, reversedBitPositions[i], bitValues[i]);
+                if (bitPattern[i] == true) Console.Write(1);
+                else Console.Write(0);
             }
+            Console.WriteLine();
 
-            // print result
-            Console.WriteLine(inputVariable + " after swapping: " + number);
+
+            Console.WriteLine("{0} -> {1}.", number, numberWithSwappedBits);
+        }
+        //--------------------------------------------------------------------------
+
+        /*
+           Method: getIntFromBitArray()
+
+           It returns an integer representing
+           the value of the bits stored in the
+           BitArray. Assumes BitArray holds 32 bits.
+        */
+        static private int GetIntFromBitArray(BitArray bitPattern)
+        {
+            int[] array = new int[1];
+            bitPattern.CopyTo(array, 0);
+            return array[0];
+        }
+        //--------------------------------------------------------------------------
+
+        /*
+           Method: Reverse()
+
+        */
+        static private void Reverse(BitArray array)
+        {
+            int length = array.Length;
+            int mid = (length / 2);
+
+            for (int i = 0; i < mid; i++)
+            {
+                bool bit = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = bit;
+            }
         }
     }
 }

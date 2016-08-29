@@ -17,16 +17,13 @@
    <datecreated>29.02.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter5Exercise8
     {
-
         static void Main()
         {
-
             // read input
             Console.WriteLine("Select input type by typing a number:\n1.int\n2.double\n3.string");
             int selector = Convert.ToInt32(Console.ReadLine());

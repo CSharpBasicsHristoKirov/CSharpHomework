@@ -26,10 +26,10 @@ namespace ProgrammingBasicsCSharp
             // test variable
             int mask = 0x0100;
 
-            // apply bitwise & 
+            // apply bitwise & and collect the result 
             int resultOfBitwiseAnd = testValue & mask;
 
-            // 0 == 0x0000 <=> 1 & 1  
+            // if result 1 => bit in test value is 1
             if (resultOfBitwiseAnd != 0)
             {
                 Console.WriteLine("The third bit is 1.");

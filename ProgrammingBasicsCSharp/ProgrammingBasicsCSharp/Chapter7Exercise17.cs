@@ -22,6 +22,19 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise17
     {
+        static void Main()
+        {
+            Console.WriteLine("Apply Merge sort on integer array.\n");
+
+            int[] arr = { 6, 5, 3, 1, 8, 7, 2, 4 };
+            PrintArray("Initial array:", arr);
+
+            TopDownMergeSort(arr);
+
+            PrintArray("Sorted array:", arr);
+        }
+        //--------------------------------------------------------------------
+
         /*
             Method: TopDownMergeSort(A);
 
@@ -40,7 +53,7 @@ namespace ProgrammingBasicsCSharp
             Method: TopDownSplitMerge(A, iBegin, iEnd, B);
 
             iBegin is inclusive; 
-            iEnd is exclusive (A[iEnd] is not in the set).
+            iEnd is exclusive (not in the set).
         */
         static void TopDownSplitMerge(int[] A, int iBegin, int iEnd, int[] B)
         {
@@ -49,13 +62,15 @@ namespace ProgrammingBasicsCSharp
                 return;
             }
 
-            int iMiddle = (iEnd + iBegin) / 2;   
-                       
-            TopDownSplitMerge(A, iBegin, iMiddle, B);   
-            TopDownSplitMerge(A, iMiddle, iEnd, B);   
+            int iMiddle = (iEnd + iBegin) / 2;
 
-            TopDownMerge(A, iBegin, iMiddle, iEnd, B);   
-            CopyArray(B, iBegin, iEnd, A);               
+            // recursive step on the upper and lower halves of the array
+            TopDownSplitMerge(A, iBegin, iMiddle, B);
+            TopDownSplitMerge(A, iMiddle, iEnd, B);
+
+            // actual work done
+            TopDownMerge(A, iBegin, iMiddle, iEnd, B);
+            CopyArray(B, iBegin, iEnd, A);
         }
         //--------------------------------------------------------------------
 
@@ -75,12 +90,13 @@ namespace ProgrammingBasicsCSharp
                 // If left run head exists and is <= existing right run head.
                 if (i < iMiddle && (j >= iEnd || A[i] <= A[j]))
                 {
-                    B[k] = A[i];
-                    i = i + 1;
+                    B[k] = A[i]; 
+                    ++i;
                 }
-                else {
-                    B[k] = A[j];
-                    j = j + 1;
+                else
+                {
+                    B[k] = A[j];  
+                    ++j;
                 }
             }
         }
@@ -89,7 +105,7 @@ namespace ProgrammingBasicsCSharp
         /*
             Method: CopyArray(src, iBegin, iEnd, dest);
 
-            Copies src's elements: [iBegin, iEnd)
+            It deep copies src's elements: [iBegin, iEnd)
             into dest.  
         */
         static void CopyArray(int[] B, int iBegin, int iEnd, int[] A)
@@ -102,12 +118,12 @@ namespace ProgrammingBasicsCSharp
         //--------------------------------------------------------------------
 
         /*
-            Method: printArray(label, arr);
+            Method: PrintArray(label, arr);
 
             It prints tha label and then the 
             elements of the array.
         */
-        static void printArray(string label, int[] arr)
+        static void PrintArray(string label, int[] arr)
         {
             Console.WriteLine(label);
             Console.Write("{");
@@ -119,18 +135,7 @@ namespace ProgrammingBasicsCSharp
                     Console.Write(", ");
                 }
             }
-            Console.Write("}\n");
-        }
-
-        //====================================================================
-        static void Main()
-        {
-            int[] arr = { 6, 5, 3, 1, 8, 7, 2, 4 };
-            printArray("Initial array:", arr);
-
-            TopDownMergeSort(arr);
-
-            printArray("Ordered array:", arr);
+            Console.WriteLine("}");
         }
     }
 }

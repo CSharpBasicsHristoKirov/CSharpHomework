@@ -17,8 +17,12 @@ namespace ProgrammingBasicsCSharp
     {
         static void Main()
         {
-            bool isMale = true;
-            Console.WriteLine("isMale: {0}", isMale);
+            Nullable<bool> isMale = null;
+
+            isMale = bool.Parse(Console.ReadLine()); 
+
+            Console.Write("isMale: ");
+            Console.WriteLine(isMale.ToString() ?? "Unspecified");
         }
     }
 }

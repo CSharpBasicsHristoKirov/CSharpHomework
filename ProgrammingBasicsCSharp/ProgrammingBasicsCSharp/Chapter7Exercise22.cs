@@ -19,14 +19,29 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise22
     {
-        /*
-            Method: sortRemove(src);
+        static void Main()
+        {
+            int[] numbers = { 6, 1, 4, 3, 0, 3, 6, 4, 5 };
+            PrintArray("", numbers);
 
-            It removes minimal number of elements
-            from src, so that the remaining elements
-            returned in a list are in sorted order.
+            // sort by removing minimum number of elements
+            List <int> sorted = SortRemove(numbers);
+
+            // convert result to array
+            int[] destination = sorted.ToArray();
+
+            PrintArray("->", destination);
+        }
+        //--------------------------------------------------------------------------
+
+        /*
+           Method: sortRemove(src);
+
+           It removes minimal number of elements
+           from src, so that the remaining elements
+           returned in a list are in sorted order.
         */
-        static List<int> sortRemove(int[] numbers)
+        static List<int> SortRemove(int[] numbers)
         {
             List<int> longestSubarray = new List<int>();
 
@@ -38,11 +53,11 @@ namespace ProgrammingBasicsCSharp
                 // start the search from ith element
                 currentSubarray.Add(numbers[i]);
 
-                // look for equal or least larger in the remaining of the arrat
+                // look for equal or least larger in the remaining of the array
                 for (int j = i + 1; j < numbers.Length; j++)
                 {
                     // find the next least larger or equal
-                    int nextElementIndex = leastLargerOrEqual(numbers, j, currentSubarray[currentSubarray.Count - 1]);
+                    int nextElementIndex = LeastLargerOrEqual(numbers, j, currentSubarray[currentSubarray.Count - 1]);
 
                     // if index valid (!= -1) add element with that index
                     if (nextElementIndex != -1)
@@ -64,7 +79,7 @@ namespace ProgrammingBasicsCSharp
                     longestSubarray = currentSubarray;
                 }
 
-                // stop if the number of the remaining unchecked elements smaller than the longest subarray 
+                // stop if the number of the remaining unchecked elements smaller than the current longest subarray 
                 if (longestSubarray.Count >= numbers.Length - i)
                 {
                     break;
@@ -73,14 +88,14 @@ namespace ProgrammingBasicsCSharp
 
             return longestSubarray;
         }
-
         //--------------------------------------------------------------------------
+
         /*
             Method: int index = leastLargerOrEqual(array, startIndex, referent);
 
             It returns the index of the least larger or equal (to referent) element. 
         */
-        static int leastLargerOrEqual(int[] array, int startIndex, int referent)
+        static int LeastLargerOrEqual(int[] array, int startIndex, int referent)
         {
             int targetIndex = -1; // initial value signifies no larger element than referent exists
             int difference = int.MaxValue;
@@ -97,7 +112,7 @@ namespace ProgrammingBasicsCSharp
                 if (array[i] > referent)
                 {
                     int currentDifference = array[i] - referent;
-                    
+
                     if (currentDifference < difference)
                     {
                         targetIndex = i;
@@ -108,14 +123,13 @@ namespace ProgrammingBasicsCSharp
 
             return targetIndex;
         }
-
         //--------------------------------------------------------------------------
-        /*
-            Method: printArray(label, arr);
 
-            Print the array elements.
+        /*
+            Method: PrintArray(label, arr);
+
         */
-        static void print(string label, int[] arr)
+        static void PrintArray(string label, int[] arr)
         {
             Console.Write(label);
             Console.Write("{");
@@ -128,22 +142,7 @@ namespace ProgrammingBasicsCSharp
                     Console.Write(", ");
                 }
             }
-            Console.Write("}");
-        }
-        //=======================================================================
-
-        static void Main()
-        {
-            int[] numbers = { 6, 1, 4, 3, 0, 3, 6, 4, 5 };
-            print("", numbers);
-
-            // sort by removing minimum number of elements
-            List <int> sorted = sortRemove(numbers);
-
-            // convert result to array
-            int[] destination = sorted.ToArray();
-
-            print("->", destination);
+            Console.WriteLine("}");
         }
     }
 }

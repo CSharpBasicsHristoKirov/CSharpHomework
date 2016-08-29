@@ -22,27 +22,27 @@ namespace ProgrammingBasicsCSharp
         static void Main()
         {
             // calculate point's distance from origin
-            double coordinateX = 4.0;
-            double coordinateY = 0.9;
-            double distanceFromOrigin = Math.Sqrt(coordinateX * coordinateX + coordinateY * coordinateY);
+            double coordinateX = 4.0d;
+            double coordinateY = 0.9d;
+            double distanceFromCenter = Math.Abs(Math.Sqrt(coordinateX * coordinateX + coordinateY * coordinateY));
 
-            // circle parameter
-            double circleRadius = 5.0f;
+            // circle parameters
+            double circleRadius = 5.0d;
 
             // rectangle parameters
-            double lowerLeftCornerX = -1.0;
-            double lowerLeftCornerY = 1.0;
-            double upperRightCornerX = 5.0;
-            double upperRightCornerY = 5.0;
+            double lowerLeftCornerX = -1.0d;
+            double lowerLeftCornerY = 1.0d;
+            double upperRightCornerX = 5.0d;
+            double upperRightCornerY = 5.0d;
 
             // within circle ?
-            if (distanceFromOrigin <= circleRadius 
+            if (distanceFromCenter <= circleRadius 
             // and outside vertical sides ?     
                 && ((coordinateX < lowerLeftCornerX) || (coordinateX > upperRightCornerX) 
             // or outside horizontal sides ?
                  || (coordinateY < lowerLeftCornerY) || (coordinateY > upperRightCornerY)))
             {
-                Console.WriteLine("Point O(" + coordinateX + ", " + coordinateY + ") within the circle and out of the rectangle.");
+                Console.WriteLine("Point O({0}, {1})  within the circle and out of the rectangle.", coordinateX, coordinateY);
             }
            
         }

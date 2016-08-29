@@ -29,45 +29,64 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise18
     {
+        static void Main()
+        {
+            Console.WriteLine("Apply Quick sort to array of integers.");
+
+            int[] arr = { 6, 5, 3, 1, 8, 7, 2, 4 , 30, 20, 21, 200, 100 };
+            PrintArray("Initial array:", arr);
+
+            QuicksortLomutoPartiotion(arr);
+
+            PrintArray("Ordered array:", arr);
+        }
+        //--------------------------------------------------------------------
+
         /*
             Method quicksortLomutoPartiotion(A);
 
             Wrapper. A - unsorted array.
         */
-        static void quicksortLomutoPartiotion(int[] A)
+        static void QuicksortLomutoPartiotion(int[] A)
         {
             int indexOfFirstElement = 0;
             int indexOfLastElement = A.Length - 1;
-            quicksort(A, indexOfFirstElement, indexOfLastElement);
+            Quicksort(A, indexOfFirstElement, indexOfLastElement);
         }
-
         //--------------------------------------------------------------------
+
         /*
-            Method: quicksort(A, lo, hi);
+            Method: Quicksort(A, lo, hi);
 
             It performs the recursive calls to the functions that implement the
             aforementioned algorithm steps.
+
+            Complexity: (worst case) O(n^2)
         */
-        static void quicksort(int[] A, int lo, int hi)
+        static void Quicksort(int[] A, int lo, int hi)
         {
             if (lo < hi)
             {
-                int p = partition(A, lo, hi);
-                quicksort(A, lo, p - 1);
-                quicksort(A, p + 1, hi);
+                // actual work done
+                int p = Partition(A, lo, hi);
+
+                // recursive steps
+                Quicksort(A, lo, p - 1);
+                Quicksort(A, p + 1, hi);
             }
         }
-
         //--------------------------------------------------------------------
-        /*
-            Method: partiotion(A, lo, hi);
 
-            Chooses a pivot (last element in the array).
-            It maintains the index to put the pivot in variable
-            i and each time when it finds an element less than or equal to pivot,
-            this index is incremented and that element would be placed before the pivot.
+        /*
+            Method: Partiotion(A, lo, hi);
+
+            It chooses the last element value for referent
+            and then it scans the array putting it 
+            in increasing order, by swapping
+            elements <= referent, with their consecutive.
+            Returns the index of the last element being swapped.
         */
-        static int partition(int[] A, int lo, int hi)
+        static int Partition(int[] A, int lo, int hi)
         {
             int pivot = A[hi];
 
@@ -77,23 +96,23 @@ namespace ProgrammingBasicsCSharp
             {
                 if (A[j] <= pivot)
                 {
-                    swapElements(ref A[i], ref A[j]);
+                    SwapElements(ref A[i], ref A[j]);
                     ++i;
                 }
             }
 
-            swapElements(ref A[i], ref A[hi]);
+            SwapElements(ref A[i], ref A[hi]);
 
             return i;
         }
-
         //--------------------------------------------------------------------
+
         /*
-            Method: printArray(label, arr);
+            Method: PrintArray(label, arr);
 
             It prints tha label and then the elements of the array.
         */
-        static void printArray(string label, int[] arr)
+        static void PrintArray(string label, int[] arr)
         {
             Console.WriteLine(label);
             Console.Write("{");
@@ -107,30 +126,19 @@ namespace ProgrammingBasicsCSharp
             }
             Console.Write("}\n");
         }
-
         //--------------------------------------------------------------------
+
         /*
-            Method: swapElements(ref a, ref b);
+            Method: SwapElements(ref a, ref b);
 
             It swaps the values of the two variables
             passed as parameters.
         */
-        static void swapElements(ref int a, ref int b)
+        static void SwapElements(ref int a, ref int b)
         {
             int temp = a;
             a = b;
             b = temp;
-        }
-
-        //====================================================================
-        static void Main()
-        {
-            int[] arr = { 6, 5, 3, 1, 8, 7, 2, 4 };
-            printArray("Initial array:", arr);
-
-            quicksortLomutoPartiotion(arr);
-
-            printArray("Ordered array:", arr);
         }
     }
 }

@@ -5,30 +5,64 @@
    COMMENT
            Objective: Swap k adjacent bits startint at positions p and q;
                       [p, p + k] and [q, q + k], where p + k < q
-               Input: - Requires proper testing!
-              Output: -
+               Input: 56
+              Output: 56 -> 469762048. Matches the result from previous exercise.
    </summary>
    <author>Chris B. Kirov</author>
    <datecreated>25.02.2016</datecreated>
 */
 using System;
-using System.Text;
+using System.Collections;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter3Exercise16
     {
-        /*
-            Function: swapRangeOfBits();
+        static void Main()
+        {
+            int number = 56;
 
-            It returns the number passed by the first parameter after "range" number 
-            of consecutive bits starting at positions: "positionA" and "positionB"
-            have been swapped.
-            Assumes positionA + range < positionB.
-        */
+            /* test lines: displays bits
+            BitArray bitPattern = new BitArray(new int[] { number });
+            for (int i = 0; i < bitPattern.Length; i++)
+            {
+                if (bitPattern[i] == true) Console.Write(1);
+                else Console.Write(0);
+            }
+            Console.WriteLine();
+            */
+
+            int startFirstRange = 3;
+            int startSecondRange = 23;
+            int rangeLenght = 4;
+
+            int modifiedNumber = swapRangeOfBits(number, startFirstRange, startSecondRange , rangeLenght);
+
+            /* test lines: displays bits
+            BitArray bitPattern2 = new BitArray(new int[] { modifiedNumber  });
+            for (int i = 0; i < bitPattern2.Length; i++)
+            {
+                if (bitPattern2[i] == true) Console.Write(1);
+                else Console.Write(0);
+            }
+            Console.WriteLine();
+            */
+
+            Console.WriteLine("{0} -> {1}.", number, modifiedNumber);
+        }
+        //----------------------------------------------------------------------------------
+
+        /*
+           Function: swapRangeOfBits();
+
+           It returns the number passed by the first parameter after "range" number 
+           of consecutive bits starting at positions: "positionA" and "positionB"
+           have been swapped.
+           Assumes positionA + range < positionB.
+       */
         static int swapRangeOfBits(int number, int positionA, int positionB, int range)
         {
-            // range gives the LSB number of 1 
+            // range gives the LSB number of 1's 
             int testVariable = 0;
             for (int i = 0; i < range; i++)
             {
@@ -50,14 +84,6 @@ namespace ProgrammingBasicsCSharp
             result |= firstRangeOfBits << positionB;
             result |= secondRangeOfBits << positionA;
             return result;
-        }
-         
-        static void Main()
-        {
-            int number = 0x0011;  
-
-            int modifiedNumber = swapRangeOfBits(number, 0, 2, 2);
-            Console.WriteLine(number + " after swap: " + modifiedNumber);
         }
     }
 }

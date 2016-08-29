@@ -12,19 +12,27 @@
    <datecreated>07.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise15
     {
-        /*
-            Method: int hexadecimalToDecimal(string hex);
+        static void Main()
+        {
+            Console.WriteLine("Type a hexadecimal value:");
+            string hex = Console.ReadLine();
 
-            It returns the decimal value of the parameter
-            holding the string hexadecimal value of a number.
+            Console.WriteLine("{0} as decimal is {1}", hex, HexadecimalToDecimal(hex));
+        }
+        //------------------------------------------------------------------------------
+
+        /*
+           Method: HexadecimalToDecimal(string hex);
+
+           It returns the decimal value of the parameter.
+           Assumes parameter is a string stroring a hexadecimal number.
         */
-        static int hexadecimalToDecimal(string hex)
+        static int HexadecimalToDecimal(string hex)
         {
             int dec = 0;
             int length = hex.ToString().Length;
@@ -52,18 +60,9 @@ namespace ProgrammingBasicsCSharp
                     case 'F': case 'f': summand = 15; break;
                 }
                 // accumulate the decimal value as number within [0,15] * 16 ^ index
-                dec += summand * (int) Math.Pow(16, i);
+                dec += summand * (int)Math.Pow(16, i);
             }
             return dec;
-        }
-        //========================================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a hexadecimal value:");
-            string hex = Console.ReadLine();
-
-            Console.WriteLine("{0} as decimal is {1}", hex, hexadecimalToDecimal(hex));
         }
     }
 }

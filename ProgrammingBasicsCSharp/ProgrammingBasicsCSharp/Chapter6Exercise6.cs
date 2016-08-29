@@ -17,6 +17,15 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise6
     {
+        static void Main()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("N! / K! = {0}", factorial(n)/ factorial(k));
+        }
+        //----------------------------------------------------------------------
+
         /*
             Method: double p = factorial(n)
 
@@ -30,14 +39,6 @@ namespace ProgrammingBasicsCSharp
                 fact *= i;
             }
             return fact;
-        }
-
-        static void Main()
-        {
-            int n = int.Parse(Console.ReadLine());
-            int k = int.Parse(Console.ReadLine());
-            
-            Console.WriteLine("N! / K! = {0}", factorial(n)/ factorial(k));
         }
     }
 }

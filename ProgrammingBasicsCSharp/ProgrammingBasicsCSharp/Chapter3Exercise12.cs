@@ -38,10 +38,10 @@ namespace ProgrammingBasicsCSharp
             int mask = testVariable << bitPosition;
 
             // apply bitwise operator& to inputVariable and mask; if result: true, return: 1
-            int bitValue = (inputVariable & mask) == 1 ? 1 : 0;
+            bool bitValue = (inputVariable & mask) == 1 ? true : false;
 
             // print result
-            Console.WriteLine("The bit at position: " + bitPosition + " is: " + bitValue);
+            Console.WriteLine("v = {0}, p = {1} -> {2}.", inputVariable, bitPosition, bitValue);
         }
     }
 }

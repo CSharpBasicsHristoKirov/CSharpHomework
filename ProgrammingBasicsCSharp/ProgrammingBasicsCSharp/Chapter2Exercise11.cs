@@ -20,17 +20,16 @@ namespace ProgrammingBasicsCSharp
         {
             char CopyrightSign = '\u00A9';
 
-            Console.WriteLine("         " + CopyrightSign);
-            Console.WriteLine("        " + CopyrightSign + " " + CopyrightSign);
-            Console.WriteLine("       " + CopyrightSign + "   " + CopyrightSign);
-            Console.WriteLine("      " + CopyrightSign + "     " + CopyrightSign);
-            Console.WriteLine("     " + CopyrightSign + "       " + CopyrightSign);
-            Console.WriteLine("    " + CopyrightSign + "         " + CopyrightSign);
-            Console.WriteLine("   " + CopyrightSign + "           " + CopyrightSign);
-            Console.WriteLine("  " + CopyrightSign + "             " + CopyrightSign);
-            Console.WriteLine(" " + CopyrightSign + "               " + CopyrightSign);
-           
+            // top 
+            Console.WriteLine( new string(' ', 9) + CopyrightSign);
 
+            int length = 8;
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine(new string(' ', 8 - i) + CopyrightSign + new string(' ', 1 + 2 * i) + CopyrightSign);
+            }
+
+            // base
             int baseLength = 19;
             for (int i = 0; i < baseLength; i++)
             {

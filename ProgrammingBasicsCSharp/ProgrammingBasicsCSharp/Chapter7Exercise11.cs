@@ -17,13 +17,25 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise11
     {
+        static void Main()
+        {
+            Console.WriteLine("Find if there is a subarray that sums up to specific value.");
+            int[] numbers = { 4, 3, 1, 4, 2, 5, 8 };
+
+            Console.WriteLine("Type a sum:");
+            int sum = int.Parse(Console.ReadLine());
+
+            ElementsWithSum(numbers, sum);
+        }
+        //----------------------------------------------------------------
+
         /*
-            Method: elementsWithSum(arr, sum);
+            Method: ElementsWithSum(arr, sum);
 
             It prints the sequence of elements that sum
             up to the value passed as second parameter.
         */
-        static void elementsWithSum(int[] arr, int sum)
+        static void ElementsWithSum(int[] arr, int sum)
         {
             bool exists = false;
             int length = arr.Length;
@@ -54,20 +66,9 @@ namespace ProgrammingBasicsCSharp
             }
 
             if (!exists)
-            { 
+            {
                 Console.WriteLine("No seqeunce with such sum exists!\n");
             }
-        }
-        //======================================================================
-
-        static void Main()
-        {
-            int[] numbers = { 4, 3, 1, 4, 2, 5, 8 };
-
-            Console.WriteLine("Type a sum:");
-            int sum = int.Parse(Console.ReadLine());
-
-            elementsWithSum(numbers, sum);
         }
     }
 }

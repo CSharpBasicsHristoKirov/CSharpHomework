@@ -17,7 +17,7 @@ namespace ProgrammingBasicsCSharp
         static void Main()
         {
             // values that within single precision float
-            float var1 = 34.567839023f;
+            float var1 = 34.567839023f; // up to 6th digit (after the decimal point)
             float var2 = 12.345f;
             float var3 = 8923.1234857f;
 

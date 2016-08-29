@@ -43,17 +43,17 @@ namespace ProgrammingBasicsCSharp
 
             if (newBitValue == setBit)
             {
-                // apply bitwise operator| between the wanted bit and the shifted 1
+                // Set bit: apply bitwise operator| between the wanted bit and the shifted 1
                 modifiedValue = initialValue | (1 << bitPosition);
             }
             else if (newBitValue == resetBit)
             {
-                // apply bitwise operator& between the wanted bit and the shifted, negated 1
+                // Reset bit: apply bitwise operator& between the wanted bit and the shifted, negated 1
                 modifiedValue = initialValue & (~(1 << bitPosition));
             }
 
             // print result
-            Console.WriteLine("Modified value: " + modifiedValue);
+            Console.WriteLine("Modified value: {0}.", modifiedValue);
         }
     }
 }

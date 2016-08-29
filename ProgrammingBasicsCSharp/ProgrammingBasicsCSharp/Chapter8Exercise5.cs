@@ -16,14 +16,23 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise5
     {
-        /*
-            Method: int dec = binaryToDecimal(binary);
+        static void Main()
+        {
+            Console.WriteLine("Type a number in binary representation:");
+            string binary = Console.ReadLine();
 
-            It converts the string parameter consisted
-            of binary represented number to decimal
-            representation.
-        */
-        static int binaryToDecimal(string binary)
+            Console.WriteLine("{0}(2) -> {1}(10)", binary, BinaryToDecimal(binary));
+        }
+        //-----------------------------------------------------------------------------------
+
+        /*
+           Method: BinaryToDecimal(binary);
+
+           It converts the string parameter consisted
+           of binary represented number to decimal
+           representation.
+       */
+        static int BinaryToDecimal(string binary)
         {
             int dec = 0;
 
@@ -39,15 +48,6 @@ namespace ProgrammingBasicsCSharp
                 }
             }
             return dec;
-        }
-        //==============================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a number in binary representation:");
-            string binary = Console.ReadLine();
-
-            Console.WriteLine("{0}(2) -> {1}(10)", binary, binaryToDecimal(binary));
         }
     }
 }

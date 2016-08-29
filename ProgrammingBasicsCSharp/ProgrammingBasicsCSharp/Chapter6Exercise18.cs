@@ -12,23 +12,32 @@
    <datecreated>07.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise18
     {
+        static void Main()
+        {
+            Console.WriteLine("Type n x n matrix dimension:");
+            int n = int.Parse(Console.ReadLine());
+
+            PrintSpiralMatrix(n);
+        }
+        //----------------------------------------------------------------
+
         /*
-            Method: printSpiralMatrix(int n);
+            Method: PrintSpiralMatrix(int n);
 
             It prints a matrix populated with
+            elements whose values are 
             increasing numbers starting from 1,
             in a inward spiral. 
         */
-        static void printSpiralMatrix(int n)
+        static void PrintSpiralMatrix(int n)
         {
             int[,] spiralMatrix = new int[n, n];
-            
+
             // used to initialize matrix elements
             int numbers = 1;
 
@@ -78,14 +87,6 @@ namespace ProgrammingBasicsCSharp
                 }
                 Console.WriteLine();
             }
-        }
-
-        static void Main()
-        {
-            Console.WriteLine("Type n x n matrix dimension:");
-            int n = int.Parse(Console.ReadLine());
-
-            printSpiralMatrix(n);
         }
     }
 }

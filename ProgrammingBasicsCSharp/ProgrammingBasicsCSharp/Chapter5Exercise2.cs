@@ -24,7 +24,7 @@ namespace ProgrammingBasicsCSharp
             
             Returns true if the number of elements
             in the array with negative sign is even,
-            i.e. the their product is positive.     
+            i.e. their product is positive.     
         */
         static bool isSignOfProductPositive(int[] numbers)
         {

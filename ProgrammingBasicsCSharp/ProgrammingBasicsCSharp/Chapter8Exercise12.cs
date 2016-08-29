@@ -17,8 +17,19 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise12
     {
+        static void Main()
+        {
+            int upperBound = 4000;
+            for (int i = 1; i <= upperBound; ++i)
+            {
+                Console.WriteLine("{0}(Arabic) -> {1}(Roman)", i, arabicToRoman(i));
+                Console.ReadKey();
+            }
+        }
+        //----------------------------------------------------------------------------
+
         /*
-            Collection:  List<Tuple<int, string>> arabic;
+            Class data member:  List<Tuple<int, string>> arabic;
 
             It establishes a connections between Roman
             and Arabic numerals.
@@ -39,8 +50,8 @@ namespace ProgrammingBasicsCSharp
             new Tuple<int, string>(4, "IV"),
             new Tuple<int, string>(1, "I")
         };
-
         //----------------------------------------------------------------------------
+
         /*
             Method: arabicToRoman(n);
 
@@ -71,16 +82,6 @@ namespace ProgrammingBasicsCSharp
             }
             return result;
         }
-        //============================================================================
 
-        static void Main()
-        {
-            int upperBound = 4000;
-            for (int i = 1; i <= upperBound; ++i)
-            {
-                Console.WriteLine("{0}(Arabic) -> {1}(Roman)", i, arabicToRoman(i));
-                Console.ReadKey();
-            }
-        }
     }
 }

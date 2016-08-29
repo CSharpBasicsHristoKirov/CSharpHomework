@@ -27,14 +27,14 @@ namespace ProgrammingBasicsCSharp
             Console.WriteLine("Populate first int array of size {0}.", size);
             for (int i = 0; i < size; i++)
             {
-                Console.WriteLine("Type an element:");
+                Console.WriteLine("Type element arr[{0}] = ", i);
                 array1[i] = int.Parse(Console.ReadLine());
             }
 
             Console.WriteLine("Populate second int array of size {0}.", size);
             for (int i = 0; i < size; i++)
             {
-                Console.WriteLine("Type an element:");
+                Console.WriteLine("Type element arr[{0}] = ", i);
                 array2[i] = int.Parse(Console.ReadLine());
             }
 

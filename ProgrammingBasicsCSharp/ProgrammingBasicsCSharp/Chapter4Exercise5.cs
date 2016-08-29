@@ -20,27 +20,6 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter4Exercise5
     {
-        /*
-            Method: numberOfDivisible();
-
-            Returns the number of integers
-            divisible by the third parameter
-            within an interval specified by the
-            first two parameters.
-        */
-        static int numberOfDivisible(int min, int max, int denominator)
-        {
-            int count = 0;
-            for (int i = min; i <= max; i++)
-            {
-                if (i % denominator == 0)
-                {
-                    ++count;
-                }
-            }
-            return count;
-        }
-
         static void Main()
         {
             // information
@@ -58,6 +37,28 @@ namespace ProgrammingBasicsCSharp
             Console.WriteLine("The number of divisble by {0} within [{1}, {2}] is {3}.",
                               denominator, lowerBound, upperBound, 
                               numberOfDivisible(lowerBound, upperBound, denominator));
+        }
+        //------------------------------------------------------------------------------------
+
+        /*
+           Method: numberOfDivisible();
+
+           Returns the number of integers
+           divisible by the third parameter
+           within an interval specified by the
+           first two parameters.
+       */
+        static int numberOfDivisible(int min, int max, int denominator)
+        {
+            int count = 0;
+            for (int i = min; i <= max; i++)
+            {
+                if (i % denominator == 0)
+                {
+                    ++count;
+                }
+            }
+            return count;
         }
     }
 }

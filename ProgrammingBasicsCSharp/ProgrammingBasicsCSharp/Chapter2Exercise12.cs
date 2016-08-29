@@ -21,10 +21,10 @@ namespace ProgrammingBasicsCSharp
         static void Main()
         {
             string employeeFirstName;
-            string employeeLastName;
-            byte employeeAge;
-            bool employeeSex;           // possibly more than 2 values? null for value: "else"?
-            uint employeeUniqueID;      // 4e+9 uniques ID's
+            string lastName;
+            byte age;
+            bool sex;           // possibly more than 2 values? null for value: "else"?
+            uint ID;            // 4e+9 uniques ID's
         }
     }
 }

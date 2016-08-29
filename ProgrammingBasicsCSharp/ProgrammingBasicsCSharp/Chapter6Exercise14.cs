@@ -18,13 +18,24 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise14
     {
+        static void Main()
+        {
+            Console.WriteLine("Type a number in decimal representation:");
+            int n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("{0} in hexadecimal is {1:x}", n, n);
+            Console.WriteLine("From function: {0}", DecimalToHexadecimal(n));
+        }
+        //-------------------------------------------------------------------------
+
         /*
-            Method: hex = decimalToHexadecimal(n);
+            DecimalToHexadecimal(n);
 
             It returns a string representing
             the hexadecimal value of the parameter.
+            Assumes parameter is positive integer.
         */
-        static string decimalToHexadecimal(int n)
+        static string DecimalToHexadecimal(int n)
         {
             if (n == 0)
             {
@@ -60,17 +71,6 @@ namespace ProgrammingBasicsCSharp
                 n /= 16;
             }
             return hex;
-        }
-        //============================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a number in decimal representation:");
-            int n = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("{0} in hexadecimal is {1:x}", n, n);
-            Console.WriteLine("From function: {0}", decimalToHexadecimal(n));
-
         }
     }
 }

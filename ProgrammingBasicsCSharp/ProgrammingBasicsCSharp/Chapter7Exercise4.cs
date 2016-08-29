@@ -11,7 +11,6 @@
    <datecreated>11.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
@@ -48,6 +47,7 @@ namespace ProgrammingBasicsCSharp
                     startingIndex = i;
                 }
             }
+
             // print sequence
             for (int i = startingIndex; i < startingIndex + longestSequence; i++)
             {

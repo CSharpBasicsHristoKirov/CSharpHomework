@@ -14,36 +14,44 @@
    <datecreated>18.03.2016</datecreated>
 */
 using System;
-using System.Collections.Generic;
 
 namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise25
     {
+        static void Main()
+        {
+            Console.Write("N = ");
+            int n = int.Parse(Console.ReadLine());
+
+            Console.Write("K = ");
+            int k = int.Parse(Console.ReadLine());
+
+            PrintCombinations(n, k);
+
+            Console.WriteLine();
+        }
+        //-----------------------------------------------------------------------
+
         /*
-            Method: printCombinations(n, k);
+            Method: PrintCombinations(n, k);
 
             Wrapper for the recursive function.
             It prints all the k combinations
             out of n elements.
         */
-        static void printCombinations(int n, int k)
+        static void PrintCombinations(int n, int k)
         {
-            // define and initialize an array of elements
             int[] elements = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                elements[i] = i + 1;
-            }
-
-            int length = k;
+            InitializeArray(elements, n);
 
             Console.Write("->");
-            combinations(elements, length, 0, new int[k]);
+            Combinations(elements, k, 0, new int[k]);
         }
+        //-----------------------------------------------------------------------
 
         /*
-            Method:  combinations(arr, length, startPosition, ithCombination);
+            Method:  Combinations(arr, length, startPosition, ithCombination);
 
             Recursive function that accumulates all the (k == length) combinations 
             in array ithCombination and when filled up it prints it.
@@ -58,12 +66,12 @@ namespace ProgrammingBasicsCSharp
                             - exclude added element, update currentNumberOfElementsInCombination.
                             - calls itself with updated arguments.
         */
-        static void combinations(int[] arr, int length, int startPosition, int[] ithCombination)
+        static void Combinations(int[] arr, int length, int startPosition, int[] ithCombination)
         {
             // if k elements added to the combination: print it
             if (length == 0)
             {
-                print(", ", ithCombination);
+                PrintArray(", ", ithCombination);
                 return;
             }
 
@@ -72,17 +80,17 @@ namespace ProgrammingBasicsCSharp
             {
                 ithCombination[ithCombination.Length - length] = arr[i];
 
-                combinations(arr, length - 1, i + 1, ithCombination);
+                Combinations(arr, length - 1, i + 1, ithCombination);
             }
         }
-
         //-----------------------------------------------------------------------
+
         /*
-            Method: printArray(label, arr);
+            Method: PrintArray(label, arr);
 
             Print label and the array elements;  
         */
-        static void print(string label, int[] arr)
+        static void PrintArray(string label, int[] arr)
         {
             Console.Write("{");
             for (int i = 0; i < arr.Length; i++)
@@ -97,19 +105,18 @@ namespace ProgrammingBasicsCSharp
             Console.Write("}");
             Console.Write(label);
         }
-        //=======================================================================
+        //-----------------------------------------------------------------------
 
-        static void Main()
+        /*
+            Method: InitializeArray();
+
+        */
+        static void InitializeArray(int[] arr, int n)
         {
-            Console.Write("N = ");
-            int n = int.Parse(Console.ReadLine());
-
-            Console.Write("K = ");
-            int k = int.Parse(Console.ReadLine());
-
-            printCombinations(n, k);
-
-            Console.WriteLine();
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = i + 1;
+            }
         }
     }
 }

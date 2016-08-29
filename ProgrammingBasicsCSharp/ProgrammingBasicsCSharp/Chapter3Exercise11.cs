@@ -24,7 +24,7 @@ namespace ProgrammingBasicsCSharp
         static void Main()
         {
             Console.WriteLine("Type an integer: ");
-            int inputVariable = Convert.ToInt32(Console.ReadLine());
+            int inputVariable = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Type a bit position: ");
             byte bitPosition = Convert.ToByte(Console.ReadLine());
@@ -32,7 +32,7 @@ namespace ProgrammingBasicsCSharp
             // find bit value by AND-ing it with a known bit and observing the result
             int testVariable = 1; // equivalent to: 00000001
 
-            // place the test bit at the right position by shifting it to the right
+            // place the test bit at the right position by shifting it to the left
             int mask = testVariable << bitPosition;
 
             // if AND true => bit is: 1 
@@ -41,7 +41,7 @@ namespace ProgrammingBasicsCSharp
             int bitValue = (inputVariable & mask) != 0 ? on : off;
 
             // print result
-            Console.WriteLine("The bit at position: "+ bitPosition+ " in: "+ inputVariable+ " is: "+ bitValue);
+            Console.WriteLine("n = {0}, p = {1} -> {2}.", inputVariable, bitPosition,   bitValue);
         }
     }
 }

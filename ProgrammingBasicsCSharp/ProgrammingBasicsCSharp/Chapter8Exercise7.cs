@@ -16,13 +16,22 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise7
     {
-        /*
-           Method: int hexadecimalToDecimal(string hex);
+        static void Main()
+        {
+            Console.WriteLine("Type a hexadecimal string:");
+            string hex = Console.ReadLine();
+             
+            Console.WriteLine("{0}(16) -> {1}(10)", hex, HexadecimalToDecimal(hex));
+        }
+        //---------------------------------------------------------------------------
 
-           It returns the decimal value of the parameter
-           holding the string hexadecimal value of a number.
-       */
-        static int hexadecimalToDecimal(string hex)
+        /*
+             Method: HexadecimalToDecimal(string hex);
+
+             It returns the decimal value of the parameter
+             holding the string hexadecimal value of a number.
+        */
+        static int HexadecimalToDecimal(string hex)
         {
             int dec = 0;
             int length = hex.ToString().Length;
@@ -53,15 +62,6 @@ namespace ProgrammingBasicsCSharp
                 dec += summand * (int)Math.Pow(16, i);
             }
             return dec;
-        }
-        //========================================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a hexadecimal string:");
-            string hex = Console.ReadLine();
-             
-            Console.WriteLine("{0}(16) -> {1}(10)", hex, hexadecimalToDecimal(hex));
         }
     }
 }

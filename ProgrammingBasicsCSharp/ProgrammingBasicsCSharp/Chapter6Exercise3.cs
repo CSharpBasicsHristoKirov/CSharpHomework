@@ -23,21 +23,34 @@ namespace ProgrammingBasicsCSharp
             int min = int.MaxValue;
             int max = int.MinValue;
 
-            Console.WriteLine("How many number do you want to type:");
-            int size = int.Parse(Console.ReadLine());
-            for (int i = 0; i < size; i++)
+            Console.WriteLine("Find min / max;'q' to display result:");
+            string sentinel = "q";
+            while(true)
             {
                 Console.WriteLine("Type a number:");
-                int n = int.Parse(Console.ReadLine());
-
-                if (n < min)
+                string input = Console.ReadLine();
+                
+                if (input == sentinel)
                 {
-                    min = n;
+                    break;
                 }
 
-                if (n > max)
+                int n;
+                if (Int32.TryParse(input, out n))
                 {
-                    max = n;
+                    if (n < min)
+                    {
+                        min = n;
+                    }
+
+                    if (n > max)
+                    {
+                        max = n;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Wrong type!");
                 }
             }
             Console.WriteLine("Min: {0}\nMax: {1}", min, max);

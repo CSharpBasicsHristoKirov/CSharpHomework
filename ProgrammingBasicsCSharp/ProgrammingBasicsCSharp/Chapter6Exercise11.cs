@@ -18,27 +18,35 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise11
     {
-        /*
-            Method: int f = factorial(n);
+        static void Main()
+        {
+            int n = int.Parse(Console.ReadLine());
 
-            It returns the factorial of n.
+            Console.WriteLine("Number of zeroes: in {0} is {1}", Factorial(n), CountTrailingZeroes(n));
+        }
+        //-----------------------------------------------------------------------------------------------
+        /*
+           Method: int f = Factorial(n);
+
+           It returns the factorial of n.
         */
-        static int factorial(int n)
+        static int Factorial(int n)
         {
             if (n < 1)
             {
                 return 1;
             }
-            return n * factorial(n - 1);
+            return n * Factorial(n - 1);
         }
+        //-----------------------------------------------------------------------------------------------
 
         /*
-            Method: int zeroes = countTrailingZeroes(int n);
+            Method: CountTrailingZeroes(int n);
 
             It counts how many times the remainder of division
             by 10 is equal to 0.
         */
-        static int countTrailingZeroes(int n)
+        static int CountTrailingZeroes(int n)
         {
             int numberOfZeroes = 0;
             while (true)
@@ -57,15 +65,6 @@ namespace ProgrammingBasicsCSharp
                 n /= 10;
             }
             return numberOfZeroes;
-        }
-
-        static void Main()
-        {
-            int n = int.Parse(Console.ReadLine());
-
-            n = factorial(n);
-
-            Console.WriteLine("Number of zeroes: in {0} is {1}",n, countTrailingZeroes(n));
         }
     }
 }

@@ -17,36 +17,6 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise9
     {
-        /*
-           Method: double p = factorial(n)
-
-           It returns the factorial of n.
-       */
-        static double factorial(double n)
-        {
-            double fact = 1;
-            for (int i = 1; i <= n; i++)
-            {
-                fact *= i;
-            }
-            return fact;
-        }
-
-        /*
-           Method: double sum = series(int n, int x);
-
-           It returns the sum of n!/ x^n.
-        */
-        static double series(int n, int x)
-        {
-            double sum = 1;
-            for (int i = 0; i < n; i++)
-            {
-                sum += (factorial(i) / Math.Pow(x, i));
-            }
-            return sum;
-        }
-
         static void Main()
         {
             Console.WriteLine("Type x:");
@@ -55,7 +25,39 @@ namespace ProgrammingBasicsCSharp
             Console.WriteLine("Type n:");
             int n = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Series: " + series(n, x));
+            Console.WriteLine("The sum of the series:\n S = 1 + 1! / {0} + 2! / {1}^2 + ... + {2}! / {3}^{4} is: {5}",x, x, n, x, n, Series(n, x));
+        }
+        //---------------------------------------------------------
+
+        /*
+          Method: double p = Factorial(n)
+
+          It returns the factorial of n.
+        */
+        static double Factorial(double n)
+        {
+            double fact = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                fact *= i;
+            }
+            return fact;
+        }
+        //---------------------------------------------------------
+
+        /*
+           Method: double sum = Series(int n, int x);
+
+           It returns the sum of the series: n! / x^n.
+        */
+        static double Series(int n, int x)
+        {
+            double sum = 1;
+            for (int i = 0; i < n; i++)
+            {
+                sum += (Factorial(i) / Math.Pow(x, i));
+            }
+            return sum;
         }
     }
 }

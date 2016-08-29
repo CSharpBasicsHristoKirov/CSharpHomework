@@ -16,13 +16,23 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter8Exercise6
     {
-        /*
-          Method: hex = decimalToHexadecimal(n);
+        static void Main()
+        {
+            Console.WriteLine("Type a positive integer:");
+            int n = int.Parse(Console.ReadLine());
 
-          It returns a string representing
-          the hexadecimal value of the parameter.
+            Console.WriteLine("{0}(10) -> {1:x}(16)", n, n);
+            Console.WriteLine("{0}(10) -> {1}(16)", n, DecimalToHexadecimal(n));
+        }
+        //------------------------------------------------------------------------------
+
+        /*
+            Method: DecimalToHexadecimal(n);
+
+            It returns a string representing
+            the hexadecimal value of the parameter.
         */
-        static string decimalToHexadecimal(int n)
+        static string DecimalToHexadecimal(int n)
         {
             if (n == 0)
             {
@@ -58,16 +68,6 @@ namespace ProgrammingBasicsCSharp
                 n /= 16;
             }
             return hex;
-        }
-        //============================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a positive integer:");
-            int n = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("{0}(10) -> {1:x}(16)", n, n);
-            Console.WriteLine("{0}(10) -> {1}(16)", n, decimalToHexadecimal(n));
         }
     }
 }

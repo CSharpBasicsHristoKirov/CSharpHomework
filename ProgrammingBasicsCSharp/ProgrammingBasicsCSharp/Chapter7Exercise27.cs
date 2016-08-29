@@ -26,14 +26,26 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise27
     {
-        /*
-            Method: largestAreaOfIdenticalAdjacentElements (arr2D);
+        static void Main()
+        {
+            // target matrix
+            int[,] matrix = new int[,] { { 1, 3, 2, 2, 2, 4 },
+                                         { 3, 3, 3, 2, 4, 4 },
+                                         { 4, 3, 1, 2, 3, 3 },
+                                         { 4, 3, 1, 3, 3, 1 },
+                                         { 4, 3, 3, 3, 1, 1,}
+                                       };
+            PrintMatrix(matrix);
 
-            It prints the area (number of adjacent elements) of
-            elements with identical value, within the 2D matrix
-            passed as paremeter.
+            MaxAreaOfIdenticalAdjacentElements(matrix);
+        }
+        //----------------------------------------------------------------------------
+
+        /*
+            Method:  MaxAreaOfIdenticalAdjacentElements (arr2D);
+
         */
-        static void largestAreaOfIdenticalAdjacentElements(int[,] arr2D)
+        static void MaxAreaOfIdenticalAdjacentElements(int[,] arr2D)
         {
             int value = 0;
             int largestArea = 0;
@@ -44,16 +56,16 @@ namespace ProgrammingBasicsCSharp
                 for (int j = 0; j < arr2D.GetLength(1); j++)
                 {
                     // stores all unique matrix elements with the same values
-                    HashSet<Tuple<int,int>> visited = new HashSet<Tuple<int, int>>();
+                    HashSet<Tuple<int, int>> visited = new HashSet<Tuple<int, int>>();
 
                     // mark start element as visited
-                    Tuple<int, int> MatrixElement = new Tuple<int, int>(i,j);
+                    Tuple<int, int> MatrixElement = new Tuple<int, int>(i, j);
                     visited.Add(MatrixElement);
 
-                    checkLeft(arr2D, i, j, visited);
-                    checkRight(arr2D, i, j, visited);
-                    checkUp(arr2D, i, j, visited);
-                    checkDown(arr2D, i, j, visited);
+                    CheckLeft(arr2D, i, j, visited);
+                    CheckRight(arr2D, i, j, visited);
+                    CheckUp(arr2D, i, j, visited);
+                    CheckDown(arr2D, i, j, visited);
 
                     // check if area with current value is largest
                     if (visited.Count > largestArea)
@@ -72,15 +84,15 @@ namespace ProgrammingBasicsCSharp
                 area[item.Item1, item.Item2] = '*';
             }
 
-            printMatrix(area);
+            PrintMatrix(area);
 
             // print result
             Console.WriteLine("Value: {0} Area: {1}", value, largestArea);
         }
-
         //----------------------------------------------------------------------------
+
         /*
-            Method: checkLeft (arr2D, i, j, visited);
+            Method: CheckLeft (arr2D, i, j, visited);
 
             arr2D - target 2D matrix storing seached elements
             i - row of current element
@@ -89,7 +101,7 @@ namespace ProgrammingBasicsCSharp
 
             It recursively checks for elements with identical values to the left, up, and down.
         */
-        static void checkLeft(int[,] arr2D, int i, int j, HashSet<Tuple<int, int>> visited)
+        static void CheckLeft(int[,] arr2D, int i, int j, HashSet<Tuple<int, int>> visited)
         {
             int currentValue = arr2D[i, j];
             int col = j - 1;
@@ -107,10 +119,10 @@ namespace ProgrammingBasicsCSharp
                     visited.Add(nextElement);
 
                     // check up
-                    checkUp(arr2D, i, col, visited);
+                    CheckUp(arr2D, i, col, visited);
 
                     // check down
-                    checkDown(arr2D, i, col, visited);
+                    CheckDown(arr2D, i, col, visited);
                 }
                 else
                 {
@@ -119,10 +131,10 @@ namespace ProgrammingBasicsCSharp
                 --col;
             }
         }
-
         //----------------------------------------------------------------------------
+
         /*
-            Method: checkUp (arr2D, i, j, visited);
+            Method: CheckUp (arr2D, i, j, visited);
 
             arr2D - target 2D matrix storing seached elements
             i - row of current element
@@ -131,7 +143,7 @@ namespace ProgrammingBasicsCSharp
 
             It recursively checks for elements with identical values to the up, left, and right.
         */
-        static void checkUp(int[,] arr2D, int i, int j, HashSet<Tuple<int, int>> visited)
+        static void CheckUp(int[,] arr2D, int i, int j, HashSet<Tuple<int, int>> visited)
         {
             int currentValue = arr2D[i, j];
             int row = i - 1;
@@ -149,10 +161,10 @@ namespace ProgrammingBasicsCSharp
                     visited.Add(nextElement);
 
                     // check left 
-                    checkLeft(arr2D, row, j, visited);
+                    CheckLeft(arr2D, row, j, visited);
 
                     // check right
-                    checkRight(arr2D, row, j, visited);
+                    CheckRight(arr2D, row, j, visited);
                 }
                 else
                 {
@@ -161,10 +173,10 @@ namespace ProgrammingBasicsCSharp
                 --row;
             }
         }
-
         //----------------------------------------------------------------------------
+
         /*
-            Method: checkRight (arr2D, i, j, visited);
+            Method: CheckRight (arr2D, i, j, visited);
 
             arr2D - target 2D matrix storing seached elements
             i - row of current element
@@ -173,7 +185,7 @@ namespace ProgrammingBasicsCSharp
 
             It recursively checks for elements with identical values to the right, up, and down.
         */
-        static void checkRight(int[,] arr2D, int i, int j, HashSet<Tuple<int, int>> visited)
+        static void CheckRight(int[,] arr2D, int i, int j, HashSet<Tuple<int, int>> visited)
         {
             int currentValue = arr2D[i, j];
             int col = j + 1;
@@ -191,10 +203,10 @@ namespace ProgrammingBasicsCSharp
                     visited.Add(nextElement);
 
                     // check up
-                    checkUp(arr2D, i, col, visited);
+                    CheckUp(arr2D, i, col, visited);
 
                     // check down
-                    checkDown(arr2D, i, col, visited);
+                    CheckDown(arr2D, i, col, visited);
                 }
                 else
                 {
@@ -203,10 +215,10 @@ namespace ProgrammingBasicsCSharp
                 ++col;
             }
         }
-
         //----------------------------------------------------------------------------
+
         /*
-            Method: checkDown (arr2D, i, j, visited);
+            Method: CheckDown (arr2D, i, j, visited);
 
             arr2D - target 2D matrix storing seached elements
             i - row of current element
@@ -215,7 +227,7 @@ namespace ProgrammingBasicsCSharp
 
             It recursively checks for elements with identical values to the down, left, and right.
         */
-        static void checkDown(int[, ] arr2D, int i, int j, HashSet<Tuple<int, int>> visited)
+        static void CheckDown(int[,] arr2D, int i, int j, HashSet<Tuple<int, int>> visited)
         {
             int currentValue = arr2D[i, j];
             int row = i + 1;
@@ -233,10 +245,10 @@ namespace ProgrammingBasicsCSharp
                     visited.Add(nextElement);
 
                     // check left
-                    checkLeft(arr2D, row, j, visited);
+                    CheckLeft(arr2D, row, j, visited);
 
                     // check right
-                    checkRight(arr2D, row, j, visited);
+                    CheckRight(arr2D, row, j, visited);
                 }
                 else
                 {
@@ -245,14 +257,14 @@ namespace ProgrammingBasicsCSharp
                 ++row;
             }
         }
-
         //-----------------------------------------------------------------------------
-        /*
-            Method: printMatrix(arr);
 
-            It prints all the elements of the 2D array
+        /*
+            Method: PrintMatrix(arr);
+
+            It prints all the elements of the 2D integer array.
         */
-        static void printMatrix(int[,] arr)
+        static void PrintMatrix(int[,] arr)
         {
             for (int row = 0; row < arr.GetLength(0); row++)
             {
@@ -264,14 +276,14 @@ namespace ProgrammingBasicsCSharp
             }
             Console.WriteLine();
         }
-
         //-----------------------------------------------------------------------------
-        /*
-            Method: printMatrix(arr);
 
-            It prints all the elements of the 2D array
+        /*
+            Method: PrintMatrix(arr);
+
+            It prints all the elements of the 2D char array.
         */
-        static void printMatrix(char[,] arr)
+        static void PrintMatrix(char[,] arr)
         {
             for (int row = 0; row < arr.GetLength(0); row++)
             {
@@ -282,23 +294,6 @@ namespace ProgrammingBasicsCSharp
                 Console.WriteLine();
             }
             Console.WriteLine();
-        }
-
-        //============================================================================
-
-        static void Main()
-        {
-            // target matrix
-            int[,] matrix = new int[,] { { 1, 3, 2, 2, 2, 4 },
-                                         { 3, 3, 3, 2, 4, 4 },
-                                         { 4, 3, 1, 2, 3, 3 },
-                                         { 4, 3, 1, 3, 3, 1 },
-                                         { 4, 3, 3, 3, 1, 1,}
-                                       };
-            printMatrix(matrix);
-
-            // find largest area of identical adjacent elements
-            largestAreaOfIdenticalAdjacentElements(matrix);
         }
     }
 }

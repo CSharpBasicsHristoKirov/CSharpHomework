@@ -18,13 +18,23 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter6Exercise12
     {
-        /*
-            Method: string binaryRepresentation = decimalToBinary(n);
+        static void Main()
+        {
+            Console.WriteLine("Type a positive integer:");
+            int n = int.Parse(Console.ReadLine());
 
-            It returns a string holding the binary representation 
-            of the number passed as parameter.
+            // Console.WriteLine("{0}(10) -> {1}(2).", n, Convert.ToString(n, 2));
+            Console.WriteLine("{0}(10) -> {1}(2)", DecimalToBinary(n));
+        }
+        //---------------------------------------------------------------------------
+
+        /*
+           Method: string binaryRepresentation = DecimalToBinary(n);
+
+           It returns a string holding the binary representation 
+           of the number passed as parameter.
         */
-        static string decimalToBinary(int n)
+        static string DecimalToBinary(int n)
         {
             string binary = string.Empty;
             while (n > 0)
@@ -36,16 +46,6 @@ namespace ProgrammingBasicsCSharp
                 binary = remainder.ToString() + binary;
             }
             return binary;
-        }
-        //=================================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type a positive integer:");
-            int n = int.Parse(Console.ReadLine());
-
-            // Console.WriteLine("{0}(10) -> {1}(2).", n, Convert.ToString(n, 2));
-            Console.WriteLine("{0}(10) -> {1}(2)", decimalToBinary(n));
         }
     }
 }

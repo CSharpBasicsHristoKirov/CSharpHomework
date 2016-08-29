@@ -22,14 +22,12 @@ namespace ProgrammingBasicsCSharp
         {
             Console.WriteLine("Type a mass in [kg]:");
             double massOfObject = Convert.ToDouble(Console.ReadLine()); // kg
-            double earthGravitationalStregth = 9.8f;                    // N / m^2 or N / kg
 
-            double moonGravitationalStrength = earthGravitationalStregth * (16.6f / 100.0f); // N / kg
+            double earthGravitationalStregth = 9.8d;                    // N / m^2 or N / kg
+            double moonGravitationalStrength = earthGravitationalStregth * (16.6d / 100.0d); // N / kg
             double weightOfObjectOnMoon = moonGravitationalStrength * massOfObject;          // N
-
-            string printResult = "Object with mass of: " + massOfObject + "[kg] will weigh: " 
-                                                         + weightOfObjectOnMoon + "[N] on the Moon.";
-            Console.WriteLine(printResult);
+              
+            Console.WriteLine("Object with mass of: {0} [kg] will weigh: {1} [N] on the Moon.", massOfObject, weightOfObjectOnMoon);
         }
     }
 }

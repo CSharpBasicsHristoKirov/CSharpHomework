@@ -17,10 +17,29 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter7Exercise7
     {
+        static void Main()
+        {
+            Console.WriteLine("Type number of elements: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] numbers = new int[n];
+
+            PopulateArray(numbers, n);
+
+            PrintArray(numbers);
+
+            Console.WriteLine("Type number of elements to search maximum sum of: ");
+            int k = int.Parse(Console.ReadLine());
+
+            MaxSum(numbers, k);
+        }
+
+        //-------------------------------------------------------------------------------
+
         /*
-            Method: printArray(arr);
+            Method: PrintArray(arr);
+
         */
-        static void printArray(int[] arr)
+        static void PrintArray(int[] arr)
         {
             Console.Write("{");
             foreach (var item in arr)
@@ -32,29 +51,28 @@ namespace ProgrammingBasicsCSharp
         //-------------------------------------------------------------------------------
 
         /*
-            Method: void populateArray(arr, n);
+            Method: PopulateArray(arr, n);
 
             It generates n random ([1, 20]) array elements. 
         */
-        static void populateArray(int[] arr, int n)
+        static void PopulateArray(int[] arr, int n)
         {
             Random element = new Random();
+            int minValue = 1, maxValue = 20;
             for (int i = 0; i < n; i++)
             {
-                arr[i] = element.Next() % 20 + 1;
+                arr[i] = element.Next(minValue, maxValue);
             }
         }
         //-------------------------------------------------------------------------------
 
         /*
-            Method: maxSum(array, n);
+            Method: MaxSum(array, n);
 
-            It prints the n elements constituting the max sum 
-            and its value.
-            It calculates the sum of all the consecutive 
-            subarrays of size n and stores the max sum.
+            Finds and prints max sum out of n elements
+            of the array.
         */
-        static void maxSum(int[] array, int n)
+        static void MaxSum(int[] array, int n)
         {
             int maximumSum = 0;
             int startingIndex = 0;
@@ -84,23 +102,6 @@ namespace ProgrammingBasicsCSharp
                 Console.Write(array[i] + ", ");
             }
             Console.Write("}\n");
-        }
-        //==========================================================================================
-
-        static void Main()
-        {
-            Console.WriteLine("Type number of elements: ");
-            int n = int.Parse(Console.ReadLine());
-            int[] numbers = new int[n];
-
-            populateArray(numbers, n);
-
-            printArray(numbers);
-
-            Console.WriteLine("Type number of elements to search maximum sum of: ");
-            int k = int.Parse(Console.ReadLine());
-
-            maxSum(numbers, k);
         }
     }
 }

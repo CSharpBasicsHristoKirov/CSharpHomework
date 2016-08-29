@@ -12,7 +12,6 @@
    <datecreated>11.03.2016</datecreated>
 */
 using System;
-using System.Text;
 
 namespace ProgrammingBasicsCSharp
 {
