@@ -22,16 +22,18 @@ namespace Chapter9Exercise4.Tests
         public void FrequencyOfNTest()
         {
             // arrange
-            int[] Array = { 1, 1, 1, 2, 3, 4, 5 };
-            int TargetElement = 1;
-            int actual = 0;
-            int expected = 3;
+            int[] arr = { 1, 1, 1, 2, 3, 4, 5 };
+            int target= 1;
+
+            // occurences
+            int actual = 3;
+            int? measured = null;
 
             // act
-            actual = Program.FrequencyOfN(TargetElement, Array);
+            measured = Program.FrequencyOfN(target, arr);
 
             // assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(measured, actual);
         }
     }
 }

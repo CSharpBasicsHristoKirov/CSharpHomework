@@ -18,14 +18,23 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter9Exercise3
     {
-        /*
-            Method: NameOfLastDigit()
+        static void Main()
+        {
+            Console.WriteLine("Type an integer: ");
+            int n = int.Parse(Console.ReadLine());
 
-            It returns the name of 
-            the last digit of the
-            input paramter.
-        */
-        static string NameOfLastDigit(int n)
+            Console.WriteLine("Its least significand digit is: {0}", LastDigitName(n));
+        }
+        //---------------------------------------------------------------
+
+        /*
+           Method: LastDigitName()
+
+           It returns the name of 
+           the last digit of the
+           input paramter.
+       */
+        static string LastDigitName(int n)
         {
             string[] names = {"zero", "one", "two", "three", "four",
                               "five", "six", "seven", "eight", "nine"};
@@ -33,14 +42,6 @@ namespace ProgrammingBasicsCSharp
             int LeastSignificantDigit = n % 10;
 
             return names[LeastSignificantDigit];
-        }
-        //=============================================================
-
-        static void Main()
-        {
-            int n = int.Parse(Console.ReadLine());
-
-            Console.WriteLine(NameOfLastDigit(n));
         }
     }
 }

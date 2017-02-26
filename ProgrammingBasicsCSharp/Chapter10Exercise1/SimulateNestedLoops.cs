@@ -1,16 +1,17 @@
 ﻿/*
    <summary>    
-   TITLE              Simulate Nested Loops      Chapter10Exercise13 
+   TITLE              Simulate Nested Loops      Chapter10Exercise1  
    S.Nakov, V.Kolev et al.    "Introduction to Programming with C#" 
    COMMENT
            Objective: Read number of loops n.
-                      Simulate n nested loops of n iterations each and print
-                      their values.
-               Input: -
-              Output: -
+                      Simulate n nested loops of n iterations each
+                      and print their values.
+                      n^n - permutations / lines should be printed.
+               Input: 2
+              Output: 11 12 21 22
    </summary>
    <author>Chris B. Kirov</author>
-   <datecreated>05.04.2016</datecreated>
+   <datecreated>12.10.2016</datecreated>
 */
 using System;
 
@@ -18,47 +19,62 @@ namespace Chapter10Exercise1
 {
     class SimulateNestedLoops
     {
+        /* 
+           keeps current permutation, 
+           i.e. values of local variable for each outer loop 
+        */
+        static int[] permutation;
+        //------------------------------------------------------------------
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Type n:");
+            int n = int.Parse(Console.ReadLine());
+
+            permutation = new int[n];
+
+            NestedLoops(n, n);
+        }
+        //------------------------------------------------------------------
+
         /*
-            Method: NestedLoops(int NumberOfLoops)
-        
-             
+           Method: NestedLoops(int NumberOfLoops)
+
+           A direct recurrence based method simulating
+           nested loops. Where NumberOfLoops additionally
+           indicates recurrence depth.
         */
         public static void NestedLoops(int NumberOfLoops, int Iterations)
         {
+            // print all "local variables" in the innermost "for" loop and start over / exit
             if (NumberOfLoops == 0)
             {
+                PrintPermutation();
                 return;
             }
 
             for (int i = 1; i <= Iterations; i++)
             {
-                Console.Write(i);
+                // store local-variable-value of current "for" loop
+                permutation[NumberOfLoops - 1] = i;
+                // proceed to inner "for" loop
                 NestedLoops(NumberOfLoops - 1, Iterations);
-                Console.WriteLine();
             }
         }
         //------------------------------------------------------------------
 
         /*
-            Method: PrintLoops
+            Method: PrintPermutation()
+
+            Prints current permutation.
         */
-
-
-        //==================================================================
-
-        static void Main(string[] args)
+        public static void PrintPermutation()
         {
-            //  NestedLoops(2, 2);
-
-            DateTime startTime = DateTime.Now;
-
-            long sum = 0;
-            for (int i = 0; i < 30000000; i++)
+            for (int i = permutation.Length - 1; i >= 0; --i)
             {
-                sum = sum + i / 100000;
+                Console.Write(permutation[i]);
             }
-
-            Console.WriteLine(DateTime.Now - startTime);
+            Console.WriteLine();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ProgrammingBasicsCSharp
     {
         static void Main()
         {
-            // member function is not static, thus it can be accessed only via object instantiation
+            // member function is not static, thus it can be only accessed via object instantiation
             Chapter9Exercise1 objectInstantiation = new Chapter9Exercise1();
 
             objectInstantiation.GreetinsByName();

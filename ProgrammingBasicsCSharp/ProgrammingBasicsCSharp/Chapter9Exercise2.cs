@@ -18,22 +18,37 @@ namespace ProgrammingBasicsCSharp
 {
     class Chapter9Exercise2
     {
-        /*
-            Method: GetMax(int a, int b);
+        static void Main()
+        {
+            int length = 3;
+            int[] numbers = new int[length];
+            GetInput(numbers);
 
+            Console.WriteLine("Max = {0}", GetMax(GetMax(numbers[0], numbers[1]), numbers[2]));
+        }
+        //-------------------------------------------------------------------------------------
+
+        /*
+            Method: GetInput()
+
+        */
+        static void GetInput(params int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Type a number: ");
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+        }
+        //-------------------------------------------------------------------------------------
+
+        /*
+             Method: GetMax(int a, int b);
 
         */
         static int GetMax(int a, int b)
         {
             return (a > b) ? a : b;
-        }
-
-        //========================================================
-        static void Main()
-        {
-            int a = 5, b = 6;
-
-            Console.WriteLine("The greatest between {0} and {1} is {2}", a, b, GetMax(a, b));
         }
     }
 }

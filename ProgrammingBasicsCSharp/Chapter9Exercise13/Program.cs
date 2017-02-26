@@ -21,6 +21,27 @@ namespace Chapter9Exercise13
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            // 3x^2 + x - 3
+            int[] lhs = { -3, 1, 3 };
+            // x - 1
+            int[] rhs = { -1, 1 };
+
+            Chapter9Exercise12.Program.PrintPolynomial(lhs);
+            Console.Write(" *\n");
+
+            Chapter9Exercise12.Program.PrintPolynomial(rhs);
+            Console.Write(" =\n");
+
+            // 3x^3 - 2x^2 - 4x + 3
+            var result = MultiplyPolynomials(lhs, rhs);
+            Chapter9Exercise12.Program.PrintPolynomial(result);
+
+            Console.WriteLine();
+        }
+        //--------------------------------------------------------------------
+
         /*
             Method: MultiplyPolynomials(int[] a, int[] b);
 
@@ -35,7 +56,7 @@ namespace Chapter9Exercise13
             int length1 = Math.Max(a.Length, b.Length);
             for (int i = 0; i < length1; i++)
             {
-                int[] PartialProduct = new int[result.Length];
+                int[] partialProduct = new int[result.Length];
 
                 int length2 = Math.Min(a.Length, b.Length);
                 for (int j = 0; j < length2; j++)
@@ -43,35 +64,13 @@ namespace Chapter9Exercise13
                     int multiplicand = (a.Length < b.Length) ? b[i] : a[i];
                     int multiplier = (a.Length < b.Length) ? a[j] : b[j];
 
-                    int product = PartialProduct[i + j] + multiplicand * multiplier;
+                    int product = partialProduct[i + j] + multiplicand * multiplier;
 
-                    PartialProduct[i + j] = product;
+                    partialProduct[i + j] = product;
                 }
-                result = Chapter9Exercise12.Program.SumPolynomials(result, PartialProduct);
+                result = Chapter9Exercise12.Program.SumPolynomials(result, partialProduct);
             }
             return result;
-        }
-        //============================================================
-
-        static void Main(string[] args)
-        {
-            // 3x^2 + x - 3
-            int[] lhs = { -3, 1, 3 };
-            // x - 1
-            int[] rhs = { -1, 1 };
-
-            Chapter9Exercise12.Program.PrintPolynomial(lhs);
-
-            Console.Write(" *\n");
-
-            Chapter9Exercise12.Program.PrintPolynomial(rhs);
-
-            Console.Write(" =\n");
-
-            var result = MultiplyPolynomials(lhs, rhs);
-            Chapter9Exercise12.Program.PrintPolynomial(result);
-
-            Console.WriteLine();
         }
     }
 }

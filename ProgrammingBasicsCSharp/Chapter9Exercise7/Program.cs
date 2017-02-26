@@ -17,6 +17,14 @@ namespace Chapter9Exercise7
 {
     public class Program
     {
+        static void Main(string[] args)
+        {
+            int n = 256;
+
+            PrintDigitsInReverseOrder(n);
+        }
+        //---------------------------------------------------------
+
         /*
             Method: PrintDigitsInReverseOrder(int n);
 
@@ -32,14 +40,6 @@ namespace Chapter9Exercise7
                 n /= 10;
             }
             Console.WriteLine();
-        }
-
-        //==========================================================
-        static void Main(string[] args)
-        {
-            int n = 256;
-
-            PrintDigitsInReverseOrder(n);
         }
     }
 }

@@ -21,24 +21,44 @@ namespace Chapter9Exercise6
 {
     public class Program
     {
+        static void Main(string[] args)
+        {
+            int[] arr = { 1, 2, 3, 4, 3, 7, 6 };
+            PrintArray(arr);
+
+            try
+            {
+                Console.WriteLine("The first element larger than its two adjacent has:");
+
+                int index = FindFirstLargerThanNeighbouring(arr);
+
+                Console.WriteLine("Index: {0}, Value: {1}", index, arr[index]);
+            }
+            catch (AccessViolationException)
+            {
+                Console.WriteLine("Target Index out of bounds or Empty Array!\n");
+            }
+        }
+        //-----------------------------------------------------------------------------------------------------
+
         /*
-            Method: GreaterOrSmallerThanAdjacent(int TargetIndex, param int[] Array);
+            Method: GreaterThanNeighbouring(int TargetIndex, param int[] Array);
 
             It returns true iff the adjacent elements both have smaller
             vlues than the element with TargetIndex.
         */
-        public static bool GreaterThanAdjacent(int TargetIndex, params int[] Array)
+        public static bool GreaterThanNeighbouring(int targetIndex, params int[] arr)
         {
             // Array must have at least one element; TargerIndex within [0, Array.Length]
-            if (Array.Length < 1 || TargetIndex < 0 || TargetIndex > Array.Length - 1)
+            if (arr.Length < 1 || targetIndex < 0 || targetIndex > arr.Length - 1)
             {
-                throw new System.AccessViolationException();
+                throw new Exception("Invalid parameters!");
             }
 
             // special cases
-            if (TargetIndex == 0)
+            if (targetIndex == 0)
             {
-                if (Array[TargetIndex] > Array[TargetIndex + 1])
+                if (arr[targetIndex] > arr[targetIndex + 1])
                 {
                     return true;
                 }
@@ -48,9 +68,9 @@ namespace Chapter9Exercise6
                 }
             }
 
-            if (TargetIndex == Array.Length - 1)
+            if (targetIndex == arr.Length - 1)
             {
-                if (Array[TargetIndex] > Array[TargetIndex - 1])
+                if (arr[targetIndex] > arr[targetIndex - 1])
                 {
                     return true;
                 }
@@ -61,7 +81,7 @@ namespace Chapter9Exercise6
             }
 
             // general case
-            if (Array[TargetIndex] > Array[TargetIndex - 1] && Array[TargetIndex] > Array[TargetIndex + 1])
+            if (arr[targetIndex] > arr[targetIndex - 1] && arr[targetIndex] > arr[targetIndex + 1])
             {
                 return true;
             }
@@ -73,43 +93,42 @@ namespace Chapter9Exercise6
         //-----------------------------------------------------------------------------------------------------
 
         /*
-            Method: FindFirstLargerThanAdjacent(param int[] Array);
+            Method: FindFirstLargerThanNeighbouring(param int[] arr);
 
             It returns the index of the first element larger 
             than its adjacent; -1 if no such element.
         */
-        public static int FindFirstLargerThanAdjacent(params int[] Array)
+        public static int FindFirstLargerThanNeighbouring(params int[] arr)
         {
-            int length = Array.Length;
             // search only elements that have two adjacent elements 
-            for (int i = 1; i < length - 2; i++)
+            for (int i = 1; i < arr.Length - 2; i++)
             {
-                if (GreaterThanAdjacent(i, Array))
+                if (GreaterThanNeighbouring(i, arr))
                 {
                     return i;
                 }
             }
             return -1;
         }
+        //-----------------------------------------------------------------------------
 
+        /*
+            Method: PrintArray()
 
-        //==========================================================
-        static void Main(string[] args)
+        */
+        static void PrintArray(int[] arr)
         {
-            int[] Array = { 1, 2, 3, 4, 3, 5, 6 };
-
-            try
+            Console.Write("{");
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine("The first element larger than its two adjacent:");
+                Console.Write(arr[i]);
 
-                int index = FindFirstLargerThanAdjacent(Array);
-
-                Console.WriteLine("Index {0}, Value {1}", index, Array[index]);
+                if (i < arr.Length - 1)
+                {
+                    Console.Write(", ");
+                }
             }
-            catch (AccessViolationException)
-            {
-                Console.WriteLine("Target Index out of bounds or Empty Array!\n");
-            }
+            Console.WriteLine("}");
         }
     }
 }

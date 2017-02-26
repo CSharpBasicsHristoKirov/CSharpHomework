@@ -19,24 +19,48 @@ namespace Chapter9Exercise5
 {
     public class Program
     {
-        /*
-            Method: GreaterOrSmallerThanAdjacent(int TargetIndex, param int[] Array);
-
-            It returns true iff the adjacent elements both have smaller
-            vlues than the element with TargetIndex.
-        */
-        public static bool GreaterThanAdjacent(int TargetIndex, params int[] Array)
+        static void Main(string[] args)
         {
-            // Array must have at least one element; TargerIndex within [0, Array.Length]
-            if (Array.Length < 1 || TargetIndex < 0 || TargetIndex > Array.Length - 1 )
+            int[] arr= { 1, 2, 3, 4, 3, 5, 6 };
+            int targetIndex = 3;
+
+            PrintArray(arr);
+            try
             {
-                throw new System.AccessViolationException();
+                Console.Write("\nThe element with index {0} is: ", targetIndex);
+
+                if (!GreaterThanNeigbouring(targetIndex, arr))
+                {
+                    Console.Write(" not");
+                }
+
+                Console.WriteLine(" larger than its two adjacent.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        //-----------------------------------------------------------------------------
+
+        /*
+            Method: GreaterThanNeigbouring(int targetIndex, param int[] Array);
+  
+            It returns true iff the adjacent elements both have smaller
+            values than the element with targetIndex.
+        */
+        public static bool GreaterThanNeigbouring(int targetIndex, params int[] arr)
+        {
+            // check array length, index value and their relation
+            if (arr.Length < 1 || targetIndex < 0 || targetIndex > arr.Length - 1)
+            {
+                throw new Exception("Invalid parameters!\n");
             }
 
             // special cases
-            if (TargetIndex == 0)
+            if (targetIndex == 0)
             {
-                if (Array[TargetIndex] > Array[TargetIndex + 1])
+                if (arr[targetIndex] > arr[targetIndex + 1])
                 {
                     return true;
                 }
@@ -46,9 +70,9 @@ namespace Chapter9Exercise5
                 }
             }
 
-            if (TargetIndex == Array.Length - 1)
+            if (targetIndex == arr.Length - 1)
             {
-                if (Array[TargetIndex] > Array[TargetIndex - 1])
+                if (arr[targetIndex] > arr[targetIndex - 1])
                 {
                     return true;
                 }
@@ -59,7 +83,7 @@ namespace Chapter9Exercise5
             }
 
             // general case
-            if (Array[TargetIndex] > Array[TargetIndex - 1] && Array[TargetIndex] > Array[TargetIndex + 1])
+            if (arr[targetIndex] > arr[targetIndex - 1] && arr[targetIndex] > arr[targetIndex + 1])
             {
                 return true;
             }
@@ -68,28 +92,25 @@ namespace Chapter9Exercise5
                 return false;
             }
         }
-        
-        //==========================================================
-        static void Main(string[] args)
+        //-----------------------------------------------------------------------------
+
+        /*
+            Method: PrintArray()
+
+        */
+        static void PrintArray(int [] arr)
         {
-            int[] Array = { 1, 2, 3, 4, 3, 5, 6 };
-            int TargetIndex = 3;
-
-            try
+            Console.Write("{");
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.Write("The element with index {0} is", TargetIndex);
+                Console.Write(arr[i]);
 
-                if (!GreaterThanAdjacent(TargetIndex, Array))
+                if (i < arr.Length - 1)
                 {
-                    Console.Write(" not");
+                    Console.Write(", ");
                 }
-
-                Console.Write(" larger than its two adjacent");
             }
-            catch (AccessViolationException)
-            {
-                Console.WriteLine("Target Index out of bounds or Empty Array!\n");
-            }
+            Console.Write("}");
         }
     }
 }

@@ -21,6 +21,29 @@ namespace Chapter9Exercise12
 {
     public class Program
     {
+        static void Main(string[] args)
+        {
+            // 3x^2 + x - 3 
+            int[] lhs = {-3, 1, 3};
+            // x - 1
+            int[] rhs = {-1, 1};
+
+            PrintPolynomial(lhs);
+
+            Console.Write(" +\n");
+
+            PrintPolynomial(rhs);
+
+            Console.Write(" =\n");
+
+            // 3x^2 + 2x - 4
+            var result = SumPolynomials(lhs, rhs);
+            PrintPolynomial(result);
+
+            Console.WriteLine();
+        }
+        //---------------------------------------------------------------------------------------------
+
         /*
             Method: ConstructPolynomial();
 
@@ -39,8 +62,8 @@ namespace Chapter9Exercise12
                 Console.WriteLine(prompt);
                 string[] tokens = Console.ReadLine().Split();
 
-                int CarriageReturn = 0;
-                if (tokens.Length == 1 && !int.TryParse(tokens[0], out CarriageReturn))
+                int carriageReturn = 0;
+                if (tokens.Length == 1 && !int.TryParse(tokens[0], out carriageReturn))
                 {
                     Console.WriteLine("Zero polynomial!");
                 }
@@ -61,7 +84,7 @@ namespace Chapter9Exercise12
                 }
             }
         }
-        //---------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------
 
         /*
             Method: SumPolynomials(int[] a, int[] b);
@@ -74,7 +97,7 @@ namespace Chapter9Exercise12
         {
             int length = Math.Max(a.Length, b.Length);
             int[] result = new int[length];
-            
+
             for (int i = 0; i < length; i++)
             {
                 int lhs = (i < a.Length) ? a[i] : 0;
@@ -82,10 +105,9 @@ namespace Chapter9Exercise12
 
                 result[i] = lhs + rhs;
             }
-
             return result;
         }
-        //---------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------
 
         /*
             Method: PrintPolynomial(int[] poly);
@@ -133,29 +155,6 @@ namespace Chapter9Exercise12
                     }
                 }
             }
-            // Console.WriteLine(" = 0");
-        }
-        //===============================================================
-
-        static void Main(string[] args)
-        {
-            // 3x^3 + 2x^2 + x 
-            int[] lhs = {-3, 1, 3};
-            // x^3 + 2x^2 + 3x
-            int[] rhs = {-1, 1};
-
-            PrintPolynomial(lhs);
-
-            Console.Write(" +\n");
-
-            PrintPolynomial(rhs);
-
-            Console.Write(" =\n");
-
-            var result = SumPolynomials(lhs, rhs);
-            PrintPolynomial(result);
-
-            Console.WriteLine();
         }
     }
 }

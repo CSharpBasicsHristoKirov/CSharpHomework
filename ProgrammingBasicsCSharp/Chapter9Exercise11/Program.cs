@@ -24,6 +24,12 @@ namespace Chapter9Exercise11
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            Interface();
+        }
+        //----------------------------------------------------------------------------------------------------------
+
         /*
             Method: LinearEquationRoot();
 
@@ -47,22 +53,22 @@ namespace Chapter9Exercise11
                 {
                     if (a != 0)
                     {
-                        Console.WriteLine("x = {0, 2}", -b / (double) a);
+                        Console.WriteLine("x = {0, 2}", -b / (double)a);
                         return;
                     }
                     else
                     {
                         Console.WriteLine("The coefficient 'a' must be != 0");
-                    }                       
+                    }
                 }
                 else
                 {
                     Console.WriteLine("Wrong input format!");
                 }
-                
+
             }
         }
-        //-------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------
 
         /*
             Method: ArithmeticMean();
@@ -109,7 +115,7 @@ namespace Chapter9Exercise11
                 }
             }
         }
-        //-------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------
 
         /*
             Method: ReverseDigits();
@@ -126,7 +132,7 @@ namespace Chapter9Exercise11
             while (true)
             {
                 Console.WriteLine("Type a positive, multidigit integer:");
-                string input = Console.ReadLine() ;
+                string input = Console.ReadLine();
 
                 int number = 0;
                 if (int.TryParse(input, out number))
@@ -152,7 +158,7 @@ namespace Chapter9Exercise11
                 }
             }
         }
-        //-------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------
 
         /*
             Method: Interface()
@@ -194,13 +200,6 @@ namespace Chapter9Exercise11
                     Console.WriteLine("Wrong input format, try again!");
                 }
             }
-        }
-        //=========================================================================
-        
-
-        static void Main(string[] args)
-        {
-            Interface();
         }
     }
 }

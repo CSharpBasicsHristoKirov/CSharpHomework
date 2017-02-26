@@ -12,13 +12,42 @@
    <datecreated>02.04.2016</datecreated>
 */
 using System;
-using System.Collections.Generic;
 using System.Numerics;
+using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace Chapter9Exercise10
 {
     class Program
     {
+        static void Main(string[] args)
+        {            
+            try
+            {
+                int n = 100;
+
+                int[] factorial = Factorial(n);
+
+                Stopwatch t1 = Stopwatch.StartNew();
+                Console.WriteLine("Factorial of {0} using arrays:", n);
+                PrintArray(factorial);
+                t1.Stop();
+                Console.WriteLine("\nFactorial using arrays time: {0}ms.", t1.ElapsedMilliseconds);
+
+                Stopwatch t2 = Stopwatch.StartNew();
+                Console.WriteLine("\nFactorial of {0} using BigInteger:", n);
+                Console.WriteLine(FactorialBigInteger(n).ToString());
+                t2.Stop();
+
+                Console.WriteLine("\nFactorial using BigIntegers time: {0}ms.", t2.ElapsedMilliseconds);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        //--------------------------------------------------------------------------------
+
         /*
             Method: ToDigitArray(int n);
 
@@ -30,7 +59,7 @@ namespace Chapter9Exercise10
         {
             if (n < 0)
             {
-                throw new ArgumentException();
+                throw new Exception("ToDigitArray: Negative Integer!");
             }
 
             if (n == 0)
@@ -38,16 +67,15 @@ namespace Chapter9Exercise10
                 return new int[1] { 0 };
             }
 
-            var Digits = new List<int>();
+            var digits = new List<int>();
             for (; n != 0; n /= 10)
             {
-                Digits.Add(n % 10);
+                digits.Add(n % 10);
             }
 
-            return Digits.ToArray();
+            return digits.ToArray();
         }
-
-        //=================================================================================
+        //--------------------------------------------------------------------------------
 
         /*
             Method: ValidDigitArraysInput(int[] lhs, int[] rhs, int[] result);
@@ -58,8 +86,8 @@ namespace Chapter9Exercise10
             int length = Math.Max(lhs.Length, rhs.Length);
 
             // result exceeds maximum allowed digits 10.000
-            int MaximumInputDigits = 5000;
-            if (length > MaximumInputDigits)
+            int maximumInputDigits = 5000;
+            if (length > maximumInputDigits)
             {
                 Console.WriteLine("Multiply::Size!");
                 return false;
@@ -74,7 +102,7 @@ namespace Chapter9Exercise10
 
             return true;
         }
-        //--------------------------------------------------------
+        //--------------------------------------------------------------------------------
 
         /*
            Method: MultiplyDigitArrays(int[] lhs, int[] rhs, int[] result);
@@ -97,32 +125,35 @@ namespace Chapter9Exercise10
             int length1 = Math.Max(lhs.Length, rhs.Length);
             for (int i = 0; i < length1; i++)
             {
-                int[] PartialProduct = new int[result.Length];
+                int[] partialProduct = new int[result.Length];
 
                 int length2 = Math.Min(lhs.Length, rhs.Length);
                 for (int j = 0; j < length2; j++)
                 {
+                    // multipicand length should be > multiplier length
                     int multiplicand = (lhs.Length < rhs.Length) ? rhs[i] : lhs[i];
                     int multiplier = (lhs.Length < rhs.Length) ? lhs[j] : rhs[j];
 
-                    int product = PartialProduct[i + j] + multiplicand * multiplier;
+                    int product = partialProduct[i + j] + multiplicand * multiplier;
 
-                    PartialProduct[i + j] = product % 10;
+                    // carry 
+                    partialProduct[i + j] = product % 10;
                     int carry = product / 10;
 
-                    if (i + j + 1 < PartialProduct.Length)
+                    // overflow
+                    if (i + j + 1 < partialProduct.Length)
                     {
-                        PartialProduct[i + j + 1] = PartialProduct[i + j + 1] + carry;
+                        partialProduct[i + j + 1] = partialProduct[i + j + 1] + carry;
                     }
                 }
-                result = Chapter9Exercise8.Program.SumDigitArraysDifferentSize(PartialProduct, result);
+                result = Chapter9Exercise8.Program.SumDigitArraysDifferentSize(partialProduct, result);
             }
 
             var TrimToActualValue = TrimToMatchTheValue(result);
 
             return TrimToActualValue;
         }
-        //=================================================================================
+        //--------------------------------------------------------------------------------
 
         /*
            Method: ValidInput(int n);
@@ -132,7 +163,7 @@ namespace Chapter9Exercise10
         {
             return n >= 1 && n <= 100;
         }
-        //--------------------------------------------------------
+        //--------------------------------------------------------------------------------
 
         /*
             Method: Factorial(int n);
@@ -144,12 +175,12 @@ namespace Chapter9Exercise10
         {
             if (!ValidFactorialInput(n))
             {
-                throw new ArgumentOutOfRangeException();
+                throw new Exception("Factorial: Out of range parameter!");
             }
 
-            int[] Initial = ToDigitArray(1);
+            int[] initial = ToDigitArray(1);
             Stack<int[]> factorials = new Stack<int[]>();
-            factorials.Push(Initial);
+            factorials.Push(initial);
 
             for (int i = 1; i <= n; i++)
             {
@@ -158,14 +189,14 @@ namespace Chapter9Exercise10
 
                 var current = MultiplyDigitArrays(last, ith);
 
-                var TrimToActualValue = TrimToMatchTheValue(current);
+                var trimToActualValue = TrimToMatchTheValue(current);
 
-                factorials.Push(TrimToActualValue);
-            }             
+                factorials.Push(trimToActualValue);
+            }
             return factorials.Pop();
         }
+        //--------------------------------------------------------------------------------
 
-        //---------------------------------------------------------------------------------
         /*
             Method: TrimToMatchTheValue(int[] arr);
 
@@ -175,19 +206,18 @@ namespace Chapter9Exercise10
         */
         public static int[] TrimToMatchTheValue(int[] current)
         {
-            var EndIndex = current.Length - 1;
-            while (current[EndIndex] == 0)
+            var endIndex = current.Length - 1;
+            while (current[endIndex] == 0)
             {
-                --EndIndex;
+                --endIndex;
             }
 
-            var TrimToActualValue = new int[EndIndex + 1];
-            Array.Copy(current, TrimToActualValue, EndIndex + 1);
+            var trimToActualValue = new int[endIndex + 1];
+            Array.Copy(current, trimToActualValue, endIndex + 1);
 
-            return TrimToActualValue;
+            return trimToActualValue;
         }
-
-        //=================================================================================
+        //--------------------------------------------------------------------------------
 
         /*
             Method: PrintArray(int[] Array);
@@ -195,49 +225,34 @@ namespace Chapter9Exercise10
         */
         public static void PrintArray(int[] arr)
         {
-            int SkipLeadingZereos = arr.Length - 1;
-            while (arr[SkipLeadingZereos] == 0)
+            int skipLeadingZereos = arr.Length - 1;
+            while (arr[skipLeadingZereos] == 0)
             {
-                --SkipLeadingZereos;
+                --skipLeadingZereos;
             }
 
-            int EndIndex = SkipLeadingZereos;
-            for (int i = EndIndex; i >= 0; i--)
+            int endIndex = skipLeadingZereos;
+            for (int i = endIndex; i >= 0; i--)
             {
                 Console.Write(arr[i]);
             }
         }
-        //=================================================================================
+        //--------------------------------------------------------------------------------
 
-        public static BigInteger FactorialBagInteger(int n)
+        /*
+            Method: FactorialBigInteger()
+
+            Calculating factorial of integers up to 100!
+            using C# library BigInteger.
+        */
+        public static BigInteger FactorialBigInteger(int n)
         {
             BigInteger result = 1;
             for (int i = 1; i <= n; i++)
             {
-                result *=  i;
+                result *= i;
             }
             return result;
-        }
-
-        //=================================================================================
-        static void Main(string[] args)
-        {            
-            try
-            {
-                int n = 100;
-
-                int[] factorial = Factorial(n);
-
-                Console.WriteLine("Factorial where large numbers represented as arrays:");
-                PrintArray(factorial);
-
-                Console.WriteLine("\nFactorial where large numbers represented as BigInteger:");
-                Console.WriteLine(FactorialBagInteger(n).ToString());
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                Console.WriteLine("Multiply Digit Arrays Exception Caught");
-            }
         }
     }
 }
@@ -328,7 +343,7 @@ namespace Chapter9Exercise10
         {
             if (n < 0)
             {
-                throw new ArgumentException();
+                throw new Exception("ToDigitArray: negative integer!");
             }
 
             if (n == 0)
@@ -362,7 +377,7 @@ namespace Chapter9Exercise10
 
             if (length > 31)
             {
-                throw new ArgumentException();
+                throw new Exception("ToInteger: length exceeded!");
             }
 
             for (int i = 0; i < length; i++)
@@ -517,7 +532,7 @@ namespace Chapter9Exercise10
         {
             if (!ValidFactorialInput(n))
             {
-                throw new ArgumentOutOfRangeException();
+                throw new Exception("Factorial: integer out of range!");
             }
 
             int[] Initial = ToDigitArray(1);

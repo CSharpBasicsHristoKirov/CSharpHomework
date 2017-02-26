@@ -20,6 +20,33 @@ namespace Chapter9Exercise8
 {
     public class Program
     {
+        static void Main(string[] args)
+        {
+            int[] lhs = { 9, 9, 9, 9 };
+            int[] rhs = { 9, 9, 9, 9 };
+
+            try
+            {
+                PrintArray(lhs);
+                Console.Write(" + ");
+                PrintArray(rhs);
+                Console.Write(" = ");
+
+                int[] result = SumDigitArraysDifferentSize(lhs, rhs);
+
+                PrintArray(result);
+
+                Console.WriteLine("\nComparison: {0} + {1} = {2}", 9999 , 9999, 9999 + 9999);
+
+                Console.WriteLine();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        //------------------------------------------------------------------------------
+
         /*
            Method: MatchArraySize(int[] a, int[] b);
 
@@ -29,6 +56,11 @@ namespace Chapter9Exercise8
         */
         public static void MatchArraySize(int[] a, int[] b)
         {
+            if (a.Length == b.Length)
+            {
+                return;
+            }
+
             if (a.Length < b.Length)
             {
                 Array.Resize(ref a, b.Length);
@@ -39,8 +71,8 @@ namespace Chapter9Exercise8
             }
             Console.WriteLine("lhs.Length {0}, rhs.Lenght {1}", a.Length, b.Length);
         }
+        //------------------------------------------------------------------------------
 
-        //-----------------------------------------------------------
         /*
             Method: ValidInput(int[] a, int[] b, int[] result)
 
@@ -74,8 +106,8 @@ namespace Chapter9Exercise8
 
             return true;
         }
+        //------------------------------------------------------------------------------
 
-        //-----------------------------------------------------------
         /*
             Method: SumDigitArrays(int[] a, int[] b)
 
@@ -89,16 +121,17 @@ namespace Chapter9Exercise8
 
             if (!ValidInput(a, b, result))
             {
-                throw new System.ArgumentException();
+                throw new Exception("Invalid Input!");
             }
 
             int length = a.Length;
             for (int i = 0; i < length; i++)
             {
-                int Sum = result[i] + a[i] + b[i];
+                int sum = result[i] + a[i] + b[i];
 
-                result[i] = Sum % 10;
-                result[i + 1] += Sum / 10;
+                // take care of carry
+                result[i] = sum % 10;
+                result[i + 1] += sum / 10;
             }
 
             // resize the array storing the result to match the value stored
@@ -108,19 +141,21 @@ namespace Chapter9Exercise8
                 --index;
             }
 
-            var TrimToActualValue = new int[index + 1];
-            Array.Copy(result, TrimToActualValue, index + 1);
+            var trimToActualValue = new int[index + 1];
+            Array.Copy(result, trimToActualValue, index + 1);
 
-            return TrimToActualValue;
+            return trimToActualValue;
         }
-        //===========================================================
+        //------------------------------------------------------------------------------
 
         /*
             Method: SumDigitArraysDifferentSize(int[] a, int[] b)
 
-            It returns an array storing the sum* of 
+            It returns an array storing the sum of 
             the two input arrays, that represent large numbers
             stored Little - Endian representation.
+
+            It doesn't use array resize!
         */
         public static int[] SumDigitArraysDifferentSize(int[] a, int[] b)
         {
@@ -128,20 +163,23 @@ namespace Chapter9Exercise8
 
             if (!ValidInputDifferentSize(a, b, result))
             {
-                throw new System.ArgumentException();
+                throw new Exception("Invalid Input!");
             }
 
             int length = Math.Max(a.Length, b.Length);
             for (int i = 0; i < length; i++)
             {
+                // take care of different array sizes
                 int lhs = (i < a.Length) ? a[i] : 0;
                 int rhs = (i < b.Length) ? b[i] : 0;
 
                 int sum = result[i] + lhs + rhs;
-                result[i] = sum % 10;
 
+                // take care of carry, i.e. sum > 9
+                result[i] = sum % 10;
                 int carry = sum / 10;
 
+                // prevent overflow
                 if (i + 1 < result.Length)
                 {
                     result[i + 1] = result[i + 1] + carry;
@@ -149,7 +187,7 @@ namespace Chapter9Exercise8
             }
             return result;
         }
-        //-----------------------------------------------------------
+        //------------------------------------------------------------------------------
 
         /*
             Method: ValidInputDifferentSize(int[] a, int[] b, int[] result);
@@ -175,8 +213,8 @@ namespace Chapter9Exercise8
             }
             return true;
         }
+        //------------------------------------------------------------------------------
 
-        //---------------------------------------------------------------------------------
         /*
             Method: TrimToMatchTheValue(int[] arr);
 
@@ -197,11 +235,12 @@ namespace Chapter9Exercise8
 
             return TrimToActualValue;
         }
-        //-----------------------------------------------------------
+        //------------------------------------------------------------------------------
 
         /*
             Method: PrintArray(int[] Array);
 
+            Prints the array reversed.
         */
         public static void PrintArray(int[] Array)
         {
@@ -209,35 +248,6 @@ namespace Chapter9Exercise8
             for (int i = length - 1; i >= 0; i--)
             {
                 Console.Write(Array[i]);
-               
-            }
-        }
-        //============================================================
-         
-        static void Main(string[] args)
-        {
-            int[] lhs = { 9, 9 , 9, 9};
-            int[] rhs = { 9, 9, 9, 9};
-
-            try
-            {
-                PrintArray(lhs);
-                Console.Write(" + ");
-                PrintArray(rhs);
-                Console.Write(" = ");
-
-                int[] result = SumDigitArraysDifferentSize(lhs, rhs);
-
-                PrintArray(result);
-
-                Console.WriteLine();
-                Console.WriteLine(9999 + 9999);
-
-                Console.WriteLine();
-            }
-            catch (ArgumentException)
-            {
-                Console.WriteLine("Argument Exception Caught!");
             }
         }
     }

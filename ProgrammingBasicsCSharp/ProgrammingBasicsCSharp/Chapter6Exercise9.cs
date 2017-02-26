@@ -3,7 +3,7 @@
    TITLE              Power series             Chapter6Exercise9.cs
    S.Nakov, V.Kolev et al.    "Introduction to Programming with C#" 
    COMMENT
-           Objective: Calculate the series n!/ x^n.  (1/ e^x)?
+           Objective: Calculate the series n!/ x^n.   
                Input: -
               Output: -
    </summary>
@@ -59,5 +59,24 @@ namespace ProgrammingBasicsCSharp
             }
             return sum;
         }
+
+        //---------------------------------------------------------
+
+        /*
+           Method: double sum = pSeries(int limit, int n);
+
+           It returns the sum of the series: 1 / n^p.
+        */
+        static double pSeries(int limit, int x)
+        {
+            double sum = 1;
+            for (int i = 0; i < limit; i++)
+            {
+                sum += (1.0f / Math.Pow(i, 4));
+            }
+            return sum;
+        }
+
+
     }
 }

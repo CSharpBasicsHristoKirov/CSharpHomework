@@ -19,34 +19,33 @@ namespace Chapter9Exercise4
 {
     public class Program
     {
-        /*
-           Method: FrequencyOfN(int n, param int[] arr);
-
-           It returns how many occurences of n
-           there are within the array arr.
-       */
-        public static int FrequencyOfN(int TargetElement, params int[] Array)
-        {
-            int Count = 0;
-
-            int Length = Array.Length;
-            for (int i = 0; i < Length; i++)
-            {
-                if (TargetElement == Array[i])
-                {
-                    ++Count;
-                }
-            }
-
-            return Count;
-        }
-        //==========================================================
-
         static void Main() 
         {
-            int TargetElement = 5;
+            int target = 5;
+            int[] arr = { 1, 2, 3, 4, 5, 5 };
+
             Console.WriteLine("Number {0}, Occurence: {1}.",
-                              TargetElement, FrequencyOfN(TargetElement), 1, 2, 3, 4, 5, 5);
+                              target, FrequencyOfN(target, arr));
+        }
+        //------------------------------------------------------------------------------------
+
+        /*
+           Method: FrequencyOfN();
+
+           It returns how many occurences of n
+           there are within the array.
+       */
+        public static int FrequencyOfN(int target, params int[] arr)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (target == arr[i])
+                {
+                    ++count;
+                }
+            }
+            return count;
         }
     }
 }
