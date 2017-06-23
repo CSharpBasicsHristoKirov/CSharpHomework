@@ -1,11 +1,5 @@
-Software University 
-===
-  
-
-
 
 <h1>Repository Content</h1>
----
 
 <h2>I. [Homework][6]</h2>
  
@@ -54,7 +48,7 @@ Software University
  10. Metric converter.
  11. Number from 1 to 100 to text.
  12. Numbers from 100 to 200.
- 13. Numer to text.
+ 13. Number to text.
  14. Password guess.
  15. Simple conditions.
  16. Speed info.
@@ -135,11 +129,11 @@ Software University
 
 ---
 
-##II. [Exam Practice.][3]
+<h1>II. [Exam Practice.][3]</h1>
 
 <h2>Exam date: 12.04.2014</h2>
 
-######1. Morning
+<h3>1. Morning</h3>
 
 1. Triangle.
 2. Pairs.
@@ -147,12 +141,11 @@ Software University
 4. Magic Dates.
 5. Bits Killer.
 
-######2. Evening
+<h3>2. Evening</h3>
 
----
 <h2>Exam date: 14.04.2014</h2>
 
-######1. Morning
+<h3>1. Morning</h3>
 
 1. Fruit Market.
 2. Biggest triple.
@@ -160,7 +153,7 @@ Software University
 4. Longest Alphabetical Word.
 5. Bit Shooter.
  
-######2. Evening
+<h3>2. Evening</h3>
 
 1. Inside The Building.
 2. Student Cables.
@@ -170,7 +163,7 @@ Software University
 
 <h2>Exam date: 29.03.2015</h2>
 
-######1. Morning
+<h3>1. Morning</h3>
 
  1. Torrent Pirate.
  2. Basket Battle.
@@ -178,7 +171,7 @@ Software University
  4. Encrypted Matrix.
  5. Game of Bits.
 
-######1. Evening
+<h3>1. Evening</h3>
 
  1. Array Matcher.
  2. Currency Check.
@@ -196,10 +189,9 @@ Software University
 
 ---
 
-##III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
+<h1>III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]</h1>
 
 <h2>Chapter 1</h2>
----
 
 1. Install [Visual Studio][4] and [MSDN Library Documentation][5].<br>
 2. Describe the class [`System.Console`](https://msdn.microsoft.com/en-us/library/system.console%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396). 
@@ -217,7 +209,6 @@ Software University
 14. Decompile Exercise 5 . <sup> Use [ILSpy-2.3.1 - Decompiler](http://ilspy.net/)</sup>
 
 <h2>Chapter 2</h2>
----
 
 1. Match values with appropriate types.
 2. Witch of the values could be assigned to `float`, `double` and `decimal`.
@@ -234,7 +225,6 @@ Software University
 13. _Swap_ tha values of two `int`variables.
 
 <h2>Chapter 3</h2>
----
 
 1. Check whether a number is _odd or even_.
 2. Check if a number is _perfectly divisble_ by `5` and `7`.
@@ -254,7 +244,6 @@ Software University
 16. _Swap_ `k` number of bits starting a position `p` with `k` number of bits starting at position `q`.
 
 <h2>Chapter 4</h2>
----
 
 1. Read<sup>1</sup> three `int`s from the console and print their values. <sup>1. "Read"/"Write" to/from Standard Input/Output.</sup>
 2. Read a radius of circle , `r`, and print its area and circumference.
@@ -271,7 +260,6 @@ Software University
 13. Accumulate the first 1000 terms of the `Harmonic Series`.
 
 <h2>Chapter 5</h2>
----
 
 1. Write an `if` construction such that it _swaps_ the values of two variables if the first is larger than the second.
 2. Print the sign (`+` , `-`) of the product of thee numbers without actually calculating it. (Use `if` statements)
@@ -286,7 +274,6 @@ Software University
 11. Read a number `n` within [0,999] and print its name in _Bulgarian language_.
 
 <h2>Chapter 6</h2>
----
 
 1. Read a number `n`. Print the numbers from `1` to `n`.
 2. Read a number `n`. Print all the numbers within [1, n] not divisible by `3` and `7`.
@@ -308,7 +295,6 @@ Software University
 18. Read `n`. Print _n x n matrix_ with values increasing in a clockwise inward pattern, starting from element with _matrix index_ _00_ and value `1`.
 
 <h2>Chapter 7</h2>
----
 
 1. Define and print an `int` array of size `20` with elements initialized to values equal to their index multiplied by `5`.
 2. Read two arrays and check if they are identical.
@@ -339,7 +325,6 @@ Software University
 27. Find the largest region of horizontally or vertically adjacent elements with equal values within a 2D `int` _matrix_.
 
 <h2>Chapter 8</h2>
----
 
 1. Convert `int` and `float` numbers into _binary_ strings.  
 2. Convert a _binary_ string to _hexadecimal_ and _decimal_.
@@ -358,7 +343,7 @@ Software University
 15. Extract _sign_, _exponent_ and _mantissa_ of `float` number.
 
 <h2>Chapter 9</h2>
----
+ 
  <sup>From now on, it is implied that all the tasks must be implemented via methods.</sup>
  1. Print a greeting by name read from standard input. Create a [_Unit Test_](https://msdn.microsoft.com/en-us/library/hh694602.aspx) for the implemented method.
  2. Implement `GetMax(int a, int b)` returning the largest of the two input parameters. 
@@ -375,14 +360,13 @@ Software University
  13. _Multiply polynomials_. 
  
 <h2>Chapter 10</h2>
---- 
 
 1.
 
 
 
 
----
+ 
 
 
 ---
