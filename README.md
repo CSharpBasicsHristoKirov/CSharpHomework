@@ -129,7 +129,7 @@
 
 ---
 
-<h1>II. [Exam Practice.][3]</h1>
+<h1>II.<a href="https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics">Exam Practice.</h1>
 
 <h2>Exam date: 12.04.2014</h2>
 
@@ -189,7 +189,7 @@
 
 ---
 
-<h1>III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]</h1>
+<h1>III.<a href="http://www.introprogramming.info/">Fundamentals of Computer Programming with C#", S. Nakov</a></h1>
 
 <h2>Chapter 1</h2>
 
@@ -389,8 +389,6 @@ IDE: Visual Studio 2015
 ---
 
 [1]: https://softuni.bg/trainings/1297/programming-basics-january-2016
-[2]: http://www.introprogramming.info/
-[3]: https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics
 [4]: https://www.visualstudio.com/
 [5]: https://msdn.microsoft.com/en-us/library/ms123401.aspx
 
