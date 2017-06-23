@@ -189,7 +189,7 @@
 
 ---
 
-<h1>III.<a href="http://www.introprogramming.info/">Fundamentals of Computer Programming with C#", S. Nakov</a></h1>
+<h1>III. <a href="http://www.introprogramming.info/"> Fundamentals of Computer Programming with C#, S. Nakov</a></h1>
 
 <h2>Chapter 1</h2>
 
