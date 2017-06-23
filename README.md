@@ -4,12 +4,12 @@ Software University
 
 
 
-####Repository Content
+<h1>Repository Content</h1>
 ---
 
-##I. [Homework][6]
+<h2>I. [Homework][6]</h2>
  
-####1. First steps in Coding
+<h2>1. First steps in Coding</h2>
  
 1. Print _"Hello C#"_.
 2. Simple Algebraic Expression.
@@ -20,7 +20,7 @@ Software University
 7. Read base `a` and height `b`, calculate the _area of rectangle_.
 8. Read side length `N`, _print a square_ of asterisks with side lenght `N`.
  
-####2. Simple calculations
+<h2>2. Simple calculations</h2>
 
 1. Visual Studio _blank solution_. Collect projects related to different exercises under common solution.
 2. Square _area_.
@@ -40,7 +40,7 @@ Software University
 16. _GUI application_ push a button appearing on random location.
 17. Number of classroom seats.
   
-####3. Simple conditions
+<h2>3. Simple conditions</h2>
 
  1. Area of figures.
  2. Bonus score.
@@ -63,7 +63,7 @@ Software University
  19. Three equal numbers.
  20. Time in 15 minutes.
 
-####4. Complex conditions
+<h2>4. Complex conditions</h2>
 
  1. Cinema.
  2. Fruit or Vegetable.
@@ -80,7 +80,7 @@ Software University
  13. Volleyball.
  14. Voyage.
 
-####5. Loops
+<h2>5. Loops</h2>
 
  1. Equal Pairs.
  2. Half Sum Element.
@@ -98,7 +98,7 @@ Software University
  14. GUI Turtle Graphics.
  15. Vowels Sum.
  
-####6. Drawing with Loops
+<h2>6. Drawing with Loops</h2>
 
  1. Butterfly.
  2. Christmas Tree.
@@ -113,7 +113,7 @@ Software University
  11. Sunglasses.
  12. _Web Application_ Rattings.
  
-####7. Advanced Loops
+<h2>7. Advanced Loops</h2>
 
  1. Check prime.
  2. Enter even number.
@@ -137,7 +137,7 @@ Software University
 
 ##II. [Exam Practice.][3]
 
-####Exam date: 12.04.2014 
+<h2>Exam date: 12.04.2014</h2>
 
 ######1. Morning
 
@@ -150,7 +150,7 @@ Software University
 ######2. Evening
 
 ---
-####Exam date: 14.04.2014
+<h2>Exam date: 14.04.2014</h2>
 
 ######1. Morning
 
@@ -168,7 +168,7 @@ Software University
 4. Magic Car Numbers.
 5. Bit flipper.
 
-####Exam date: 29.03.2015
+<h2>Exam date: 29.03.2015</h2>
 
 ######1. Morning
 
@@ -186,7 +186,7 @@ Software University
  4. Knight Path.
  5. Magic Wand.
 
-####Exam date: 17.03.2016
+<h2>Exam date: 17.03.2016</h2>
 
  1. Beer Stock.
  2. Cake Tycoon.
@@ -198,7 +198,7 @@ Software University
 
 ##III. ["Fundamentals of Computer Programming with C#", S. Nakov][2]
 
-####Chapter 1
+<h2>Chapter 1</h2>
 ---
 
 1. Install [Visual Studio][4] and [MSDN Library Documentation][5].<br>
@@ -216,7 +216,7 @@ Software University
 13. Compile a list of the most famous program languages; their differences from `C#`. 
 14. Decompile Exercise 5 . <sup> Use [ILSpy-2.3.1 - Decompiler](http://ilspy.net/)</sup>
 
-####Chapter 2
+<h2>Chapter 2</h2>
 ---
 
 1. Match values with appropriate types.
@@ -233,7 +233,7 @@ Software University
 12. Company employees first-, last- name, gender and ID. 
 13. _Swap_ tha values of two `int`variables.
 
-####Chapter 3
+<h2>Chapter 3</h2>
 ---
 
 1. Check whether a number is _odd or even_.
@@ -253,7 +253,7 @@ Software University
 15. _Swap_ the bits at positions 3, 4 , 5 with those at positions 24, 25, 26.
 16. _Swap_ `k` number of bits starting a position `p` with `k` number of bits starting at position `q`.
 
-####Chapter 4
+<h2>Chapter 4</h2>
 ---
 
 1. Read<sup>1</sup> three `int`s from the console and print their values. <sup>1. "Read"/"Write" to/from Standard Input/Output.</sup>
@@ -270,7 +270,7 @@ Software University
 12. Print the first 100 terms of _Fibonacci sequence_.
 13. Accumulate the first 1000 terms of the `Harmonic Series`.
 
-####Chapter 5
+<h2>Chapter 5</h2>
 ---
 
 1. Write an `if` construction such that it _swaps_ the values of two variables if the first is larger than the second.
@@ -285,7 +285,7 @@ Software University
 10. Appy the following rules for the number, `n` (within [1,9]) read from the console: if `n` in: [1,3] -> `n * 10` ; [4,6] -> `n * 100`; [7,9] -> `n * 1000`.
 11. Read a number `n` within [0,999] and print its name in _Bulgarian language_.
 
-####Chapter 6
+<h2>Chapter 6</h2>
 ---
 
 1. Read a number `n`. Print the numbers from `1` to `n`.
@@ -307,7 +307,7 @@ Software University
 17. Read `a` and `b`. Find the _greatest common divisor_ of `a` and `b`.
 18. Read `n`. Print _n x n matrix_ with values increasing in a clockwise inward pattern, starting from element with _matrix index_ _00_ and value `1`.
 
-####Chapter 7
+<h2>Chapter 7</h2>
 ---
 
 1. Define and print an `int` array of size `20` with elements initialized to values equal to their index multiplied by `5`.
@@ -338,7 +338,7 @@ Software University
 26. Go through _matrix_ elements in specific pattern: in parallel/perpendicularly to the main diagonal starting from the bottom.
 27. Find the largest region of horizontally or vertically adjacent elements with equal values within a 2D `int` _matrix_.
 
-####Chapter 8
+<h2>Chapter 8</h2>
 ---
 
 1. Convert `int` and `float` numbers into _binary_ strings.  
@@ -357,7 +357,7 @@ Software University
 14. Store `0.000001` in `float`, `double` and `decimal` and sum it `50000000` times. Observe _rounding error_ and _execution time_.
 15. Extract _sign_, _exponent_ and _mantissa_ of `float` number.
 
-####Chapter 9
+<h2>Chapter 9</h2>
 ---
  <sup>From now on, it is implied that all the tasks must be implemented via methods.</sup>
  1. Print a greeting by name read from standard input. Create a [_Unit Test_](https://msdn.microsoft.com/en-us/library/hh694602.aspx) for the implemented method.
@@ -374,7 +374,7 @@ Software University
  12. _Sum polynomials_.
  13. _Multiply polynomials_. 
  
-####Chapter 10
+<h2>Chapter 10</h2>
 --- 
 
 1.
