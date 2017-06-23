@@ -129,7 +129,7 @@
 
 ---
 
-<h1>II.<a href="https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics">Exam Practice.</h1>
+<h1>II.<a href="https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics">Exam Practice.</a></h1>
 
 <h2>Exam date: 12.04.2014</h2>
 
@@ -189,7 +189,7 @@
 
 ---
 
-<h1>III. <a href="http://www.introprogramming.info/"> Fundamentals of Computer Programming with C#, S. Nakov</a></h1>
+<h1>III.<a href="http://www.introprogramming.info/">Fundamentals of Computer Programming with C#, S. Nakov</a></h1>
 
 <h2>Chapter 1</h2>
 
