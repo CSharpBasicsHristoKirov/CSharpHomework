@@ -1,7 +1,7 @@
 
 <h1>Repository Content</h1>
 
-<h2>I. [Homework][6]</h2>
+<h2>I.<a href="https://softuni.bg/trainings/1336/programming-basics-march-2016">Homework</a></h2>
  
 <h2>1. First steps in Coding</h2>
  
@@ -393,4 +393,4 @@ IDE: Visual Studio 2015
 [3]: https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics
 [4]: https://www.visualstudio.com/
 [5]: https://msdn.microsoft.com/en-us/library/ms123401.aspx
-[6]: https://softuni.bg/trainings/1336/programming-basics-march-2016
+
