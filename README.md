@@ -1,195 +1,8 @@
 
 <h1>Repository Content</h1>
 
-<h2>I.<a href="https://softuni.bg/trainings/1336/programming-basics-march-2016">Homework</a></h2>
- 
-<h2>1. First steps in Coding</h2>
- 
-1. Print _"Hello C#"_.
-2. Simple Algebraic Expression.
-3. _GUI application_: simple summator.
-4. _Web application_: simple summator.
-5. Print the numbers from `1` to `20`, each on a new line.
-6. _Print a right-angle triangle_ using the symbol `*`.
-7. Read base `a` and height `b`, calculate the _area of rectangle_.
-8. Read side length `N`, _print a square_ of asterisks with side lenght `N`.
- 
-<h2>2. Simple calculations</h2>
 
-1. Visual Studio _blank solution_. Collect projects related to different exercises under common solution.
-2. Square _area_.
-3. Inch to centimeter _unit converter_.
-4. Greetings by personal name.
-5. Text and character _concatenation_.
-6. Trapezium _area_.
-7. Circle _area_ and _perimeter_.
-8. Rectangle _area_.
-9. _GUI application_ BGN to EUR _currency converter_.
-10. Triangle _area_.
-11. Celsius to Fahrenheit _degrees converter_.
-12. Degrees to radians _angle units converter_.
-13. _GUI application_ USD to BGN _currency converter_.
-14. Multiple currency converter.
-15. _Astronomical date_ manipulation.
-16. _GUI application_ push a button appearing on random location.
-17. Number of classroom seats.
-  
-<h2>3. Simple conditions</h2>
-
- 1. Area of figures.
- 2. Bonus score.
- 3. Cheap transport.
- 4. _GUI_ Currency converter.
- 5. Equal words.
- 6. Even or odd.
- 7. Excellent or not.
- 8. Excellent result.
- 9. Greater number.
- 10. Metric converter.
- 11. Number from 1 to 100 to text.
- 12. Numbers from 100 to 200.
- 13. Number to text.
- 14. Password guess.
- 15. Simple conditions.
- 16. Speed info.
- 17. Sum seconds.
- 18. Swimming pool pipes.
- 19. Three equal numbers.
- 20. Time in 15 minutes.
-
-<h2>4. Complex conditions</h2>
-
- 1. Cinema.
- 2. Fruit or Vegetable.
- 3. Fruit shop.
- 4. Invalid Number.
- 5. On time for the Exam.
- 6. Personal Title.
- 7. _GUI_ Point and Rectangle.
- 8. Point in Rectangle.
- 9. Point in the figure.
- 10. Point on Rectangle border.
- 11. Small shop.
- 12. Trade comission.
- 13. Volleyball.
- 14. Voyage.
-
-<h2>5. Loops</h2>
-
- 1. Equal Pairs.
- 2. Half Sum Element.
- 3. Histogram.
- 4. Latin Letters.
- 5. Left and Right Sum.
- 6. Max Number.
- 7. Min Number.
- 8. Numbers 1 to 100.
- 9. Numbers ending in 7.
- 10. Odd - Even Position.
- 11. Odd - Even sum.
- 12. Perfect division.
- 13. Sum numbers.
- 14. GUI Turtle Graphics.
- 15. Vowels Sum.
- 
-<h2>6. Drawing with Loops</h2>
-
- 1. Butterfly.
- 2. Christmas Tree.
- 3. Diamond.
- 4. Draw fort.
- 5. House.
- 6. Triangle with dollars.
- 7. Rectangle of 10 by 10 Stars.
- 8. Rectangle of N by N stars.
- 9. Rhombus stars.
- 10. Square of stars.
- 11. Sunglasses.
- 12. _Web Application_ Rattings.
- 
-<h2>7. Advanced Loops</h2>
-
- 1. Check prime.
- 2. Enter even number.
- 3. Even powers of `2`.
- 4. Factorial.
- 5. Fibonacci.
- 6. _Web app_ Fruits web game.
- 7. Greatest common divisor.
- 8. Number pyramid.
- 9. Numbers from 1 to N with step 3.
- 10. Numbers in range.
- 11. Numbers from N to 1.
- 12. Number table.
- 13. Powers of `2`.
- 14. Sequence of `2k + 1`.
- 15. Sum digits.
- 16. Magic numbers.
- 17. Stupid password generator.
-
----
-
-<h1>II.<a href="https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics">Exam Practice.</a></h1>
-
-<h2>Exam date: 12.04.2014</h2>
-
-<h3>1. Morning</h3>
-
-1. Triangle.
-2. Pairs.
-3. House.
-4. Magic Dates.
-5. Bits Killer.
-
-<h3>2. Evening</h3>
-
-<h2>Exam date: 14.04.2014</h2>
-
-<h3>1. Morning</h3>
-
-1. Fruit Market.
-2. Biggest triple.
-3. Wine Glass.
-4. Longest Alphabetical Word.
-5. Bit Shooter.
- 
-<h3>2. Evening</h3>
-
-1. Inside The Building.
-2. Student Cables.
-3. Programmer DNA.
-4. Magic Car Numbers.
-5. Bit flipper.
-
-<h2>Exam date: 29.03.2015</h2>
-
-<h3>1. Morning</h3>
-
- 1. Torrent Pirate.
- 2. Basket Battle.
- 3. Dumbbell.
- 4. Encrypted Matrix.
- 5. Game of Bits.
-
-<h3>1. Evening</h3>
-
- 1. Array Matcher.
- 2. Currency Check.
- 3. Dream Item.
- 4. Knight Path.
- 5. Magic Wand.
-
-<h2>Exam date: 17.03.2016</h2>
-
- 1. Beer Stock.
- 2. Cake Tycoon.
- 3. Emergency Repairs.
- 4. Illuminati Lock.
- 5. Master Herbalist.
-
----
-
-<h1>III.<a href="http://www.introprogramming.info/">Fundamentals of Computer Programming with C#, S. Nakov</a></h1>
+<h1>I.<a href="http://www.introprogramming.info/">Fundamentals of Computer Programming with C#, S. Nakov</a></h1>
 
 <h2>Chapter 1</h2>
 
@@ -364,7 +177,193 @@
 1.
 
 
+<h2>II.<a href="https://softuni.bg/trainings/1336/programming-basics-march-2016">Homework</a></h2>
+ 
+<h2>1. First steps in Coding</h2>
+ 
+1. Print _"Hello C#"_.
+2. Simple Algebraic Expression.
+3. _GUI application_: simple summator.
+4. _Web application_: simple summator.
+5. Print the numbers from `1` to `20`, each on a new line.
+6. _Print a right-angle triangle_ using the symbol `*`.
+7. Read base `a` and height `b`, calculate the _area of rectangle_.
+8. Read side length `N`, _print a square_ of asterisks with side lenght `N`.
+ 
+<h2>2. Simple calculations</h2>
 
+1. Visual Studio _blank solution_. Collect projects related to different exercises under common solution.
+2. Square _area_.
+3. Inch to centimeter _unit converter_.
+4. Greetings by personal name.
+5. Text and character _concatenation_.
+6. Trapezium _area_.
+7. Circle _area_ and _perimeter_.
+8. Rectangle _area_.
+9. _GUI application_ BGN to EUR _currency converter_.
+10. Triangle _area_.
+11. Celsius to Fahrenheit _degrees converter_.
+12. Degrees to radians _angle units converter_.
+13. _GUI application_ USD to BGN _currency converter_.
+14. Multiple currency converter.
+15. _Astronomical date_ manipulation.
+16. _GUI application_ push a button appearing on random location.
+17. Number of classroom seats.
+  
+<h2>3. Simple conditions</h2>
+
+ 1. Area of figures.
+ 2. Bonus score.
+ 3. Cheap transport.
+ 4. _GUI_ Currency converter.
+ 5. Equal words.
+ 6. Even or odd.
+ 7. Excellent or not.
+ 8. Excellent result.
+ 9. Greater number.
+ 10. Metric converter.
+ 11. Number from 1 to 100 to text.
+ 12. Numbers from 100 to 200.
+ 13. Number to text.
+ 14. Password guess.
+ 15. Simple conditions.
+ 16. Speed info.
+ 17. Sum seconds.
+ 18. Swimming pool pipes.
+ 19. Three equal numbers.
+ 20. Time in 15 minutes.
+
+<h2>4. Complex conditions</h2>
+
+ 1. Cinema.
+ 2. Fruit or Vegetable.
+ 3. Fruit shop.
+ 4. Invalid Number.
+ 5. On time for the Exam.
+ 6. Personal Title.
+ 7. _GUI_ Point and Rectangle.
+ 8. Point in Rectangle.
+ 9. Point in the figure.
+ 10. Point on Rectangle border.
+ 11. Small shop.
+ 12. Trade comission.
+ 13. Volleyball.
+ 14. Voyage.
+
+<h2>5. Loops</h2>
+
+ 1. Equal Pairs.
+ 2. Half Sum Element.
+ 3. Histogram.
+ 4. Latin Letters.
+ 5. Left and Right Sum.
+ 6. Max Number.
+ 7. Min Number.
+ 8. Numbers 1 to 100.
+ 9. Numbers ending in 7.
+ 10. Odd - Even Position.
+ 11. Odd - Even sum.
+ 12. Perfect division.
+ 13. Sum numbers.
+ 14. GUI Turtle Graphics.
+ 15. Vowels Sum.
+ 
+<h2>6. Drawing with Loops</h2>
+
+ 1. Butterfly.
+ 2. Christmas Tree.
+ 3. Diamond.
+ 4. Draw fort.
+ 5. House.
+ 6. Triangle with dollars.
+ 7. Rectangle of 10 by 10 Stars.
+ 8. Rectangle of N by N stars.
+ 9. Rhombus stars.
+ 10. Square of stars.
+ 11. Sunglasses.
+ 12. _Web Application_ Rattings.
+ 
+<h2>7. Advanced Loops</h2>
+
+ 1. Check prime.
+ 2. Enter even number.
+ 3. Even powers of `2`.
+ 4. Factorial.
+ 5. Fibonacci.
+ 6. _Web app_ Fruits web game.
+ 7. Greatest common divisor.
+ 8. Number pyramid.
+ 9. Numbers from 1 to N with step 3.
+ 10. Numbers in range.
+ 11. Numbers from N to 1.
+ 12. Number table.
+ 13. Powers of `2`.
+ 14. Sequence of `2k + 1`.
+ 15. Sum digits.
+ 16. Magic numbers.
+ 17. Stupid password generator.
+
+---
+
+<h1>III.<a href="https://judge.softuni.bg/Contests#!/List/ByCategory/1/Programming-Basics">Exam Practice.</a></h1>
+
+<h2>Exam date: 12.04.2014</h2>
+
+<h3>1. Morning</h3>
+
+1. Triangle.
+2. Pairs.
+3. House.
+4. Magic Dates.
+5. Bits Killer.
+
+<h3>2. Evening</h3>
+
+<h2>Exam date: 14.04.2014</h2>
+
+<h3>1. Morning</h3>
+
+1. Fruit Market.
+2. Biggest triple.
+3. Wine Glass.
+4. Longest Alphabetical Word.
+5. Bit Shooter.
+ 
+<h3>2. Evening</h3>
+
+1. Inside The Building.
+2. Student Cables.
+3. Programmer DNA.
+4. Magic Car Numbers.
+5. Bit flipper.
+
+<h2>Exam date: 29.03.2015</h2>
+
+<h3>1. Morning</h3>
+
+ 1. Torrent Pirate.
+ 2. Basket Battle.
+ 3. Dumbbell.
+ 4. Encrypted Matrix.
+ 5. Game of Bits.
+
+<h3>1. Evening</h3>
+
+ 1. Array Matcher.
+ 2. Currency Check.
+ 3. Dream Item.
+ 4. Knight Path.
+ 5. Magic Wand.
+
+<h2>Exam date: 17.03.2016</h2>
+
+ 1. Beer Stock.
+ 2. Cake Tycoon.
+ 3. Emergency Repairs.
+ 4. Illuminati Lock.
+ 5. Master Herbalist.
+
+---
 
  
 
